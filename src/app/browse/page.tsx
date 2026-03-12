@@ -2,12 +2,12 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useMemo, useState } from "react";
+import { Suspense, useMemo, useState } from "react";
 import { FilterBar, type BrowseFilters } from "@/components/FilterBar";
 import { useParlaData } from "@/hooks/useParlaData";
 import { unique } from "@/lib/utils";
 
-export default function BrowsePage() {
+function BrowsePageContent() {
   const search = useSearchParams();
   const { cards } = useParlaData();
 
@@ -61,5 +61,13 @@ export default function BrowsePage() {
         ))}
       </div>
     </main>
+  );
+}
+
+export default function BrowsePage() {
+  return (
+    <Suspense fallback={<main><p className="small">Loading filters...</p></main>}>
+      <BrowsePageContent />
+    </Suspense>
   );
 }

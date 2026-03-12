@@ -2,44 +2,39 @@
 
 ## Session summary
 
-This session focused on **refactoring the previous MVP** while preserving Parla's core loop:
+This session focused on **Vercel deployment readiness** and fixed blocking build/lint issues.
 
-- prompt -> silent recall -> reveal -> self-rate -> next
+## What changed
 
-## What was refactored
+1. **ESLint config fix**
+   - Updated `.eslintrc.json` to extend only `next/core-web-vitals`.
+   - Removed `next/typescript`, which failed to resolve in the current Next.js setup and blocked lint.
 
-1. **Shared client data loading**
-   - Introduced `src/hooks/useParlaData.ts`.
-   - Home, Browse, Review, and Drill now share one pattern for loading published cards + progress.
-   - Reduced duplicated `useEffect`/repository wiring.
+2. **Next.js build fix for App Router pages using search params**
+   - Updated `src/app/browse/page.tsx`:
+     - split into `BrowsePage` (wrapper) and `BrowsePageContent` (uses `useSearchParams`)
+     - wrapped content with `<Suspense>` fallback to satisfy Next.js CSR bailout requirements.
+   - Updated `src/app/drill/page.tsx` similarly:
+     - split into `DrillPage` and `DrillPageContent`
+     - wrapped `useSearchParams` usage inside `<Suspense>`.
 
-2. **Review-driven drill queues**
-   - Added `DrillMode` and `selectDrillCards` to `src/domain/review/reviewSelectors.ts`.
-   - Drill page (`/drill`) now supports `mode` query:
-     - `all`
-     - `due`
-     - `hard`
-     - `confusing`
-     - `want_to_use`
-   - Review page “Start focused drill” now links to mode-specific drill routes.
+3. **README deployment guidance**
+   - Added `Vercel deployment checklist` section to `README.md`.
+   - Documented commands/settings and noted current validation status.
 
-3. **Card detail action cleanup**
-   - Consolidated repeated toggle flows into one helper (`runAction`) in `src/app/card/[id]/page.tsx`.
-   - Keeps behavior the same while reducing repeated async code.
+## Validation run
 
-4. **Docs update**
-   - Updated README to include focused drill mode and refactor highlights.
+- `npm run lint` ✅ pass
+- `npm run build` ✅ pass
 
-## Current behavior notes
+## Why this matters
 
-- Hidden cards remain excluded from standard drill queues and review selectors.
-- Confusing cards still surface early in due selection.
-- Audio remains optional and URL-based; no runtime TTS required.
+- The app now passes production build checks expected by Vercel.
+- The previous prerender errors for `/browse` and `/drill` are resolved.
+- Contributors now have explicit deployment checklist docs in the repository.
 
-## Remaining limitations / future work
+## Suggested next steps
 
-1. Add real static audio files for seeded cards.
-2. Add a richer empty-state UX for focused drills when no cards match mode.
-3. Add tests for review selectors (`selectDrillCards`, due/confusing precedence).
-4. Expand dataset toward target 50 cards.
-5. Consider server-compatible card repository path for future SSR/edge needs.
+1. Connect the repo to Vercel and trigger a preview deployment.
+2. Confirm route behavior in preview (`/`, `/browse`, `/drill`, `/review`, `/card/[id]`).
+3. Optionally add a CI workflow to run `npm run lint` and `npm run build` on pull requests.

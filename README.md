@@ -53,3 +53,21 @@ Then open `http://localhost:3000`.
 - `npm run build`
 - `npm run start`
 - `npm run lint`
+
+## Dataset authoring workflow
+
+Prompt templates for generating and polishing the initial 50-card dataset are documented in:
+
+- `docs/parla-dataset-prompt-playbook-ja.md`
+
+This playbook includes: full-generation prompt, cleanup prompt, contrast refinement prompt, audio metadata append prompt, and per-category prompt variants.
+
+
+## Vercel deployment checklist
+
+- Ensure Node.js 18+ runtime in Vercel project settings (Next.js 14 compatible).
+- Build command: `npm run build`
+- Output: default Next.js output (no extra config required).
+- Install command: `npm install`
+- Environment variables: none required for current local-first MVP.
+- Verified in this repo: both `npm run lint` and `npm run build` pass.
