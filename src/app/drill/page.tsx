@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { Suspense, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import { DrillCard } from "@/components/DrillCard";
 import { selectDrillCards, type DrillMode } from "@/domain/review/reviewSelectors";
@@ -13,7 +13,7 @@ function parseMode(rawMode: string | null): DrillMode {
   return validModes.includes(rawMode as DrillMode) ? (rawMode as DrillMode) : "all";
 }
 
-export default function DrillPage() {
+function DrillPageContent() {
   const searchParams = useSearchParams();
   const mode = parseMode(searchParams.get("mode"));
   const { cards, progress } = useParlaData();
@@ -29,5 +29,13 @@ export default function DrillPage() {
       </div>
       <DrillCard cards={drillCards} initialProgress={progress} />
     </main>
+  );
+}
+
+export default function DrillPage() {
+  return (
+    <Suspense fallback={<main><p className="small">Loading drill...</p></main>}>
+      <DrillPageContent />
+    </Suspense>
   );
 }
