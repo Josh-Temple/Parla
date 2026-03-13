@@ -11,8 +11,10 @@ Parla is a mobile-first, high-tempo English expression trainer focused on **non-
 - Focused drill mode via query (`mode=due|hard|confusing|want_to_use`)
 - Browse mode with category/function/register/tag filters
 - Review mode (due / hard / confusing / want-to-use)
+- Focused drill modes may be empty depending on progress state; app provides an all-cards fallback CTA
 - Card detail mode with metadata and progress flags
 - Versioned static starter card dataset (`public/data/cards.json`)
+- Current starter dataset ships with **8 published cards** (usable immediately)
 - Optional static audio URLs per card
 - Local-first persistence via `localStorage`
 
@@ -61,9 +63,13 @@ The drill experience prioritizes English cueing for faster recall:
 Language support mode is persisted in `localStorage`:
 
 - `english-first` (default): shows Hint controls when `support.jaHint` exists
-- `english-only`: hides all Japanese hint UI
+- `english-only`: hides all Japanese hint UI (study flow stays English-only)
 
 Use the nav toggle (`EN-first` / `EN-only`) to switch modes at runtime.
+
+Notes:
+- Cards can be authored without Japanese by omitting `support.jaHint`.
+- In the current starter dataset, all 8 published cards include `support.jaHint`, but `english-only` mode keeps the UI Japanese-free.
 
 ## Dataset schema
 

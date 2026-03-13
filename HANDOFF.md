@@ -64,3 +64,44 @@ This follow-up session addressed remaining reliability gaps by adding schema-awa
 
 3. **Content polish**
    - Fixed a minor punctuation issue in one contrast string (`We should...`).
+
+## Latest session (card availability clarification)
+
+### User-facing clarification
+- Confirmed that the current dataset does include usable cards right now.
+- The app currently contains 8 cards, and all 8 are marked as `status.published: true`, so they are available for normal use.
+
+### Documentation update
+- Updated `README.md` MVP scope to explicitly state that the starter dataset currently ships with 8 published cards.
+
+### Validation
+- Used a quick Node.js data check to count cards and verify publication flags.
+
+## Latest session (Japanese-free card clarification)
+
+### User question addressed
+- Clarified that learners can study without Japanese in UI by switching to `english-only` mode.
+- Clarified authoring behavior: cards are allowed to omit `support.jaHint` entirely for fully Japanese-free card content.
+
+### Documentation update
+- Expanded the language support section in `README.md` to explicitly document Japanese-free usage and authoring guidance.
+
+### Validation
+- Re-checked `public/data/cards.json`: current starter set has 8 cards, all published, and all currently include `support.jaHint`.
+
+## Latest session ("No cards available" production check)
+
+### Investigation
+- Reproduced and reviewed the drill flow to explain why users can still see "No cards available" despite published cards existing.
+- Root cause: focused drill modes (`due`, `hard`, `confusing`, `want_to_use`) can legitimately resolve to zero cards from current progress, and the UI message did not clarify that `all` mode remains available.
+
+### Fix shipped
+- Updated `src/app/drill/page.tsx` to handle three explicit states before rendering `DrillCard`:
+  1. loading state (`Loading cards...`)
+  2. load error state (`Failed to load cards...`)
+  3. empty focused-mode state with clear guidance + CTA to `Start all-cards drill`
+- This prevents misleading "no cards" messaging from being interpreted as dataset/publishing failure.
+
+### Validation
+- Ran lint/build checks after the change.
+- Dataset still has 8 published cards, so `mode=all` remains study-ready.
