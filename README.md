@@ -54,6 +54,17 @@ Then open `http://localhost:3000`.
 - `npm run start`
 - `npm run lint`
 
+
+## English-first drill cues
+
+The drill experience now prioritizes English cueing for faster recall:
+
+- Front side shows `prompts.intent`, `prompts.situation`, and optional `prompts.cloze`
+- Japanese is treated as optional support via a small **Hint** action
+- Reveal keeps pace by showing phrase + example + short English usage note
+- Card schema now supports optional `support.jaHint`, so main drill flow works without Japanese
+- Browse and card detail now also prioritize English copy by default
+
 ## Dataset authoring workflow
 
 Prompt templates for generating and polishing the initial 50-card dataset are documented in:

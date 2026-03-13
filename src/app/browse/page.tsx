@@ -55,7 +55,7 @@ function BrowsePageContent() {
             </p>
             <h3 style={{ margin: "6px 0" }}>{card.phrase}</h3>
             <p className="small" style={{ marginBottom: 0 }}>
-              {card.japanese_meaning}
+              {card.prompts.intent} · {card.prompts.situation}
             </p>
           </Link>
         ))}

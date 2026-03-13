@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { AudioButton } from "@/components/AudioButton";
 import { CardMeta } from "@/components/CardMeta";
 import { SimilarPhrases } from "@/components/SimilarPhrases";
+import { getJapaneseHint } from "@/domain/cards/cardSupport";
 import type { Card } from "@/domain/cards/cardTypes";
 import type { ProgressItem } from "@/domain/progress/progressTypes";
 import { audioResolver, cardRepository, progressRepository } from "@/domain/services";
@@ -13,6 +14,7 @@ export default function CardDetailPage() {
   const params = useParams<{ id: string }>();
   const [card, setCard] = useState<Card | null>(null);
   const [progress, setProgress] = useState<ProgressItem | null>(null);
+  const [showHint, setShowHint] = useState(false);
 
   const id = params.id;
 
@@ -46,11 +48,20 @@ export default function CardDetailPage() {
     );
   }
 
+  const japaneseHint = getJapaneseHint(card);
+
   return (
     <main>
       <div className="panel">
         <h1 style={{ marginTop: 0 }}>{card.phrase}</h1>
-        <p>{card.japanese_meaning}</p>
+        {japaneseHint ? (
+          <div style={{ marginBottom: 8 }}>
+            <button className="button ghost" onClick={() => setShowHint((prev) => !prev)}>
+              {showHint ? "Hide meaning" : "Check meaning"}
+            </button>
+            {showHint ? <p className="small">{japaneseHint}</p> : null}
+          </div>
+        ) : null}
         <p className="small">{card.example}</p>
         <p className="small">{card.notes}</p>
         <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>

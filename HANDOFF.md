@@ -2,39 +2,36 @@
 
 ## Session summary
 
-This session focused on **Vercel deployment readiness** and fixed blocking build/lint issues.
+This session tightened the immersion direction by removing remaining Japanese-first surfaces outside the drill card and adding a single global toggle point for future English-only mode.
 
 ## What changed
 
-1. **ESLint config fix**
-   - Updated `.eslintrc.json` to extend only `next/core-web-vitals`.
-   - Removed `next/typescript`, which failed to resolve in the current Next.js setup and blocked lint.
+1. **Global Japanese support toggle point**
+   - Added `src/domain/cards/cardSupport.ts` with:
+     - `japaneseSupportEnabled`
+     - `getJapaneseHint(card)`
+   - Drill and detail screens now use this helper, making future English-only switching straightforward.
 
-2. **Next.js build fix for App Router pages using search params**
-   - Updated `src/app/browse/page.tsx`:
-     - split into `BrowsePage` (wrapper) and `BrowsePageContent` (uses `useSearchParams`)
-     - wrapped content with `<Suspense>` fallback to satisfy Next.js CSR bailout requirements.
-   - Updated `src/app/drill/page.tsx` similarly:
-     - split into `DrillPage` and `DrillPageContent`
-     - wrapped `useSearchParams` usage inside `<Suspense>`.
+2. **Drill hint source hardened**
+   - Drill no longer falls back to `japanese_meaning`; it only uses `support.jaHint` when support is enabled.
+   - This avoids accidental Japanese exposure when cards are prepared for English-only operation.
 
-3. **README deployment guidance**
-   - Added `Vercel deployment checklist` section to `README.md`.
-   - Documented commands/settings and noted current validation status.
+3. **Browse screen made English-first**
+   - Card preview text in `/browse` now shows `prompts.intent` + `prompts.situation` instead of Japanese meaning.
+
+4. **Card detail Japanese meaning made optional**
+   - Japanese meaning is hidden behind a small `Check meaning` button and is not shown by default.
+
+5. **Docs updated**
+   - README updated to note English-first defaults in browse/detail in addition to drill flow.
 
 ## Validation run
 
 - `npm run lint` ✅ pass
 - `npm run build` ✅ pass
 
-## Why this matters
-
-- The app now passes production build checks expected by Vercel.
-- The previous prerender errors for `/browse` and `/drill` are resolved.
-- Contributors now have explicit deployment checklist docs in the repository.
-
 ## Suggested next steps
 
-1. Connect the repo to Vercel and trigger a preview deployment.
-2. Confirm route behavior in preview (`/`, `/browse`, `/drill`, `/review`, `/card/[id]`).
-3. Optionally add a CI workflow to run `npm run lint` and `npm run build` on pull requests.
+1. Replace `japaneseSupportEnabled` constant with persisted user setting (`english-first` / `english-only`).
+2. Migrate remaining Japanese copy in metadata fields (e.g., `contrast`) if those areas become part of frequent drill review surfaces.
+3. Add a schema migration script for larger datasets to enforce `support.jaHint` as the only Japanese support field.
