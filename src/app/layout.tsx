@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
+import { JapaneseSupportToggle } from "@/components/JapaneseSupportToggle";
 
 export const metadata: Metadata = {
   title: "Parla",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ja">
+    <html lang="en">
       <body>
         <header className="topnav">
           <div className="topnav-inner">
@@ -19,6 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/drill">Drill</Link>
               <Link href="/browse">Browse</Link>
               <Link href="/review">Review</Link>
+              <JapaneseSupportToggle />
             </nav>
           </div>
         </header>

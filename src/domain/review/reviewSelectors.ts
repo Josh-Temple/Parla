@@ -3,7 +3,7 @@ import type { ProgressItem } from "../progress/progressTypes";
 
 export type DrillMode = "all" | "due" | "hard" | "confusing" | "want_to_use";
 
-const toMap = (progress: ProgressItem[]) => new Map(progress.map((item) => [item.card_id, item]));
+const toMap = (progress: ProgressItem[]): Map<string, ProgressItem> => new Map(progress.map((item) => [item.card_id, item]));
 
 export function getDueCards(cards: Card[], progress: ProgressItem[], now = new Date()): Card[] {
   const map = toMap(progress);
@@ -11,7 +11,6 @@ export function getDueCards(cards: Card[], progress: ProgressItem[], now = new D
     const p = map.get(card.id);
     if (p?.hidden) return false;
     if (!p) return true;
-    if (p.confusing) return true;
     return new Date(p.next_due_at) <= now;
   });
 }

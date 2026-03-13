@@ -1,272 +1,267 @@
-[
-  {
-    "id": "request_001",
-    "category": "Requests",
-    "phrase": "Could you give me a quick update?",
-    "japanese_meaning": "簡単に進捗を教えてもらえますか",
-    "function": "request",
-    "register": "polite",
-    "pattern": "Could you + verb...?",
-    "example": "Could you give me a quick update before lunch?",
-    "notes": "Polite and flexible for work or daily requests.",
-    "tags": [
-      "work",
-      "update",
-      "meeting"
-    ],
-    "similar": [
-      "Can you...",
-      "Would you mind..."
-    ],
-    "contrast": "Can you...より丁寧で柔らかい。",
-    "prompts": {
-      "intent": "polite request",
-      "situation": "You want a quick status update from a coworker.",
-      "cloze": "Could you give me a quick ___?"
+{
+  "schema_version": 1,
+  "cards": [
+    {
+      "id": "request_001",
+      "category": "Requests",
+      "phrase": "Could you give me a quick update?",
+      "function": "request",
+      "register": "polite",
+      "pattern": "Could you + verb...?",
+      "example": "Could you give me a quick update before lunch?",
+      "notes": "Polite and flexible for work or daily requests.",
+      "tags": [
+        "work",
+        "update",
+        "meeting"
+      ],
+      "similar": [
+        "Can you...",
+        "Would you mind..."
+      ],
+      "contrast": "More polite and softer than Can you...?",
+      "prompts": {
+        "intent": "polite request",
+        "situation": "You want a quick status update from a coworker.",
+        "cloze": "Could you give me a quick ___?"
+      },
+      "difficulty": 1,
+      "audio": {
+        "phraseUrl": "/audio/request_001_phrase.mp3",
+        "exampleUrl": "/audio/request_001_example.mp3",
+        "voice": "en-US-female-01"
+      },
+      "status": {
+        "published": true
+      },
+      "support": {
+        "jaHint": "簡単に進捗を教えてもらえますか"
+      }
     },
-    "difficulty": 1,
-    "audio": {
-      "phraseUrl": "/audio/request_001_phrase.mp3",
-      "exampleUrl": "/audio/request_001_example.mp3",
-      "voice": "en-US-female-01"
+    {
+      "id": "request_002",
+      "category": "Requests",
+      "phrase": "Would it be possible to move this to Friday?",
+      "function": "request",
+      "register": "formal",
+      "pattern": "Would it be possible to + verb...?",
+      "example": "Would it be possible to move this to Friday due to a conflict?",
+      "notes": "A formal way to request schedule changes.",
+      "tags": [
+        "work",
+        "schedule",
+        "request"
+      ],
+      "similar": [
+        "I was wondering if...",
+        "Could we..."
+      ],
+      "contrast": "More formal and indirect than Could we...?",
+      "prompts": {
+        "intent": "reschedule politely",
+        "situation": "You want to ask if moving the meeting is possible.",
+        "cloze": "Would it be possible to ___ this to Friday?"
+      },
+      "difficulty": 2,
+      "audio": {
+        "phraseUrl": "/audio/request_002_phrase.mp3"
+      },
+      "status": {
+        "published": true
+      },
+      "support": {
+        "jaHint": "これを金曜に移すことは可能でしょうか"
+      }
     },
-    "status": {
-      "published": true
+    {
+      "id": "refusal_001",
+      "category": "Refusals / Limits",
+      "phrase": "I won't be able to make it this time.",
+      "function": "refusal",
+      "register": "neutral",
+      "pattern": "I won't be able to + verb",
+      "example": "Thanks for inviting me, but I won't be able to make it this time.",
+      "notes": "Turns down an invitation without sounding harsh.",
+      "tags": [
+        "social",
+        "refusal"
+      ],
+      "similar": [
+        "I can't make it",
+        "Maybe next time"
+      ],
+      "contrast": "Softer and a bit more polite than I can't...",
+      "prompts": {
+        "intent": "soft refusal",
+        "situation": "You cannot join this invitation this time.",
+        "cloze": "I won't be able to ___ it this time."
+      },
+      "difficulty": 1,
+      "audio": {
+        "exampleUrl": "/audio/refusal_001_example.mp3"
+      },
+      "status": {
+        "published": true
+      },
+      "support": {
+        "jaHint": "今回は参加できなさそうです"
+      }
     },
-    "support": {
-      "jaHint": "簡単に進捗を教えてもらえますか"
+    {
+      "id": "refusal_002",
+      "category": "Refusals / Limits",
+      "phrase": "I'm tied up then, but I can do Monday.",
+      "function": "refusal",
+      "register": "polite",
+      "pattern": "I'm tied up + time, but ...",
+      "example": "I'm tied up then, but I can do Monday afternoon.",
+      "notes": "Pairs a no with a practical alternative.",
+      "tags": [
+        "schedule",
+        "alternative"
+      ],
+      "similar": [
+        "That time is tough",
+        "Could we do...instead?"
+      ],
+      "contrast": "Declines while offering a practical alternative.",
+      "prompts": {
+        "intent": "decline with alternative",
+        "situation": "You cannot do that time, but you can offer another day.",
+        "cloze": "I'm tied up then, but I can do ___."
+      },
+      "difficulty": 2,
+      "status": {
+        "published": true
+      },
+      "support": {
+        "jaHint": "その時間は埋まっていますが、月曜なら可能です"
+      }
+    },
+    {
+      "id": "opinion_001",
+      "category": "Opinions",
+      "phrase": "From my perspective, this is the safest option.",
+      "function": "opinion",
+      "register": "formal",
+      "pattern": "From my perspective, ...",
+      "example": "From my perspective, this is the safest option for launch.",
+      "notes": "Signals personal perspective in a professional tone.",
+      "tags": [
+        "work",
+        "opinion"
+      ],
+      "similar": [
+        "I think",
+        "In my view"
+      ],
+      "contrast": "Slightly more formal than I think.",
+      "prompts": {
+        "intent": "state an opinion",
+        "situation": "You want to share your view calmly in a meeting.",
+        "cloze": "From my perspective, this is the safest ___."
+      },
+      "difficulty": 2,
+      "status": {
+        "published": true
+      },
+      "support": {
+        "jaHint": "私の見方では、これが最も安全な選択です"
+      }
+    },
+    {
+      "id": "opinion_002",
+      "category": "Opinions",
+      "phrase": "I'm not fully convinced yet.",
+      "function": "opinion",
+      "register": "neutral",
+      "pattern": "I'm not fully + adjective",
+      "example": "I see your point, but I'm not fully convinced yet.",
+      "notes": "Shows hesitation without direct confrontation.",
+      "tags": [
+        "disagreement",
+        "meeting"
+      ],
+      "similar": [
+        "I'm not sure about that",
+        "I have some concerns"
+      ],
+      "contrast": "Less confrontational than I disagree.",
+      "prompts": {
+        "intent": "partial disagreement",
+        "situation": "You are not convinced yet and want to stay diplomatic.",
+        "cloze": "I'm not fully ___ yet."
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "support": {
+        "jaHint": "まだ完全には納得していません"
+      }
+    },
+    {
+      "id": "softening_001",
+      "category": "Softeners / Cushioning",
+      "phrase": "It might make sense to start small.",
+      "function": "softening",
+      "register": "neutral",
+      "pattern": "It might make sense to + verb",
+      "example": "It might make sense to start small and test demand first.",
+      "notes": "Softens proposals to reduce pressure.",
+      "tags": [
+        "proposal",
+        "softening"
+      ],
+      "similar": [
+        "Maybe we should...",
+        "Perhaps we can..."
+      ],
+      "contrast": "Less pushy than We should...",
+      "prompts": {
+        "intent": "soften a suggestion",
+        "situation": "You want to suggest a cautious first step.",
+        "cloze": "It might make sense to start ___."
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "support": {
+        "jaHint": "まず小さく始めるのがよさそうです"
+      }
+    },
+    {
+      "id": "softening_002",
+      "category": "Softeners / Cushioning",
+      "phrase": "I may be wrong, but this feels risky.",
+      "function": "softening",
+      "register": "polite",
+      "pattern": "I may be wrong, but ...",
+      "example": "I may be wrong, but this feels risky given the timeline.",
+      "notes": "Introduces concern while staying collaborative.",
+      "tags": [
+        "risk",
+        "disagreement",
+        "softening"
+      ],
+      "similar": [
+        "I could be mistaken",
+        "I'm not entirely sure, but..."
+      ],
+      "contrast": "Softer and less confrontational than This is risky.",
+      "prompts": {
+        "intent": "soften concern",
+        "situation": "You want to raise risk concerns carefully.",
+        "cloze": "I may be wrong, but this feels ___."
+      },
+      "difficulty": 2,
+      "status": {
+        "published": true
+      },
+      "support": {
+        "jaHint": "間違っているかもしれませんが、これはリスクが高そうです"
+      }
     }
-  },
-  {
-    "id": "request_002",
-    "category": "Requests",
-    "phrase": "Would it be possible to move this to Friday?",
-    "japanese_meaning": "これを金曜に移すことは可能でしょうか",
-    "function": "request",
-    "register": "formal",
-    "pattern": "Would it be possible to + verb...?",
-    "example": "Would it be possible to move this to Friday due to a conflict?",
-    "notes": "A formal way to request schedule changes.",
-    "tags": [
-      "work",
-      "schedule",
-      "request"
-    ],
-    "similar": [
-      "I was wondering if...",
-      "Could we..."
-    ],
-    "contrast": "Could we...より距離感がありフォーマル。",
-    "prompts": {
-      "intent": "reschedule politely",
-      "situation": "You want to ask if moving the meeting is possible.",
-      "cloze": "Would it be possible to ___ this to Friday?"
-    },
-    "difficulty": 2,
-    "audio": {
-      "phraseUrl": "/audio/request_002_phrase.mp3"
-    },
-    "status": {
-      "published": true
-    },
-    "support": {
-      "jaHint": "これを金曜に移すことは可能でしょうか"
-    }
-  },
-  {
-    "id": "refusal_001",
-    "category": "Refusals / Limits",
-    "phrase": "I won't be able to make it this time.",
-    "japanese_meaning": "今回は参加できなさそうです",
-    "function": "refusal",
-    "register": "neutral",
-    "pattern": "I won't be able to + verb",
-    "example": "Thanks for inviting me, but I won't be able to make it this time.",
-    "notes": "Turns down an invitation without sounding harsh.",
-    "tags": [
-      "social",
-      "refusal"
-    ],
-    "similar": [
-      "I can't make it",
-      "Maybe next time"
-    ],
-    "contrast": "I can't...より少し丁寧で柔らかい。",
-    "prompts": {
-      "intent": "soft refusal",
-      "situation": "You cannot join this invitation this time.",
-      "cloze": "I won't be able to ___ it this time."
-    },
-    "difficulty": 1,
-    "audio": {
-      "exampleUrl": "/audio/refusal_001_example.mp3"
-    },
-    "status": {
-      "published": true
-    },
-    "support": {
-      "jaHint": "今回は参加できなさそうです"
-    }
-  },
-  {
-    "id": "refusal_002",
-    "category": "Refusals / Limits",
-    "phrase": "I'm tied up then, but I can do Monday.",
-    "japanese_meaning": "その時間は埋まっていますが、月曜なら可能です",
-    "function": "refusal",
-    "register": "polite",
-    "pattern": "I'm tied up + time, but ...",
-    "example": "I'm tied up then, but I can do Monday afternoon.",
-    "notes": "Pairs a no with a practical alternative.",
-    "tags": [
-      "schedule",
-      "alternative"
-    ],
-    "similar": [
-      "That time is tough",
-      "Could we do...instead?"
-    ],
-    "contrast": "断るだけで終わらず次案を示せる。",
-    "prompts": {
-      "intent": "decline with alternative",
-      "situation": "You cannot do that time, but you can offer another day.",
-      "cloze": "I'm tied up then, but I can do ___."
-    },
-    "difficulty": 2,
-    "status": {
-      "published": true
-    },
-    "support": {
-      "jaHint": "その時間は埋まっていますが、月曜なら可能です"
-    }
-  },
-  {
-    "id": "opinion_001",
-    "category": "Opinions",
-    "phrase": "From my perspective, this is the safest option.",
-    "japanese_meaning": "私の見方では、これが最も安全な選択です",
-    "function": "opinion",
-    "register": "formal",
-    "pattern": "From my perspective, ...",
-    "example": "From my perspective, this is the safest option for launch.",
-    "notes": "Signals personal perspective in a professional tone.",
-    "tags": [
-      "work",
-      "opinion"
-    ],
-    "similar": [
-      "I think",
-      "In my view"
-    ],
-    "contrast": "I thinkよりややフォーマル。",
-    "prompts": {
-      "intent": "state an opinion",
-      "situation": "You want to share your view calmly in a meeting.",
-      "cloze": "From my perspective, this is the safest ___."
-    },
-    "difficulty": 2,
-    "status": {
-      "published": true
-    },
-    "support": {
-      "jaHint": "私の見方では、これが最も安全な選択です"
-    }
-  },
-  {
-    "id": "opinion_002",
-    "category": "Opinions",
-    "phrase": "I'm not fully convinced yet.",
-    "japanese_meaning": "まだ完全には納得していません",
-    "function": "opinion",
-    "register": "neutral",
-    "pattern": "I'm not fully + adjective",
-    "example": "I see your point, but I'm not fully convinced yet.",
-    "notes": "Shows hesitation without direct confrontation.",
-    "tags": [
-      "disagreement",
-      "meeting"
-    ],
-    "similar": [
-      "I'm not sure about that",
-      "I have some concerns"
-    ],
-    "contrast": "I disagreeより対立感が弱い。",
-    "prompts": {
-      "intent": "partial disagreement",
-      "situation": "You are not convinced yet and want to stay diplomatic.",
-      "cloze": "I'm not fully ___ yet."
-    },
-    "difficulty": 1,
-    "status": {
-      "published": true
-    },
-    "support": {
-      "jaHint": "まだ完全には納得していません"
-    }
-  },
-  {
-    "id": "softening_001",
-    "category": "Softeners / Cushioning",
-    "phrase": "It might make sense to start small.",
-    "japanese_meaning": "まず小さく始めるのがよさそうです",
-    "function": "softening",
-    "register": "neutral",
-    "pattern": "It might make sense to + verb",
-    "example": "It might make sense to start small and test demand first.",
-    "notes": "Softens proposals to reduce pressure.",
-    "tags": [
-      "proposal",
-      "softening"
-    ],
-    "similar": [
-      "Maybe we should...",
-      "Perhaps we can..."
-    ],
-    "contrast": "We should...より押しつけ感が少ない。",
-    "prompts": {
-      "intent": "soften a suggestion",
-      "situation": "You want to suggest a cautious first step.",
-      "cloze": "It might make sense to start ___."
-    },
-    "difficulty": 1,
-    "status": {
-      "published": true
-    },
-    "support": {
-      "jaHint": "まず小さく始めるのがよさそうです"
-    }
-  },
-  {
-    "id": "softening_002",
-    "category": "Softeners / Cushioning",
-    "phrase": "I may be wrong, but this feels risky.",
-    "japanese_meaning": "間違っているかもしれませんが、これはリスクが高そうです",
-    "function": "softening",
-    "register": "polite",
-    "pattern": "I may be wrong, but ...",
-    "example": "I may be wrong, but this feels risky given the timeline.",
-    "notes": "Introduces concern while staying collaborative.",
-    "tags": [
-      "risk",
-      "disagreement",
-      "softening"
-    ],
-    "similar": [
-      "I could be mistaken",
-      "I'm not entirely sure, but..."
-    ],
-    "contrast": "This is risky.より衝突しにくい。",
-    "prompts": {
-      "intent": "soften concern",
-      "situation": "You want to raise risk concerns carefully.",
-      "cloze": "I may be wrong, but this feels ___."
-    },
-    "difficulty": 2,
-    "status": {
-      "published": true
-    },
-    "support": {
-      "jaHint": "間違っているかもしれませんが、これはリスクが高そうです"
-    }
-  }
-]
+  ]
+}

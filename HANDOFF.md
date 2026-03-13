@@ -2,28 +2,43 @@
 
 ## Session summary
 
-This session tightened the immersion direction by removing remaining Japanese-first surfaces outside the drill card and adding a single global toggle point for future English-only mode.
+This follow-up session addressed remaining reliability gaps by adding schema-aware migration handling, strengthening per-card validation, and polishing one English contrast string.
 
 ## What changed
 
-1. **Global Japanese support toggle point**
-   - Added `src/domain/cards/cardSupport.ts` with:
-     - `japaneseSupportEnabled`
-     - `getJapaneseHint(card)`
-   - Drill and detail screens now use this helper, making future English-only switching straightforward.
+1. **Dataset envelope + repository guards**
+   - `public/data/cards.json` migrated from a top-level array to:
+     - `schema_version`
+     - `cards`
+   - `StaticCardRepository` now validates dataset shape (`schema_version` + `cards`) and safely falls back to an empty list on malformed data.
 
-2. **Drill hint source hardened**
-   - Drill no longer falls back to `japanese_meaning`; it only uses `support.jaHint` when support is enabled.
-   - This avoids accidental Japanese exposure when cards are prepared for English-only operation.
+2. **English-first content model cleanup**
+   - Removed `japanese_meaning` from the app card model and seed cards.
+   - Kept Japanese support only in `support.jaHint`.
+   - Converted all `contrast` entries to concise practical English.
 
-3. **Browse screen made English-first**
-   - Card preview text in `/browse` now shows `prompts.intent` + `prompts.situation` instead of Japanese meaning.
+3. **Runtime Japanese support setting (persisted)**
+   - Replaced the static Japanese-support constant with persisted mode logic in `cardSupport`.
+   - Added supported modes:
+     - `english-first` (default)
+     - `english-only`
+   - Added lightweight nav toggle (`EN-first` / `EN-only`) and persisted setting in `localStorage`.
 
-4. **Card detail Japanese meaning made optional**
-   - Japanese meaning is hidden behind a small `Check meaning` button and is not shown by default.
+4. **Review semantics refinement**
+   - `getDueCards()` no longer treats `confusing` as automatically due.
+   - `due` now reflects scheduling (`next_due_at`) while `confusing` is surfaced separately.
 
-5. **Docs updated**
-   - README updated to note English-first defaults in browse/detail in addition to drill flow.
+5. **Drill queue variety (lightweight)**
+   - `mode=all` drill queue now gets category-aware shuffled ordering to reduce positional learning.
+   - Focused drill modes (`due`, `hard`, `confusing`, `want_to_use`) keep selector ordering deterministic.
+
+6. **TypeScript tightening**
+   - `useParlaData` now uses explicit load-state typing and explicit `Promise<void>` return types for refresh functions.
+   - Added typed `refreshAll` with guarded error handling.
+
+7. **Scalability prep for larger datasets**
+   - Repository and selectors now rely on explicit maps/filters and no longer depend on tiny top-level assumptions.
+   - Schema envelope + type updates make future dataset expansion safer.
 
 ## Validation run
 
@@ -32,6 +47,20 @@ This session tightened the immersion direction by removing remaining Japanese-fi
 
 ## Suggested next steps
 
-1. Replace `japaneseSupportEnabled` constant with persisted user setting (`english-first` / `english-only`).
-2. Migrate remaining Japanese copy in metadata fields (e.g., `contrast`) if those areas become part of frequent drill review surfaces.
-3. Add a schema migration script for larger datasets to enforce `support.jaHint` as the only Japanese support field.
+1. Add optional schema migration support when `schema_version` changes.
+2. Add small unit tests for dataset validation and review selectors (`due` vs `confusing`).
+3. Expand Requests and Opinions card count first, then rebalance categories.
+
+
+## Follow-up fixes in this session
+
+1. **Schema migration safety**
+   - `StaticCardRepository` now supports a temporary migration fallback for legacy top-level array datasets in addition to `schema_version: 1` envelopes.
+   - Datasets with unsupported future schema versions are rejected safely.
+
+2. **Stronger card validation**
+   - Repository validation now checks key card fields (prompts, status, arrays, and primitive types), not just `id` and `phrase`.
+   - Malformed entries are filtered out to keep runtime behavior predictable.
+
+3. **Content polish**
+   - Fixed a minor punctuation issue in one contrast string (`We should...`).

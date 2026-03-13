@@ -1,14 +1,72 @@
-import type { Card, CardCategory, CardFilters } from "./cardTypes";
+import type { Card, CardCategory, CardDataset, CardFilters } from "./cardTypes";
 import type { CardRepository } from "./cardRepository";
+
+const SUPPORTED_SCHEMA_VERSION = 1;
+
+type LegacyCardDataset = Card[];
+type RawCardDataset = CardDataset | LegacyCardDataset;
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return !!value && typeof value === "object";
+}
+
+function isCard(value: unknown): value is Card {
+  if (!isRecord(value)) return false;
+
+  const prompts = value.prompts;
+  const status = value.status;
+
+  return (
+    typeof value.id === "string" &&
+    typeof value.category === "string" &&
+    typeof value.phrase === "string" &&
+    typeof value.function === "string" &&
+    typeof value.register === "string" &&
+    typeof value.pattern === "string" &&
+    typeof value.example === "string" &&
+    typeof value.notes === "string" &&
+    Array.isArray(value.tags) &&
+    Array.isArray(value.similar) &&
+    typeof value.contrast === "string" &&
+    isRecord(prompts) &&
+    typeof prompts.intent === "string" &&
+    typeof prompts.situation === "string" &&
+    (!("cloze" in prompts) || typeof prompts.cloze === "string") &&
+    typeof value.difficulty === "number" &&
+    isRecord(status) &&
+    typeof status.published === "boolean"
+  );
+}
+
+function readCardsFromDataset(data: RawCardDataset): Card[] {
+  if (Array.isArray(data)) {
+    console.warn("Legacy card dataset format detected; migrating in-memory to schema_version=1");
+    return data.filter(isCard);
+  }
+
+  if (!isRecord(data) || !Array.isArray(data.cards) || typeof data.schema_version !== "number") {
+    console.warn("Invalid card dataset format");
+    return [];
+  }
+
+  if (data.schema_version > SUPPORTED_SCHEMA_VERSION) {
+    console.warn(`Unsupported schema_version=${data.schema_version}; expected <= ${SUPPORTED_SCHEMA_VERSION}`);
+    return [];
+  }
+
+  return data.cards.filter(isCard);
+}
 
 export class StaticCardRepository implements CardRepository {
   private cache: Card[] | null = null;
 
-  private async loadCards() {
+  private async loadCards(): Promise<Card[]> {
     if (this.cache) return this.cache;
     const response = await fetch("/data/cards.json", { cache: "force-cache" });
     if (!response.ok) throw new Error("Failed to load card dataset");
-    this.cache = (await response.json()) as Card[];
+
+    const json = (await response.json()) as RawCardDataset;
+    this.cache = readCardsFromDataset(json);
     return this.cache;
   }
 
