@@ -8,7 +8,7 @@ export interface Card {
   id: string;
   category: CardCategory;
   phrase: string;
-  japanese_meaning: string;
+  japanese_meaning?: string;
   function: CardFunction;
   register: CardRegister;
   pattern: string;
@@ -18,9 +18,12 @@ export interface Card {
   similar: string[];
   contrast: string;
   prompts: {
-    meaning: string;
-    scenario: string;
-    cloze: string;
+    intent: string;
+    situation: string;
+    cloze?: string;
+  };
+  support?: {
+    jaHint?: string;
   };
   difficulty: number;
   audio?: {

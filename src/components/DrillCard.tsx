@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { Card } from "@/domain/cards/cardTypes";
 import type { ProgressItem, Rating } from "@/domain/progress/progressTypes";
+import { getJapaneseHint } from "@/domain/cards/cardSupport";
 import { computeNextDueDate } from "@/domain/review/reviewScheduler";
 import { audioResolver, progressRepository } from "@/domain/services";
 import { RevealPanel } from "./RevealPanel";
@@ -12,6 +13,7 @@ import { RatingButtons } from "./RatingButtons";
 export function DrillCard({ cards, initialProgress }: { cards: Card[]; initialProgress: ProgressItem[] }) {
   const [index, setIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
+  const [showHint, setShowHint] = useState(false);
   const [progressMap, setProgressMap] = useState(() => new Map(initialProgress.map((p) => [p.card_id, p])));
 
   const card = cards[index];
@@ -20,6 +22,7 @@ export function DrillCard({ cards, initialProgress }: { cards: Card[]; initialPr
 
   const nextCard = () => {
     setRevealed(false);
+    setShowHint(false);
     setIndex((prev) => (prev + 1 >= cards.length ? 0 : prev + 1));
   };
 
@@ -50,14 +53,27 @@ export function DrillCard({ cards, initialProgress }: { cards: Card[]; initialPr
     return <div className="panel">No cards available.</div>;
   }
 
+  const japaneseHint = getJapaneseHint(card);
+
   return (
     <div className="grid">
       <div className="panel">
         <p className="small" style={{ marginTop: 0 }}>
           Card {index + 1}/{cards.length} · left {queueLeft}
         </p>
-        <h2 style={{ marginBottom: 8 }}>{card.prompts.meaning}</h2>
-        <p className="small">{card.prompts.scenario}</p>
+        <h2 style={{ marginBottom: 8 }}>{card.prompts.intent}</h2>
+        <p className="small" style={{ marginBottom: 6 }}>
+          {card.prompts.situation}
+        </p>
+        {card.prompts.cloze ? <p className="small">{card.prompts.cloze}</p> : null}
+        {japaneseHint ? (
+          <div style={{ marginBottom: 10 }}>
+            <button className="button ghost" onClick={() => setShowHint((prev) => !prev)}>
+              {showHint ? "Hide hint" : "Hint"}
+            </button>
+            {showHint ? <p className="small" style={{ marginBottom: 0 }}>{japaneseHint}</p> : null}
+          </div>
+        ) : null}
         {!revealed ? (
           <button className="button primary" style={{ width: "100%" }} onClick={() => setRevealed(true)}>
             Reveal Answer
