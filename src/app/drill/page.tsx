@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Suspense, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import { DrillCard } from "@/components/DrillCard";
@@ -48,12 +49,57 @@ function diversifyByCategory(cards: Card[]): Card[] {
 function DrillPageContent() {
   const searchParams = useSearchParams();
   const mode = parseMode(searchParams.get("mode"));
-  const { cards, progress } = useParlaData();
+  const { cards, progress, loading, loadState } = useParlaData();
 
   const drillCards = useMemo(() => {
     const selected = selectDrillCards(cards, progress, mode);
     return mode === "all" ? diversifyByCategory(selected) : selected;
   }, [cards, progress, mode]);
+
+  if (loading) {
+    return (
+      <main>
+        <div className="panel">
+          <p className="small" style={{ margin: 0 }}>
+            Loading cards...
+          </p>
+        </div>
+      </main>
+    );
+  }
+
+  if (loadState === "error") {
+    return (
+      <main>
+        <div className="panel">
+          <p className="small" style={{ marginTop: 0 }}>
+            Failed to load cards. Please refresh and try again.
+          </p>
+          <Link href="/" className="button ghost">Back to home</Link>
+        </div>
+      </main>
+    );
+  }
+
+  if (drillCards.length === 0) {
+    const modeLabel = mode.replaceAll("_", " ");
+    return (
+      <main>
+        <div className="panel">
+          <p className="small" style={{ marginTop: 0 }}>
+            No cards match <strong>{modeLabel}</strong> right now.
+          </p>
+          <p className="small">
+            You can still study from all published cards.
+          </p>
+          <div style={{ display: "flex", gap: 10 }}>
+            <Link href="/drill?mode=all" className="button primary">Start all-cards drill</Link>
+            <Link href="/review" className="button ghost">Go to review</Link>
+          </div>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main>
