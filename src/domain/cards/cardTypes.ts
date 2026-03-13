@@ -8,7 +8,6 @@ export interface Card {
   id: string;
   category: CardCategory;
   phrase: string;
-  japanese_meaning?: string;
   function: CardFunction;
   register: CardRegister;
   pattern: string;
@@ -34,6 +33,11 @@ export interface Card {
   status: {
     published: boolean;
   };
+}
+
+export interface CardDataset {
+  schema_version: number;
+  cards: Card[];
 }
 
 export interface CardFilters {
