@@ -23,6 +23,15 @@ This iteration keeps that flash-drill loop intact, but shifts the starter conten
 - Optional static audio URLs per card
 - Local-first persistence via `localStorage`
 
+## Home flow
+
+The home screen is intentionally lightweight and centered on the daily study start:
+
+- **Today** is the main action surface with the primary drill CTA.
+- A compact inline summary shows reviewed-today, due, and goal progress.
+- **Quick access** is limited to secondary entry points such as Browse and, only when relevant, Hard cards.
+- Empty home sections are hidden instead of rendered as dashboard placeholders.
+
 ## Product direction
 
 Parla is now designed around two complementary layers:

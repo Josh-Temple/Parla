@@ -2,39 +2,34 @@
 
 ## Session summary
 
-This session added a lightweight staged review layer on top of Parla's existing fast recall loop without introducing a backend or a full SRS.
+This session simplified Parla's home screen so it behaves more like a focused daily drill entry point and less like a stacked dashboard.
 
 ## What changed
 
-1. **Progress schema extension**
-   - Added optional progress fields:
-     - `interval_step`
-     - `same_day_requeue_count`
-     - `last_interval_days`
-   - `LocalProgressRepository` now normalizes missing fields on read/write so old saved progress still works.
+1. **Home information architecture refactor**
+   - Reduced the home screen to three layers:
+     - Today / main action
+     - Lightweight progress summary
+     - Optional quick access
+   - Removed the previous stacked home sections for Foundation layer, Continue where I left off, Categories, and standalone Want to use.
 
-2. **Simple staged scheduler**
-   - `reviewScheduler.ts` now uses a fixed ladder:
-     - same-session
-     - 1 day
-     - 3 days
-     - 7 days
-     - 14 days
-     - 30 days
-   - `hard` resets streak, keeps weak cards in the same-session stage, and otherwise moves a card back one step.
-   - `close` advances one step.
-   - `easy` advances two steps.
+2. **Primary daily action emphasis**
+   - The top block now centers on starting today's drill.
+   - Shows compact daily metrics for goal, due, and new cards.
+   - Keeps a single primary CTA (`Start drill`) plus a secondary due-review CTA only when due cards exist.
 
-3. **Same-session requeue in drill flow**
-   - Weak/new cards rated `hard` are reinserted a few cards later in the current drill session.
-   - Requeue stays lightweight and in-memory for the current session while still persisting the updated progress snapshot locally.
+3. **Conditional rendering cleanup**
+   - The due-review button is hidden when there are no due cards.
+   - The New stat is hidden when there are no unseen cards.
+   - Hard cards only appear in Quick access when the count is non-zero.
+   - Empty dashboard-style sections were removed instead of being shown with zeros.
 
-4. **Due-first daily flow**
-   - The all-cards drill now prioritizes due cards first, then unseen cards, then later scheduled cards.
-   - Category diversification is preserved within the due-first ordering bands.
+4. **Visual simplification**
+   - Added light home-specific layout styles for a calmer hierarchy without changing the app's overall visual language.
+   - Replaced stacked heavy panels with one main panel, one inline summary line, and one smaller quick-access panel.
 
 5. **Docs refresh**
-   - `README.md` now documents the lightweight staged review behavior and backward-compatible migration approach.
+   - README now documents the simplified daily-first home flow.
 
 ## Validation run
 
@@ -43,6 +38,6 @@ This session added a lightweight staged review layer on top of Parla's existing 
 
 ## Suggested next steps
 
-1. Add focused unit tests around `computeNextReview` for each rating and edge step.
-2. Consider a tiny UI hint when a card is requeued for the same session if users need more transparency.
-3. If daily flow needs stronger pacing later, add a very small cap for new cards introduced before finishing due cards.
+1. If users still need more resume context, consider deriving a true “resume state” from an in-progress drill rather than restoring a generic progress block on Home.
+2. Consider whether the Review page should also hide empty sections, since Home now assumes Review is the place for secondary browse/review flows.
+3. If product direction sharpens around a customizable daily target, replace the temporary fixed home goal with a real persisted setting.
