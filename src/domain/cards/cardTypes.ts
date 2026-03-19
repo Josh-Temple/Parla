@@ -1,8 +1,31 @@
-export type CardFunction = "request" | "refusal" | "opinion" | "softening" | "clarification" | "agreement" | "disagreement" | "suggestion";
+export type CardFunction =
+  | "request"
+  | "refusal"
+  | "opinion"
+  | "softening"
+  | "clarification"
+  | "agreement"
+  | "disagreement"
+  | "suggestion"
+  | "identity"
+  | "intent"
+  | "daily"
+  | "repair"
+  | "question";
 
 export type CardRegister = "casual" | "neutral" | "polite" | "formal";
 
-export type CardCategory = "Requests" | "Refusals / Limits" | "Opinions" | "Softeners / Cushioning";
+export type CardCategory =
+  | "Requests"
+  | "Refusals / Limits"
+  | "Opinions"
+  | "Softeners / Cushioning"
+  | "Core Patterns"
+  | "Intent / Plans"
+  | "Daily Actions / Time"
+  | "Opinions / Uncertainty"
+  | "Repair / Survival"
+  | "Conversation Questions";
 
 export interface Card {
   id: string;
@@ -24,6 +47,11 @@ export interface Card {
   support?: {
     jaHint?: string;
   };
+  family?: string;
+  slots?: string[];
+  quick_variations?: string[];
+  practice_note?: string;
+  ai_transfer_prompt?: string;
   difficulty: number;
   audio?: {
     phraseUrl?: string;

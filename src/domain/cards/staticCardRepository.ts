@@ -10,11 +10,17 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return !!value && typeof value === "object";
 }
 
+function isStringArray(value: unknown): value is string[] {
+  return Array.isArray(value) && value.every((item) => typeof item === "string");
+}
+
 function isCard(value: unknown): value is Card {
   if (!isRecord(value)) return false;
 
   const prompts = value.prompts;
   const status = value.status;
+  const support = value.support;
+  const audio = value.audio;
 
   return (
     typeof value.id === "string" &&
@@ -25,14 +31,21 @@ function isCard(value: unknown): value is Card {
     typeof value.pattern === "string" &&
     typeof value.example === "string" &&
     typeof value.notes === "string" &&
-    Array.isArray(value.tags) &&
-    Array.isArray(value.similar) &&
+    isStringArray(value.tags) &&
+    isStringArray(value.similar) &&
     typeof value.contrast === "string" &&
     isRecord(prompts) &&
     typeof prompts.intent === "string" &&
     typeof prompts.situation === "string" &&
     (!("cloze" in prompts) || typeof prompts.cloze === "string") &&
+    (!("support" in value) || !support || (isRecord(support) && (!("jaHint" in support) || typeof support.jaHint === "string"))) &&
+    (!("family" in value) || typeof value.family === "string") &&
+    (!("slots" in value) || isStringArray(value.slots)) &&
+    (!("quick_variations" in value) || isStringArray(value.quick_variations)) &&
+    (!("practice_note" in value) || typeof value.practice_note === "string") &&
+    (!("ai_transfer_prompt" in value) || typeof value.ai_transfer_prompt === "string") &&
     typeof value.difficulty === "number" &&
+    (!("audio" in value) || !audio || (isRecord(audio) && (!("phraseUrl" in audio) || typeof audio.phraseUrl === "string") && (!("exampleUrl" in audio) || typeof audio.exampleUrl === "string") && (!("voice" in audio) || typeof audio.voice === "string"))) &&
     isRecord(status) &&
     typeof status.published === "boolean"
   );

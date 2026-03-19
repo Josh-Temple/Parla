@@ -262,6 +262,1557 @@
       "support": {
         "jaHint": "間違っているかもしれませんが、これはリスクが高そうです"
       }
+    },
+    {
+      "id": "core_001",
+      "category": "Core Patterns",
+      "phrase": "I am from Osaka.",
+      "function": "identity",
+      "register": "neutral",
+      "pattern": "I am from + place.",
+      "example": "I am from Osaka, but I live in Tokyo now.",
+      "notes": "A basic identity pattern for introductions and follow-up talk.",
+      "tags": [
+        "core",
+        "identity",
+        "intro"
+      ],
+      "similar": [
+        "I grew up in ...",
+        "I live in ..."
+      ],
+      "contrast": "Use this for origin, not your current home.",
+      "prompts": {
+        "intent": "say where you are from",
+        "situation": "You are introducing yourself to someone new.",
+        "cloze": "I am from ___."
+      },
+      "support": {
+        "jaHint": "私は大阪出身です"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "self / background",
+      "slots": [
+        "place"
+      ],
+      "quick_variations": [
+        "I am from Kyoto.",
+        "I am originally from Fukuoka.",
+        "Where are you from?"
+      ],
+      "practice_note": "Swap the place and add originally for background.",
+      "ai_transfer_prompt": "Tell an AI where you are from and ask where it thinks you should visit nearby."
+    },
+    {
+      "id": "core_002",
+      "category": "Core Patterns",
+      "phrase": "I live in Yokohama.",
+      "function": "identity",
+      "register": "neutral",
+      "pattern": "I live in + place.",
+      "example": "I live in Yokohama, so I take the train every day.",
+      "notes": "Useful for current life details and easy follow-up questions.",
+      "tags": [
+        "core",
+        "identity",
+        "daily"
+      ],
+      "similar": [
+        "I am from ...",
+        "I moved to ..."
+      ],
+      "contrast": "Use this for where you live now.",
+      "prompts": {
+        "intent": "say where you live",
+        "situation": "Someone asks about your current city.",
+        "cloze": "I live in ___."
+      },
+      "support": {
+        "jaHint": "私は横浜に住んでいます"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "self / background",
+      "slots": [
+        "place"
+      ],
+      "quick_variations": [
+        "I live near the station.",
+        "I live with my family.",
+        "I used to live in Kobe."
+      ],
+      "practice_note": "Change the place, nearby location, or who you live with.",
+      "ai_transfer_prompt": "Describe where you live and ask an AI for simple small-talk follow-up questions."
+    },
+    {
+      "id": "core_003",
+      "category": "Core Patterns",
+      "phrase": "I work in design.",
+      "function": "identity",
+      "register": "neutral",
+      "pattern": "I work in + field.",
+      "example": "I work in design, mainly on mobile apps.",
+      "notes": "Helps learners talk about their job without memorizing a long sentence.",
+      "tags": [
+        "core",
+        "identity",
+        "work"
+      ],
+      "similar": [
+        "I work as a ...",
+        "I am in ..."
+      ],
+      "contrast": "In + field names the area, not your exact job title.",
+      "prompts": {
+        "intent": "say what field you work in",
+        "situation": "You want to explain your work in a simple way.",
+        "cloze": "I work in ___."
+      },
+      "support": {
+        "jaHint": "私はデザインの仕事をしています"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "self / background",
+      "slots": [
+        "field"
+      ],
+      "quick_variations": [
+        "I work in marketing.",
+        "I work in education.",
+        "I used to work in sales."
+      ],
+      "practice_note": "Swap the field or change the tense for past experience.",
+      "ai_transfer_prompt": "Tell an AI what field you work in and ask for three simple follow-up questions."
+    },
+    {
+      "id": "core_004",
+      "category": "Core Patterns",
+      "phrase": "I study English every day.",
+      "function": "identity",
+      "register": "neutral",
+      "pattern": "I study + subject + time.",
+      "example": "I study English every day on the train.",
+      "notes": "A strong beginner pattern for habits and personal goals.",
+      "tags": [
+        "core",
+        "study",
+        "daily"
+      ],
+      "similar": [
+        "I am studying ...",
+        "I learned ..."
+      ],
+      "contrast": "Simple present works well for regular study habits.",
+      "prompts": {
+        "intent": "say what you study",
+        "situation": "You want to talk about your learning routine.",
+        "cloze": "I study ___ every day."
+      },
+      "support": {
+        "jaHint": "私は毎日英語を勉強しています"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "self / background",
+      "slots": [
+        "subject",
+        "time"
+      ],
+      "quick_variations": [
+        "I study English at night.",
+        "I study data science online.",
+        "What do you study?"
+      ],
+      "practice_note": "Swap the subject or add a time phrase for habit detail.",
+      "ai_transfer_prompt": "Tell an AI what you study and ask it to keep asking easy questions about your routine."
+    },
+    {
+      "id": "core_005",
+      "category": "Core Patterns",
+      "phrase": "I like cooking at home.",
+      "function": "identity",
+      "register": "casual",
+      "pattern": "I like + noun / -ing.",
+      "example": "I like cooking at home because it helps me relax.",
+      "notes": "One of the easiest ways to share personality and start small talk.",
+      "tags": [
+        "core",
+        "identity",
+        "hobby"
+      ],
+      "similar": [
+        "I enjoy ...",
+        "I am interested in ..."
+      ],
+      "contrast": "Like is simpler and more casual than enjoy.",
+      "prompts": {
+        "intent": "say what you like",
+        "situation": "You want to share a hobby or preference.",
+        "cloze": "I like ___."
+      },
+      "support": {
+        "jaHint": "私は家で料理するのが好きです"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "self / background",
+      "slots": [
+        "noun or activity"
+      ],
+      "quick_variations": [
+        "I like music.",
+        "I like running in the morning.",
+        "Do you like spicy food?"
+      ],
+      "practice_note": "Use a noun or an -ing activity after like.",
+      "ai_transfer_prompt": "Tell an AI what you like and ask it to suggest simple related questions."
+    },
+    {
+      "id": "core_006",
+      "category": "Core Patterns",
+      "phrase": "I am interested in local history.",
+      "function": "identity",
+      "register": "neutral",
+      "pattern": "I am interested in + topic.",
+      "example": "I am interested in local history, so I visit small museums.",
+      "notes": "Useful when you want to sound a little more focused than I like.",
+      "tags": [
+        "core",
+        "identity",
+        "interest"
+      ],
+      "similar": [
+        "I like ...",
+        "I am curious about ..."
+      ],
+      "contrast": "Interested in highlights a topic that holds your attention.",
+      "prompts": {
+        "intent": "say what interests you",
+        "situation": "You want to mention a personal interest clearly.",
+        "cloze": "I am interested in ___."
+      },
+      "support": {
+        "jaHint": "私は地域の歴史に興味があります"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "self / background",
+      "slots": [
+        "topic"
+      ],
+      "quick_variations": [
+        "I am interested in photography.",
+        "I am interested in how people learn languages.",
+        "What are you interested in?"
+      ],
+      "practice_note": "Good for topics, fields, and longer ideas after in.",
+      "ai_transfer_prompt": "Share one interest with an AI and ask it to keep the conversation at easy level."
+    },
+    {
+      "id": "core_007",
+      "category": "Intent / Plans",
+      "phrase": "I want to improve my speaking.",
+      "function": "intent",
+      "register": "neutral",
+      "pattern": "I want to + verb.",
+      "example": "I want to improve my speaking before my trip.",
+      "notes": "A high-frequency goal pattern learners can reuse everywhere.",
+      "tags": [
+        "core",
+        "intent",
+        "goal"
+      ],
+      "similar": [
+        "I hope to ...",
+        "I am trying to ..."
+      ],
+      "contrast": "Want to is direct and common for simple goals.",
+      "prompts": {
+        "intent": "say what you want to do",
+        "situation": "You want to talk about a goal.",
+        "cloze": "I want to ___."
+      },
+      "support": {
+        "jaHint": "私はスピーキングを伸ばしたいです"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "intent / need / plan",
+      "slots": [
+        "verb"
+      ],
+      "quick_variations": [
+        "I want to ask you something.",
+        "I want to travel more.",
+        "Do you want to join?"
+      ],
+      "practice_note": "Change the verb to express goals, plans, or invitations.",
+      "ai_transfer_prompt": "Tell an AI one thing you want to do this month and ask for easy follow-up questions."
+    },
+    {
+      "id": "core_008",
+      "category": "Intent / Plans",
+      "phrase": "I need more time.",
+      "function": "intent",
+      "register": "neutral",
+      "pattern": "I need + noun.",
+      "example": "I need more time to finish this.",
+      "notes": "Short, practical, and useful for daily needs or simple requests.",
+      "tags": [
+        "core",
+        "intent",
+        "need"
+      ],
+      "similar": [
+        "I need to ...",
+        "I am looking for ..."
+      ],
+      "contrast": "Use a noun after need when the thing itself is the focus.",
+      "prompts": {
+        "intent": "say what you need",
+        "situation": "You want to state a simple need clearly.",
+        "cloze": "I need ___."
+      },
+      "support": {
+        "jaHint": "もう少し時間が必要です"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "intent / need / plan",
+      "slots": [
+        "noun"
+      ],
+      "quick_variations": [
+        "I need help.",
+        "I need a break.",
+        "I need to think about it."
+      ],
+      "practice_note": "Use a noun for things and need to + verb for actions.",
+      "ai_transfer_prompt": "Tell an AI what you need today and ask it to ask simple clarification questions."
+    },
+    {
+      "id": "core_009",
+      "category": "Intent / Plans",
+      "phrase": "I am trying to wake up earlier.",
+      "function": "intent",
+      "register": "neutral",
+      "pattern": "I am trying to + verb.",
+      "example": "I am trying to wake up earlier this week.",
+      "notes": "Shows effort and ongoing change, which makes conversations more personal.",
+      "tags": [
+        "core",
+        "intent",
+        "habit"
+      ],
+      "similar": [
+        "I want to ...",
+        "I am working on ..."
+      ],
+      "contrast": "Trying to suggests effort, not just desire.",
+      "prompts": {
+        "intent": "say what you are trying to do",
+        "situation": "You want to describe an effort or challenge.",
+        "cloze": "I am trying to ___."
+      },
+      "support": {
+        "jaHint": "私はもっと早く起きようとしています"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "intent / need / plan",
+      "slots": [
+        "verb"
+      ],
+      "quick_variations": [
+        "I am trying to eat better.",
+        "I am trying to speak more English.",
+        "I am still trying to decide."
+      ],
+      "practice_note": "Use this when the change is in progress and not easy yet.",
+      "ai_transfer_prompt": "Tell an AI what habit you are trying to build and ask it to keep the conversation simple."
+    },
+    {
+      "id": "core_010",
+      "category": "Intent / Plans",
+      "phrase": "I am going to call her tonight.",
+      "function": "intent",
+      "register": "neutral",
+      "pattern": "I am going to + verb.",
+      "example": "I am going to call her tonight after dinner.",
+      "notes": "A core future plan pattern for near-term actions.",
+      "tags": [
+        "core",
+        "intent",
+        "plan"
+      ],
+      "similar": [
+        "I will ...",
+        "I plan to ..."
+      ],
+      "contrast": "Going to feels natural for a plan you already have in mind.",
+      "prompts": {
+        "intent": "say what you are going to do",
+        "situation": "You want to describe a near-future plan.",
+        "cloze": "I am going to ___ tonight."
+      },
+      "support": {
+        "jaHint": "私は今夜彼女に電話するつもりです"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "intent / need / plan",
+      "slots": [
+        "verb",
+        "time"
+      ],
+      "quick_variations": [
+        "I am going to cook tonight.",
+        "I am going to study after work.",
+        "Are you going to be there?"
+      ],
+      "practice_note": "Add a time phrase to make the plan feel more real.",
+      "ai_transfer_prompt": "Tell an AI your plan for tonight and ask for two natural follow-up questions."
+    },
+    {
+      "id": "core_011",
+      "category": "Intent / Plans",
+      "phrase": "I want to ask you something.",
+      "function": "intent",
+      "register": "neutral",
+      "pattern": "I want to ask + person + something / a question.",
+      "example": "I want to ask you something about your trip.",
+      "notes": "Great bridge into a question without sounding abrupt.",
+      "tags": [
+        "core",
+        "intent",
+        "question"
+      ],
+      "similar": [
+        "Can I ask ...?",
+        "I have a question about ..."
+      ],
+      "contrast": "This sets up a question before you ask it.",
+      "prompts": {
+        "intent": "set up a question",
+        "situation": "You want to ask something smoothly.",
+        "cloze": "I want to ask you ___."
+      },
+      "support": {
+        "jaHint": "あなたにちょっと聞きたいことがあります"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "intent / need / plan",
+      "slots": [
+        "person",
+        "thing"
+      ],
+      "quick_variations": [
+        "I want to ask you a quick question.",
+        "I wanted to ask about your class.",
+        "Can I ask you something?"
+      ],
+      "practice_note": "Swap the person or specify question for a softer lead-in.",
+      "ai_transfer_prompt": "Start an AI chat by saying you want to ask something, then continue with one simple question."
+    },
+    {
+      "id": "core_012",
+      "category": "Intent / Plans",
+      "phrase": "I am looking for a quiet cafe.",
+      "function": "intent",
+      "register": "neutral",
+      "pattern": "I am looking for + noun.",
+      "example": "I am looking for a quiet cafe near the station.",
+      "notes": "Useful for travel, daily life, and practical needs.",
+      "tags": [
+        "core",
+        "intent",
+        "search"
+      ],
+      "similar": [
+        "I need ...",
+        "Do you know a good ...?"
+      ],
+      "contrast": "Looking for focuses on searching, not just needing.",
+      "prompts": {
+        "intent": "say what you are looking for",
+        "situation": "You need to find something specific.",
+        "cloze": "I am looking for ___."
+      },
+      "support": {
+        "jaHint": "静かなカフェを探しています"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "intent / need / plan",
+      "slots": [
+        "noun"
+      ],
+      "quick_variations": [
+        "I am looking for a book on grammar.",
+        "I am looking for a cheaper option.",
+        "What are you looking for?"
+      ],
+      "practice_note": "Good for places, objects, and options you want to find.",
+      "ai_transfer_prompt": "Tell an AI what you are looking for and ask it to suggest easy follow-up questions."
+    },
+    {
+      "id": "core_013",
+      "category": "Daily Actions / Time",
+      "phrase": "I usually study before work.",
+      "function": "daily",
+      "register": "neutral",
+      "pattern": "I usually + verb.",
+      "example": "I usually study before work for twenty minutes.",
+      "notes": "A strong habit pattern that easily expands into routine talk.",
+      "tags": [
+        "core",
+        "daily",
+        "habit"
+      ],
+      "similar": [
+        "I often ...",
+        "I tend to ..."
+      ],
+      "contrast": "Usually suggests your normal pattern most of the time.",
+      "prompts": {
+        "intent": "describe your usual routine",
+        "situation": "You want to talk about what you normally do.",
+        "cloze": "I usually ___ before work."
+      },
+      "support": {
+        "jaHint": "私はたいてい仕事前に勉強します"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "daily actions / time",
+      "slots": [
+        "verb",
+        "time"
+      ],
+      "quick_variations": [
+        "I usually cook at home.",
+        "I usually walk after dinner.",
+        "What do you usually do on weekends?"
+      ],
+      "practice_note": "Add a time phrase or place to make the routine specific.",
+      "ai_transfer_prompt": "Tell an AI what you usually do in the morning and ask it to keep asking easy routine questions."
+    },
+    {
+      "id": "core_014",
+      "category": "Daily Actions / Time",
+      "phrase": "I often listen to podcasts.",
+      "function": "daily",
+      "register": "neutral",
+      "pattern": "I often + verb.",
+      "example": "I often listen to podcasts while I walk.",
+      "notes": "Easy for talking about frequency without sounding too absolute.",
+      "tags": [
+        "core",
+        "daily",
+        "frequency"
+      ],
+      "similar": [
+        "I usually ...",
+        "Sometimes I ..."
+      ],
+      "contrast": "Often is frequent, but less fixed than usually.",
+      "prompts": {
+        "intent": "describe something you often do",
+        "situation": "You want to share a repeated action.",
+        "cloze": "I often ___."
+      },
+      "support": {
+        "jaHint": "私はよくポッドキャストを聞きます"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "daily actions / time",
+      "slots": [
+        "verb"
+      ],
+      "quick_variations": [
+        "I often read on the train.",
+        "I often cook on Sundays.",
+        "How often do you exercise?"
+      ],
+      "practice_note": "Use often when the action is common but not always regular.",
+      "ai_transfer_prompt": "Tell an AI something you often do and ask it to compare with other simple habits."
+    },
+    {
+      "id": "core_015",
+      "category": "Daily Actions / Time",
+      "phrase": "I read on the train.",
+      "function": "daily",
+      "register": "neutral",
+      "pattern": "I + verb + place / time.",
+      "example": "I read on the train, so short articles are best for me.",
+      "notes": "Simple action sentences are ideal for early output practice.",
+      "tags": [
+        "core",
+        "daily",
+        "action"
+      ],
+      "similar": [
+        "I usually read ...",
+        "I am reading ..."
+      ],
+      "contrast": "This simple present pattern works for routines and general facts.",
+      "prompts": {
+        "intent": "say a simple daily action",
+        "situation": "You want to explain a small habit simply.",
+        "cloze": "I read ___."
+      },
+      "support": {
+        "jaHint": "私は電車で読みます"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "daily actions / time",
+      "slots": [
+        "verb",
+        "place or time"
+      ],
+      "quick_variations": [
+        "I read before bed.",
+        "I read in English sometimes.",
+        "What do you read these days?"
+      ],
+      "practice_note": "Swap the verb or add where and when you do it.",
+      "ai_transfer_prompt": "Tell an AI one simple action from your day and ask it to ask one short follow-up."
+    },
+    {
+      "id": "core_016",
+      "category": "Daily Actions / Time",
+      "phrase": "I practiced speaking yesterday.",
+      "function": "daily",
+      "register": "neutral",
+      "pattern": "I practiced + noun / -ing + time.",
+      "example": "I practiced speaking yesterday with a study partner.",
+      "notes": "Good for short reflections on what you did recently.",
+      "tags": [
+        "core",
+        "daily",
+        "past"
+      ],
+      "similar": [
+        "I studied ...",
+        "I worked on ..."
+      ],
+      "contrast": "Practiced emphasizes training or repeated effort.",
+      "prompts": {
+        "intent": "say what you practiced",
+        "situation": "You want to talk about recent study or training.",
+        "cloze": "I practiced ___ yesterday."
+      },
+      "support": {
+        "jaHint": "私は昨日スピーキングを練習しました"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "daily actions / time",
+      "slots": [
+        "noun or activity",
+        "time"
+      ],
+      "quick_variations": [
+        "I practiced pronunciation last night.",
+        "I practiced writing after class.",
+        "Have you practiced today?"
+      ],
+      "practice_note": "Use a skill noun or an -ing form after practiced.",
+      "ai_transfer_prompt": "Tell an AI what you practiced recently and ask it to respond with easy encouragement questions."
+    },
+    {
+      "id": "core_017",
+      "category": "Daily Actions / Time",
+      "phrase": "I learned a new word today.",
+      "function": "daily",
+      "register": "neutral",
+      "pattern": "I learned + noun + time.",
+      "example": "I learned a new word today from a podcast.",
+      "notes": "A clear pattern for sharing progress in a low-pressure way.",
+      "tags": [
+        "core",
+        "daily",
+        "learning"
+      ],
+      "similar": [
+        "I found out ...",
+        "I studied ..."
+      ],
+      "contrast": "Learned highlights a result, not just time spent.",
+      "prompts": {
+        "intent": "say what you learned",
+        "situation": "You want to mention something new you learned.",
+        "cloze": "I learned ___ today."
+      },
+      "support": {
+        "jaHint": "私は今日新しい単語を覚えました"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "daily actions / time",
+      "slots": [
+        "noun",
+        "time"
+      ],
+      "quick_variations": [
+        "I learned a useful phrase today.",
+        "I learned how to use this app.",
+        "What did you learn this week?"
+      ],
+      "practice_note": "Good for words, skills, facts, and how-to ideas.",
+      "ai_transfer_prompt": "Tell an AI one thing you learned and ask it to ask you a simple question about it."
+    },
+    {
+      "id": "core_018",
+      "category": "Daily Actions / Time",
+      "phrase": "I have been busy lately.",
+      "function": "daily",
+      "register": "neutral",
+      "pattern": "I have been + adjective + lately.",
+      "example": "I have been busy lately, so I study in short bursts.",
+      "notes": "A useful bridge into recent life updates.",
+      "tags": [
+        "core",
+        "daily",
+        "recent"
+      ],
+      "similar": [
+        "I have been working on ...",
+        "Recently, I ..."
+      ],
+      "contrast": "Have been connects the recent past to now.",
+      "prompts": {
+        "intent": "describe your recent state",
+        "situation": "You want to explain how life has been recently.",
+        "cloze": "I have been ___ lately."
+      },
+      "support": {
+        "jaHint": "最近ずっと忙しいです"
+      },
+      "difficulty": 2,
+      "status": {
+        "published": true
+      },
+      "family": "daily actions / time",
+      "slots": [
+        "adjective"
+      ],
+      "quick_variations": [
+        "I have been tired lately.",
+        "I have been more confident lately.",
+        "How have you been lately?"
+      ],
+      "practice_note": "Start with an adjective, then move to have been + -ing later.",
+      "ai_transfer_prompt": "Tell an AI how you have been lately and ask it to keep the conversation simple and supportive."
+    },
+    {
+      "id": "core_019",
+      "category": "Opinions / Uncertainty",
+      "phrase": "I think this will help.",
+      "function": "opinion",
+      "register": "neutral",
+      "pattern": "I think + clause.",
+      "example": "I think this will help if we keep it simple.",
+      "notes": "A core opinion pattern that learners need early and often.",
+      "tags": [
+        "core",
+        "opinion",
+        "thinking"
+      ],
+      "similar": [
+        "In my view, ...",
+        "It seems ..."
+      ],
+      "contrast": "Think is direct, common, and flexible in conversation.",
+      "prompts": {
+        "intent": "say what you think",
+        "situation": "You want to share a simple opinion.",
+        "cloze": "I think ___."
+      },
+      "support": {
+        "jaHint": "私はこれが役に立つと思います"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "opinions / uncertainty / comparison",
+      "slots": [
+        "clause"
+      ],
+      "quick_variations": [
+        "I think it is a good idea.",
+        "I think we need more time.",
+        "Why do you think so?"
+      ],
+      "practice_note": "Add a full idea after think; keep it short at first.",
+      "ai_transfer_prompt": "Tell an AI one opinion and ask it to respond with simple why questions."
+    },
+    {
+      "id": "core_020",
+      "category": "Opinions / Uncertainty",
+      "phrase": "I do not think that is true.",
+      "function": "opinion",
+      "register": "neutral",
+      "pattern": "I do not think + clause.",
+      "example": "I do not think that is true for everyone.",
+      "notes": "Lets learners disagree more softly than a blunt no.",
+      "tags": [
+        "core",
+        "opinion",
+        "disagreement"
+      ],
+      "similar": [
+        "I am not sure about that.",
+        "I disagree."
+      ],
+      "contrast": "This is softer than saying That is not true.",
+      "prompts": {
+        "intent": "say what you do not think",
+        "situation": "You want to disagree without sounding harsh.",
+        "cloze": "I do not think ___."
+      },
+      "support": {
+        "jaHint": "私はそれが本当だとは思いません"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "opinions / uncertainty / comparison",
+      "slots": [
+        "clause"
+      ],
+      "quick_variations": [
+        "I do not think we are ready yet.",
+        "I do not think it is a big problem.",
+        "I do not think I can make it."
+      ],
+      "practice_note": "Use it to disagree, doubt, or reject an idea more gently.",
+      "ai_transfer_prompt": "Practice soft disagreement with an AI by giving one opinion you do not agree with."
+    },
+    {
+      "id": "core_021",
+      "category": "Opinions / Uncertainty",
+      "phrase": "It seems better this way.",
+      "function": "opinion",
+      "register": "neutral",
+      "pattern": "It seems + adjective / clause.",
+      "example": "It seems better this way because it is simpler.",
+      "notes": "Useful when you want to sound less absolute.",
+      "tags": [
+        "core",
+        "opinion",
+        "softening"
+      ],
+      "similar": [
+        "I think ...",
+        "It looks like ..."
+      ],
+      "contrast": "Seems sounds a little less certain than think.",
+      "prompts": {
+        "intent": "give a soft opinion",
+        "situation": "You want to suggest an impression, not a hard claim.",
+        "cloze": "It seems ___."
+      },
+      "support": {
+        "jaHint": "こちらのほうがよさそうです"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "opinions / uncertainty / comparison",
+      "slots": [
+        "adjective or clause"
+      ],
+      "quick_variations": [
+        "It seems fine to me.",
+        "It seems like a good time.",
+        "It seems we are almost done."
+      ],
+      "practice_note": "Use seems when you want to leave room for uncertainty.",
+      "ai_transfer_prompt": "Give an AI a soft opinion with seems and ask it to reply with easy alternatives."
+    },
+    {
+      "id": "core_022",
+      "category": "Opinions / Uncertainty",
+      "phrase": "I am not sure yet.",
+      "function": "opinion",
+      "register": "neutral",
+      "pattern": "I am not sure + clause / yet.",
+      "example": "I am not sure yet, but I will check tonight.",
+      "notes": "Essential survival language for uncertainty and buying time.",
+      "tags": [
+        "core",
+        "opinion",
+        "uncertainty"
+      ],
+      "similar": [
+        "I do not know yet.",
+        "It depends."
+      ],
+      "contrast": "Not sure is softer and more conversational than I do not know.",
+      "prompts": {
+        "intent": "say you are unsure",
+        "situation": "You need time before giving an answer.",
+        "cloze": "I am not sure ___."
+      },
+      "support": {
+        "jaHint": "まだよくわかりません"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "opinions / uncertainty / comparison",
+      "slots": [
+        "clause or timing"
+      ],
+      "quick_variations": [
+        "I am not sure about that.",
+        "I am not sure if I can go.",
+        "I am still not sure."
+      ],
+      "practice_note": "Use about / if to add the topic you are unsure about.",
+      "ai_transfer_prompt": "Practice uncertainty with an AI by answering a few questions with I am not sure and short reasons."
+    },
+    {
+      "id": "core_023",
+      "category": "Opinions / Uncertainty",
+      "phrase": "It depends on the situation.",
+      "function": "opinion",
+      "register": "neutral",
+      "pattern": "It depends on + noun.",
+      "example": "It depends on the situation and how much time we have.",
+      "notes": "Good for nuanced answers without a long explanation.",
+      "tags": [
+        "core",
+        "opinion",
+        "nuance"
+      ],
+      "similar": [
+        "Maybe.",
+        "I am not sure."
+      ],
+      "contrast": "Depends shows that the answer changes with conditions.",
+      "prompts": {
+        "intent": "say the answer changes",
+        "situation": "You want to avoid an overly simple yes or no.",
+        "cloze": "It depends on ___."
+      },
+      "support": {
+        "jaHint": "状況によります"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "opinions / uncertainty / comparison",
+      "slots": [
+        "noun"
+      ],
+      "quick_variations": [
+        "It depends on the weather.",
+        "It depends on your goal.",
+        "It really depends."
+      ],
+      "practice_note": "Add on + condition, or use it alone for a very short answer.",
+      "ai_transfer_prompt": "Tell an AI that something depends on the situation and ask it to guess two possible conditions."
+    },
+    {
+      "id": "core_024",
+      "category": "Opinions / Uncertainty",
+      "phrase": "This is easier than I expected.",
+      "function": "opinion",
+      "register": "neutral",
+      "pattern": "This is + comparative + than ...",
+      "example": "This is easier than I expected once you get started.",
+      "notes": "Teaches a reusable comparison frame for many everyday comments.",
+      "tags": [
+        "core",
+        "opinion",
+        "comparison"
+      ],
+      "similar": [
+        "This is better than ...",
+        "This feels easier."
+      ],
+      "contrast": "Than lets you compare two ideas directly.",
+      "prompts": {
+        "intent": "make a comparison",
+        "situation": "You want to compare something with your expectation.",
+        "cloze": "This is ___ than I expected."
+      },
+      "support": {
+        "jaHint": "これは思ったより簡単です"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "opinions / uncertainty / comparison",
+      "slots": [
+        "comparative",
+        "comparison target"
+      ],
+      "quick_variations": [
+        "This is harder than it looks.",
+        "This is better than before.",
+        "English is easier than I thought."
+      ],
+      "practice_note": "Swap in easier, harder, better, or slower for quick comparisons.",
+      "ai_transfer_prompt": "Tell an AI what feels easier or harder than expected and ask for one follow-up question."
+    },
+    {
+      "id": "core_025",
+      "category": "Repair / Survival",
+      "phrase": "I do not understand.",
+      "function": "repair",
+      "register": "neutral",
+      "pattern": "I do not understand.",
+      "example": "I am sorry, I do not understand.",
+      "notes": "A must-have survival line for keeping communication moving.",
+      "tags": [
+        "core",
+        "survival",
+        "repair"
+      ],
+      "similar": [
+        "I am not sure what you mean.",
+        "Could you explain that?"
+      ],
+      "contrast": "Very direct and useful when meaning is not clear at all.",
+      "prompts": {
+        "intent": "say you do not understand",
+        "situation": "Someone says something and you miss the meaning.",
+        "cloze": "I do not ___."
+      },
+      "support": {
+        "jaHint": "わかりません"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "repair / survival",
+      "slots": [],
+      "quick_variations": [
+        "I do not understand this part.",
+        "Sorry, I do not understand.",
+        "I do not understand yet."
+      ],
+      "practice_note": "Add this part / yet to be more specific or softer.",
+      "ai_transfer_prompt": "In AI chat, use this line when the answer feels too hard, then ask for a simpler version."
+    },
+    {
+      "id": "core_026",
+      "category": "Repair / Survival",
+      "phrase": "I did not catch that.",
+      "function": "repair",
+      "register": "neutral",
+      "pattern": "I did not catch + that / the last part.",
+      "example": "Sorry, I did not catch that the first time.",
+      "notes": "Best when you missed the sound, not necessarily the whole idea.",
+      "tags": [
+        "core",
+        "survival",
+        "listening"
+      ],
+      "similar": [
+        "I did not hear you.",
+        "Could you say that again?"
+      ],
+      "contrast": "Catch that is especially natural for speech you missed.",
+      "prompts": {
+        "intent": "say you missed what was said",
+        "situation": "You heard the speaker, but not clearly enough.",
+        "cloze": "I did not catch ___."
+      },
+      "support": {
+        "jaHint": "今のが聞き取れませんでした"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "repair / survival",
+      "slots": [
+        "that / the last part"
+      ],
+      "quick_variations": [
+        "I did not catch the last word.",
+        "I did not quite catch that.",
+        "Sorry, I missed that."
+      ],
+      "practice_note": "Use last word / last part when you want to be more precise.",
+      "ai_transfer_prompt": "When an AI response is too dense, say you did not catch that and ask it to repeat more simply."
+    },
+    {
+      "id": "core_027",
+      "category": "Repair / Survival",
+      "phrase": "Could you say that again?",
+      "function": "repair",
+      "register": "polite",
+      "pattern": "Could you + verb + that again?",
+      "example": "Could you say that again a little more slowly?",
+      "notes": "A polite repair request that every learner should automate.",
+      "tags": [
+        "core",
+        "survival",
+        "repair"
+      ],
+      "similar": [
+        "Can you repeat that?",
+        "Could you speak more slowly?"
+      ],
+      "contrast": "More polite than Can you say that again?",
+      "prompts": {
+        "intent": "ask someone to repeat",
+        "situation": "You want to hear the same thing one more time.",
+        "cloze": "Could you say that ___?"
+      },
+      "support": {
+        "jaHint": "もう一度言ってもらえますか"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "repair / survival",
+      "slots": [
+        "verb"
+      ],
+      "quick_variations": [
+        "Could you repeat that?",
+        "Could you say that one more time?",
+        "Can you say that again?"
+      ],
+      "practice_note": "Repeat and say that again are both common; could you is the softer frame.",
+      "ai_transfer_prompt": "Use this line with an AI and then ask for the same answer in shorter sentences."
+    },
+    {
+      "id": "core_028",
+      "category": "Repair / Survival",
+      "phrase": "Could you speak more slowly?",
+      "function": "repair",
+      "register": "polite",
+      "pattern": "Could you + verb + more slowly?",
+      "example": "Could you speak more slowly? I am still learning.",
+      "notes": "Very useful for live conversation and easy to remember.",
+      "tags": [
+        "core",
+        "survival",
+        "speed"
+      ],
+      "similar": [
+        "Could you say that again?",
+        "Please slow down."
+      ],
+      "contrast": "This fixes speed, while say that again fixes repetition.",
+      "prompts": {
+        "intent": "ask for slower speech",
+        "situation": "The speaker is talking too fast for you.",
+        "cloze": "Could you speak more ___?"
+      },
+      "support": {
+        "jaHint": "もう少しゆっくり話してもらえますか"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "repair / survival",
+      "slots": [
+        "verb"
+      ],
+      "quick_variations": [
+        "Could you talk a little more slowly?",
+        "Could you slow down a bit?",
+        "Please speak slowly."
+      ],
+      "practice_note": "Use more slowly or a little more slowly depending on how soft you want it to sound.",
+      "ai_transfer_prompt": "Tell an AI you need slower language and ask it to answer with short everyday sentences."
+    },
+    {
+      "id": "core_029",
+      "category": "Repair / Survival",
+      "phrase": "What does this word mean?",
+      "function": "repair",
+      "register": "neutral",
+      "pattern": "What does + noun + mean?",
+      "example": "What does this word mean in this sentence?",
+      "notes": "A compact question for vocabulary repair in real time.",
+      "tags": [
+        "core",
+        "survival",
+        "vocabulary"
+      ],
+      "similar": [
+        "What do you mean by ...?",
+        "How do you say ...?"
+      ],
+      "contrast": "Use this for vocabulary meaning, not translation.",
+      "prompts": {
+        "intent": "ask the meaning of a word",
+        "situation": "You know the sound or spelling, but not the meaning.",
+        "cloze": "What does this word ___?"
+      },
+      "support": {
+        "jaHint": "この単語はどういう意味ですか"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "repair / survival",
+      "slots": [
+        "noun"
+      ],
+      "quick_variations": [
+        "What does this phrase mean?",
+        "What does that mean here?",
+        "What does this sign mean?"
+      ],
+      "practice_note": "Swap word, phrase, sign, or sentence depending on what you need.",
+      "ai_transfer_prompt": "Ask an AI what a word means and request a very easy explanation plus one example."
+    },
+    {
+      "id": "core_030",
+      "category": "Repair / Survival",
+      "phrase": "How do you say this in English?",
+      "function": "repair",
+      "register": "neutral",
+      "pattern": "How do you say + this / X + in English?",
+      "example": "How do you say this in English in a casual way?",
+      "notes": "Directly supports transfer from known ideas into English output.",
+      "tags": [
+        "core",
+        "survival",
+        "translation"
+      ],
+      "similar": [
+        "What is this called in English?",
+        "How can I say ...?"
+      ],
+      "contrast": "Use this when you know the idea but not the English wording.",
+      "prompts": {
+        "intent": "ask how to say something in English",
+        "situation": "You can imagine the idea, but not the English phrase.",
+        "cloze": "How do you say this in ___?"
+      },
+      "support": {
+        "jaHint": "これは英語で何と言いますか"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "repair / survival",
+      "slots": [
+        "this / X",
+        "language"
+      ],
+      "quick_variations": [
+        "How do you say this politely?",
+        "How do you say this in a natural way?",
+        "What is a simple way to say this?"
+      ],
+      "practice_note": "You can replace English with another language or add style words like politely.",
+      "ai_transfer_prompt": "Use this with an AI to turn your Japanese idea into simple English, then ask for one variation."
+    },
+    {
+      "id": "core_031",
+      "category": "Conversation Questions",
+      "phrase": "Where are you from?",
+      "function": "question",
+      "register": "neutral",
+      "pattern": "Where are you from?",
+      "example": "Where are you from originally?",
+      "notes": "A classic follow-up question that pairs well with identity cards.",
+      "tags": [
+        "core",
+        "question",
+        "conversation"
+      ],
+      "similar": [
+        "Where do you live?",
+        "Are you from ...?"
+      ],
+      "contrast": "From asks about origin, not current location.",
+      "prompts": {
+        "intent": "ask where someone is from",
+        "situation": "You want to continue a simple introduction.",
+        "cloze": "Where are you ___?"
+      },
+      "support": {
+        "jaHint": "どこの出身ですか"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "questions to continue conversation",
+      "slots": [],
+      "quick_variations": [
+        "Where are you from originally?",
+        "Are you from around here?",
+        "Where do you live now?"
+      ],
+      "practice_note": "Use originally or now to shift between origin and current home.",
+      "ai_transfer_prompt": "Ask an AI where it is from in role-play, then continue with one more easy question."
+    },
+    {
+      "id": "core_032",
+      "category": "Conversation Questions",
+      "phrase": "What do you do?",
+      "function": "question",
+      "register": "neutral",
+      "pattern": "What do you do?",
+      "example": "What do you do, if you do not mind me asking?",
+      "notes": "A compact question for jobs, studies, or everyday roles.",
+      "tags": [
+        "core",
+        "question",
+        "work"
+      ],
+      "similar": [
+        "What do you study?",
+        "What kind of work do you do?"
+      ],
+      "contrast": "Very broad and natural for work or study small talk.",
+      "prompts": {
+        "intent": "ask what someone does",
+        "situation": "You want to keep an introduction going.",
+        "cloze": "What do you ___?"
+      },
+      "support": {
+        "jaHint": "お仕事は何をしていますか"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "questions to continue conversation",
+      "slots": [],
+      "quick_variations": [
+        "What kind of work do you do?",
+        "What do you do for work?",
+        "What do you study?"
+      ],
+      "practice_note": "Add for work or kind of to narrow the question.",
+      "ai_transfer_prompt": "Ask an AI what it does in a role-play conversation and practice answering the same question back."
+    },
+    {
+      "id": "core_033",
+      "category": "Conversation Questions",
+      "phrase": "What do you usually do after work?",
+      "function": "question",
+      "register": "neutral",
+      "pattern": "What do you usually do + time?",
+      "example": "What do you usually do on weekends?",
+      "notes": "Builds on the usually pattern and naturally opens longer answers.",
+      "tags": [
+        "core",
+        "question",
+        "daily"
+      ],
+      "similar": [
+        "What do you often do ...?",
+        "How do you spend ...?"
+      ],
+      "contrast": "Usually asks about normal routine, not a one-time plan.",
+      "prompts": {
+        "intent": "ask about someone’s routine",
+        "situation": "You want a simple question that keeps conversation moving.",
+        "cloze": "What do you usually do ___?"
+      },
+      "support": {
+        "jaHint": "仕事の後はふだん何をしますか"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "questions to continue conversation",
+      "slots": [
+        "time"
+      ],
+      "quick_variations": [
+        "What do you usually do on weekends?",
+        "What do you usually do in the morning?",
+        "What do you often do after class?"
+      ],
+      "practice_note": "Swap the time phrase to ask about weekends, mornings, or evenings.",
+      "ai_transfer_prompt": "Ask an AI about its daily routine in role-play and then answer with your own routine."
+    },
+    {
+      "id": "core_034",
+      "category": "Conversation Questions",
+      "phrase": "Have you ever been to Hokkaido?",
+      "function": "question",
+      "register": "neutral",
+      "pattern": "Have you ever + past participle ...?",
+      "example": "Have you ever tried learning another language?",
+      "notes": "Useful for travel, experience, and curiosity-based conversation.",
+      "tags": [
+        "core",
+        "question",
+        "experience"
+      ],
+      "similar": [
+        "Did you ever ...?",
+        "Do you often ...?"
+      ],
+      "contrast": "Have you ever focuses on life experience up to now.",
+      "prompts": {
+        "intent": "ask about experience",
+        "situation": "You want to ask if someone has done something before.",
+        "cloze": "Have you ever ___?"
+      },
+      "support": {
+        "jaHint": "北海道に行ったことはありますか"
+      },
+      "difficulty": 2,
+      "status": {
+        "published": true
+      },
+      "family": "questions to continue conversation",
+      "slots": [
+        "past participle phrase"
+      ],
+      "quick_variations": [
+        "Have you ever tried sushi?",
+        "Have you ever studied abroad?",
+        "Have you ever met anyone famous?"
+      ],
+      "practice_note": "Use been, tried, seen, or done to ask about life experiences.",
+      "ai_transfer_prompt": "Ask an AI three Have you ever questions in role-play and answer one yourself."
+    },
+    {
+      "id": "core_035",
+      "category": "Conversation Questions",
+      "phrase": "Why do you think so?",
+      "function": "question",
+      "register": "neutral",
+      "pattern": "Why do you think + so / that?",
+      "example": "Why do you think so? I am curious.",
+      "notes": "A short way to invite reasons and deeper conversation.",
+      "tags": [
+        "core",
+        "question",
+        "opinion"
+      ],
+      "similar": [
+        "What makes you say that?",
+        "Can you explain why?"
+      ],
+      "contrast": "This is neutral and curious, not confrontational.",
+      "prompts": {
+        "intent": "ask for a reason",
+        "situation": "Someone shares an opinion and you want to know more.",
+        "cloze": "Why do you think ___?"
+      },
+      "support": {
+        "jaHint": "どうしてそう思うのですか"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "questions to continue conversation",
+      "slots": [
+        "so / that"
+      ],
+      "quick_variations": [
+        "Why do you think that?",
+        "What makes you think so?",
+        "Why do you feel that way?"
+      ],
+      "practice_note": "Use so when the idea is already clear from context.",
+      "ai_transfer_prompt": "After an AI gives an opinion, ask why it thinks so and practice reading a simple explanation."
+    },
+    {
+      "id": "core_036",
+      "category": "Conversation Questions",
+      "phrase": "What do you mean by that?",
+      "function": "question",
+      "register": "neutral",
+      "pattern": "What do you mean by + noun / that?",
+      "example": "What do you mean by that in this context?",
+      "notes": "A helpful repair question that also extends conversation.",
+      "tags": [
+        "core",
+        "question",
+        "clarification"
+      ],
+      "similar": [
+        "What does this word mean?",
+        "Could you explain that?"
+      ],
+      "contrast": "Mean by asks about the speaker’s intended meaning, not just dictionary meaning.",
+      "prompts": {
+        "intent": "ask for clarification",
+        "situation": "You heard the words but want the intended meaning.",
+        "cloze": "What do you mean by ___?"
+      },
+      "support": {
+        "jaHint": "それはどういう意味ですか"
+      },
+      "difficulty": 1,
+      "status": {
+        "published": true
+      },
+      "family": "questions to continue conversation",
+      "slots": [
+        "that / noun"
+      ],
+      "quick_variations": [
+        "What do you mean by simple?",
+        "What exactly do you mean?",
+        "What do you mean by that word?"
+      ],
+      "practice_note": "Use by that for general clarification or by + noun for a specific term.",
+      "ai_transfer_prompt": "When an AI uses a vague phrase, ask what it means by that and request a simple rewrite."
     }
   ]
 }

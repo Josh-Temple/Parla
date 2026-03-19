@@ -13,6 +13,7 @@ function BrowsePageContent() {
 
   const [filters, setFilters] = useState<BrowseFilters>({
     category: (search.get("category") as BrowseFilters["category"]) || undefined,
+    tag: search.get("tag") || undefined,
   });
 
   const options = useMemo(
@@ -47,6 +48,11 @@ function BrowsePageContent() {
         tags={options.tags}
         onChange={setFilters}
       />
+      <div className="panel">
+        <p className="small" style={{ margin: 0 }}>
+          {filtered.length} cards · core filter works via the <strong>core</strong> tag.
+        </p>
+      </div>
       <div className="grid">
         {filtered.map((card) => (
           <Link key={card.id} href={`/card/${card.id}`} className="panel">
@@ -54,6 +60,14 @@ function BrowsePageContent() {
               {card.category} · {card.function} · {card.register}
             </p>
             <h3 style={{ margin: "6px 0" }}>{card.phrase}</h3>
+            <p className="small" style={{ margin: "0 0 6px" }}>
+              Pattern: {card.pattern}
+            </p>
+            {card.quick_variations?.length ? (
+              <p className="small" style={{ margin: "0 0 6px" }}>
+                Variations: {card.quick_variations.slice(0, 2).join(" · ")}
+              </p>
+            ) : null}
             <p className="small" style={{ marginBottom: 0 }}>
               {card.prompts.intent} · {card.prompts.situation}
             </p>
@@ -65,9 +79,5 @@ function BrowsePageContent() {
 }
 
 export default function BrowsePage() {
-  return (
-    <Suspense fallback={<main><p className="small">Loading filters...</p></main>}>
-      <BrowsePageContent />
-    </Suspense>
-  );
+  return <Suspense fallback={<main><p className="small">Loading filters...</p></main>}><BrowsePageContent /></Suspense>;
 }

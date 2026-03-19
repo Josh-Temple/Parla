@@ -1,171 +1,162 @@
 # Parla Dataset Prompt Playbook (JA)
 
-このドキュメントは、Parla 向けの英語フレーズカードを AI で生成・整形するときの実務テンプレート集です。
+このドキュメントは、Parla 向けの英語カードを AI で生成・整形するときの実務テンプレート集です。
 
-## 1) 初期50カード生成用プロンプト
+## 現在の方針
+
+Parla は「役立つフレーズ集アプリ」を維持しつつ、今後のデータ追加では **核文型を覚えて変形し、あとで AI 会話練習に持ち込みやすいこと** を優先します。
+
+重要:
+
+- Parla 自体はチャットボット化しない
+- メインループは `see prompt → think → reveal → self-rate → next` のまま維持する
+- まずは大量追加よりも、短く・高頻度で・変形しやすいカードを増やす
+- situational phrase は残すが、今後は foundation layer を先に厚くする
+
+推奨する foundation family:
+
+1. Self / identity / background
+2. Intent / need / plan
+3. Daily actions / time
+4. Opinions / uncertainty / comparison
+5. Repair / survival expressions
+6. Questions to continue conversation
+
+推奨タグ:
+
+- `core`
+- `survival`
+- `question`
+- `daily`
+- `opinion`
+- `identity`
+- `intent`
+
+## 1) Foundation starter 生成用プロンプト
 
 ```text
-You are creating the initial phrase-card dataset for an English output training app called Parla.
+You are creating new card content for Parla.
 
-App concept:
-Parla is a high-tempo English expression trainer.
-It is not a chatbot.
-Its main loop is:
-- see a Japanese meaning or short scenario
-- mentally recall the English phrase
-- reveal the answer
-- self-rate
-- move on quickly
+Product direction:
+- Do not rebuild the app.
+- Keep the current mobile-first, local-first flash-drill architecture.
+- Parla is not a chatbot.
+- Parla should help learners memorize a small set of high-frequency sentence patterns,
+  see how those patterns can vary,
+  and use them later in AI conversation practice outside the app.
 
 Your task:
-Generate high-quality English phrase cards for the initial MVP dataset.
+Generate high-quality starter cards centered on reusable core English patterns.
 
-Content goals:
-- practical, modern English
-- useful for daily conversation and work communication
-- focused on English output expression
-- especially useful for Japanese learners who want to speak and write more naturally
-- short, memorable, reusable expressions
-- avoid unnatural textbook phrasing
-- avoid slang-heavy or niche expressions
-- avoid obsolete or overly formal phrases unless genuinely useful
+Content priorities:
+- short, modern, highly reusable English
+- patterns learners can vary by swapping slots
+- early speaking / output friendly
+- strong in english-first mode
+- still understandable in english-only mode
+- avoid stiff textbook phrasing
+- avoid niche business English as the default focus
+- avoid slang-heavy content
 
-Target categories and counts:
-- Requests: 14
-- Refusals / Limits: 12
-- Opinions: 14
-- Softeners / Cushioning: 10
+Target families:
+1. Self / identity / background
+2. Intent / need / plan
+3. Daily actions / time
+4. Opinions / uncertainty / comparison
+5. Repair / survival expressions
+6. Questions to continue conversation
 
-Target functions:
-- request
-- refusal
-- opinion
-- softening
+Volume target:
+- generate around 20–30 cards per batch unless instructed otherwise
+- prioritize quality and learnability over volume
 
-Allowed register values:
-- casual
-- neutral
-- polite
-- formal
+Required JSON envelope:
+{
+  "schema_version": 1,
+  "cards": []
+}
 
-Difficulty scale:
-- 1 = very common and easy
-- 2 = common and useful, slightly more nuanced
-- 3 = somewhat advanced but still practical
-
-Important design principles:
-1. Each card should teach one distinct phrase or pattern.
-2. Phrases must be genuinely reusable.
-3. Similar phrases are welcome, but avoid near-duplicates unless the contrast is meaningful.
-4. Contrast notes should be short and practical.
-5. Notes should be concise and learner-friendly.
-6. Scenario prompts should be concrete and easy to imagine.
-7. The output should support fast self-study without typing.
-
-Required JSON shape for each card:
+Base required card fields:
 {
   "id": "string",
+  "category": "string",
   "phrase": "string",
-  "japanese_meaning": "string",
-  "function": "request | refusal | opinion | softening",
+  "function": "string",
   "register": "casual | neutral | polite | formal",
   "pattern": "string",
   "example": "string",
   "notes": "string",
-  "tags": ["string", "string"],
-  "similar": ["string", "string"],
+  "tags": ["string"],
+  "similar": ["string"],
   "contrast": "string",
   "prompts": {
-    "meaning": "string",
-    "scenario": "string",
+    "intent": "string",
+    "situation": "string",
     "cloze": "string"
   },
-  "difficulty": 1
+  "support": {
+    "jaHint": "string"
+  },
+  "difficulty": 1,
+  "status": {
+    "published": true
+  }
 }
 
-ID rules:
-- use lowercase snake-like IDs
-- format: {function}_{3-digit number}
-- examples:
-  - request_001
-  - refusal_004
-  - opinion_011
-  - softening_008
+Optional fields recommended for core-pattern cards:
+{
+  "family": "string",
+  "slots": ["string"],
+  "quick_variations": ["string", "string"],
+  "practice_note": "string",
+  "ai_transfer_prompt": "string"
+}
 
-Content rules:
-- "phrase" should be the target phrase or pattern learners should recall
-- "pattern" should show the reusable structure
-- "example" should be natural and concise
-- "japanese_meaning" should be practical Japanese, not overly literal
-- "similar" should usually contain 2 items
-- "tags" should be short and practical, e.g. ["work", "meeting"] or ["daily", "request"]
-- "prompts.meaning" should be a short Japanese cue
-- "prompts.scenario" should describe a realistic situation in Japanese
-- "prompts.cloze" should be an English cloze prompt based on the phrase or example
-
-Quality constraints:
-- avoid duplicated cards
-- avoid cards that are too close in meaning unless contrast is important
-- avoid overly long examples
-- avoid idioms unless highly useful
-- avoid culture-specific expressions that need heavy explanation
-- prefer expressions that can be reused in many contexts
+Authoring rules:
+- keep old cards valid; optional fields only
+- prefer short examples
+- prompts should be concrete and easy to imagine
+- Japanese support should stay lightweight and optional
+- `pattern` must make the reusable structure obvious
+- `quick_variations` should usually be 2–4 short natural variations
+- `practice_note` should explain how to swap or extend the pattern in one line
+- `ai_transfer_prompt` should be one short idea for later practice outside the main drill
+- tag foundation cards with `core`
 
 Output requirements:
 - return valid JSON only
-- output a single object with:
-{
-  "schema_version": 1,
-  "cards": [...]
-}
-- include exactly 50 cards
-- maintain the exact category counts requested
-- do not include markdown
-- do not include commentary outside JSON
+- no markdown
+- no commentary outside JSON
 ```
 
 ## 2) 品質改善・整形用プロンプト
 
 ```text
-You are reviewing and improving a JSON phrase-card dataset for the English expression training app Parla.
-
-Your task:
-Clean, normalize, and improve the dataset while preserving the intended schema and learning design.
+You are reviewing and improving a JSON card dataset for Parla.
 
 Goals:
-- remove duplication
+- strengthen the foundation layer first
 - improve naturalness
-- improve contrast clarity
-- improve Japanese cue quality
-- improve example sentence quality
-- keep cards short, practical, and reusable
-- preserve fast-study suitability
+- improve pattern reusability
+- improve variation quality
+- keep cards short and memorable
+- preserve backward compatibility with the current schema
 
 Review checklist:
-1. Remove or rewrite awkward English.
-2. Remove or rewrite unnatural Japanese.
-3. Ensure each card teaches one clear phrase or pattern.
-4. Ensure "similar" items are actually relevant.
-5. Ensure "contrast" is concise and useful.
-6. Ensure "example" is natural and not too long.
-7. Ensure "prompts.meaning" is a short and memorable Japanese cue.
-8. Ensure "prompts.scenario" is concrete and realistic.
-9. Ensure "prompts.cloze" is valid and readable.
-10. Ensure category balance is preserved.
-11. Ensure IDs remain unchanged unless there is a critical schema issue.
-12. Remove near-duplicates unless their contrast is educationally meaningful.
+1. Remove awkward English.
+2. Remove awkward Japanese.
+3. Ensure each card teaches one clear reusable phrase or pattern.
+4. Ensure `pattern` is more general than the target phrase when possible.
+5. Ensure `quick_variations` are short, natural, and not redundant.
+6. Ensure `practice_note` is one line and actually helps variation.
+7. Ensure `contrast` is concise and practical.
+8. Ensure `example` is short and natural.
+9. Ensure prompts are concrete and useful for fast recall.
+10. Prefer high-frequency conversation English over niche professional language.
+11. Keep old IDs unless there is a critical issue.
+12. Remove near-duplicates unless the contrast is educationally meaningful.
 
-Important:
-- keep the same JSON schema
-- preserve exactly 50 cards unless there is a critical issue
-- do not add explanations outside JSON
-- return valid JSON only
-
-Return format:
-{
-  "schema_version": 1,
-  "cards": [...]
-}
+Output valid JSON only.
 ```
 
 ## 3) 類似表現の差分を強める追加プロンプト
@@ -174,170 +165,67 @@ Return format:
 For each card, strengthen the contrast with its similar phrases.
 
 Rules:
-- keep "contrast" to one short sentence
-- focus on directness, politeness, softness, or typical usage context
+- keep `contrast` to one short sentence
+- focus on directness, politeness, softness, certainty, or usage context
 - avoid dictionary-style explanations
 - make the contrast useful for fast learner decisions
-- do not make claims that are too absolute
 - keep wording simple
-
-Examples of good contrast style:
-- "Can you...? より少し丁寧。"
-- "より遠回しでやわらかい依頼。"
-- "直接否定せず、留保を置く言い方。"
-- "単なる断りより代案を出す感じが強い。"
+- when possible, help the learner know when to swap patterns
 
 Return valid JSON only.
 ```
 
-## 4) 音声用フィールドを後から足すためのプロンプト
+## 4) variation 補強用プロンプト
 
 ```text
-Add optional audio metadata to each card in the following shape:
-
-"audio": {
-  "phraseUrl": "/audio/{id}_phrase.mp3",
-  "exampleUrl": "/audio/{id}_example.mp3",
-  "voice": "en-US-female-01"
-}
+Add or improve the following optional fields for each core-pattern card:
+- `family`
+- `slots`
+- `quick_variations`
+- `practice_note`
+- `ai_transfer_prompt`
 
 Rules:
-- use the card id to build the file names
-- do not change any other field
+- do not remove existing required fields
+- keep optional fields short and practical
+- `quick_variations` should be 2 to 4 items
+- variations should sound natural in spoken English
+- `ai_transfer_prompt` must not imply an in-app chatbot feature
 - return valid JSON only
 ```
 
-## 5) カテゴリごとに小分けで作る場合のプロンプト
+## 5) 小分け生成のおすすめ
 
-一発50件より、カテゴリごとに作る方が品質を確認しやすい。
+一発で巨大データを作るより、family ごとに小分けで作る方が品質確認しやすいです。
 
-### Requests 14件
+おすすめ順:
 
-```text
-Generate 14 JSON phrase cards for the category "Requests" for the app Parla.
+1. identity
+2. intent
+3. daily
+4. opinion / uncertainty
+5. survival / repair
+6. follow-up questions
 
-Requirements:
-- function must be "request"
-- include a mix of neutral, polite, and formal-friendly request patterns
-- prioritize highly reusable expressions
-- include practical contrasts such as:
-  - Can you...?
-  - Could you...?
-  - Would you...?
-  - Would you mind ...ing?
-  - Would it be possible to...?
-  - I was wondering if...
-  - Would you be able to...?
-  - I’d appreciate it if...
-- avoid redundant near-duplicates unless the contrast is clearly useful
-- output valid JSON only in the standard Parla schema
-- IDs must run from request_001 to request_014
-```
+特に最初の 20〜30 枚は、以下のような核文型を優先してください。
 
-### Refusals / Limits 12件
-
-```text
-Generate 12 JSON phrase cards for the category "Refusals / Limits" for the app Parla.
-
-Requirements:
-- function must be "refusal"
-- focus on soft refusals, limits, non-availability, and alternative suggestions
-- prioritize practical expressions for daily and work contexts
-- include patterns like:
-  - I’m afraid I can’t...
-  - I may not be able to...
-  - I won’t be able to...
-  - That might be difficult.
-  - I’m not sure I can...
-  - Would it work if... instead?
-  - Could we do ... instead?
-- avoid harsh or blunt refusal styles unless contrast is educationally useful
-- output valid JSON only in the standard Parla schema
-- IDs must run from refusal_001 to refusal_012
-```
-
-### Opinions 14件
-
-```text
-Generate 14 JSON phrase cards for the category "Opinions" for the app Parla.
-
-Requirements:
-- function must be "opinion"
-- focus on stating opinions, soft disagreement, partial agreement, and confidence control
-- prioritize expressions useful in discussion, meetings, and daily communication
-- include patterns like:
-  - I think...
-  - I feel like...
-  - It seems to me that...
-  - I’m not sure that...
-  - I’m not convinced that...
-  - I see your point, but...
-  - You may be right, but...
-  - I partly agree, but...
-  - It might be better to...
-- avoid abstract academic phrasing unless highly practical
-- output valid JSON only in the standard Parla schema
-- IDs must run from opinion_001 to opinion_014
-```
-
-### Softeners / Cushioning 10件
-
-```text
-Generate 10 JSON phrase cards for the category "Softeners / Cushioning" for the app Parla.
-
-Requirements:
-- function must be "softening"
-- focus on hedging, cushioning, reducing directness, and softening judgments
-- prioritize expressions that combine well with other phrases
-- include items like:
-  - perhaps
-  - maybe
-  - a bit
-  - a little
-  - somewhat
-  - kind of
-  - It might be...
-  - It seems...
-  - I’m not sure if...
-- avoid overly subtle distinctions unless they are useful in real communication
-- output valid JSON only in the standard Parla schema
-- IDs must run from softening_001 to softening_010
-```
-
-## 6) 生成後の人間チェック観点
-
-優先順:
-
-- 高優先: 本当に使いたい表現 / 不自然さ / 重複 / contrast の有用性
-- 中優先: 日本語の自然さ / 例文の長さ / scenario の明快さ
-- 低優先: tags の細かさ / difficulty の微調整
-
-## 7) 実務的なおすすめ手順
-
-1. カテゴリごとに生成
-2. 各カテゴリを整形
-3. 全体を結合
-4. 重複チェック
-5. contrast だけ追加改善
-6. audio フィールド付与
-7. `cards.json` 化
-
-## 8) かなり短い最小版プロンプト
-
-```text
-Create JSON phrase cards for Parla, a fast English phrase-recall training app.
-
-Requirements:
-- practical, modern English
-- useful for Japanese learners
-- categories: Requests, Refusals / Limits, Opinions, Softeners / Cushioning
-- short reusable phrases
-- concise natural examples
-- short practical Japanese meanings
-- clear contrast with similar phrases
-- valid JSON only
-- schema:
-  id, phrase, japanese_meaning, function, register, pattern, example, notes, tags, similar, contrast, prompts { meaning, scenario, cloze }, difficulty
-
-Now generate [N] cards for the category [CATEGORY].
-```
+- I am from ...
+- I live in ...
+- I work in ...
+- I study ...
+- I like ...
+- I am interested in ...
+- I want to ...
+- I need ...
+- I am trying to ...
+- I am going to ...
+- I usually ...
+- I often ...
+- I think ...
+- I do not think ...
+- I am not sure ...
+- It depends ...
+- I do not understand.
+- Could you say that again?
+- Where are you from?
+- What do you mean by ...?

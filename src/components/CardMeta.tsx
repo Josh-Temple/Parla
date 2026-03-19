@@ -8,8 +8,10 @@ export function CardMeta({ card }: { card: Card }) {
         <CategoryChip label={card.category} />
         <CategoryChip label={card.function} />
         <CategoryChip label={card.register} />
+        {card.family ? <CategoryChip label={card.family} /> : null}
       </div>
       <p className="small">Pattern: {card.pattern}</p>
+      {card.slots?.length ? <p className="small">Slots: {card.slots.join(" · ")}</p> : null}
       <p className="small">Tags: {card.tags.join(", ")}</p>
     </div>
   );
