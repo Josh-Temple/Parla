@@ -4,6 +4,8 @@ Parla is a mobile-first, high-tempo English expression trainer focused on **non-
 
 > see prompt → think silently → reveal → self-rate → next
 
+This iteration keeps that flash-drill loop intact, but shifts the starter content toward a **foundation layer of reusable core English patterns**. The goal is not to turn Parla into a chatbot. The goal is to help learners automate a small set of high-frequency sentence frames that they can later carry into AI conversation practice outside the app.
+
 ## MVP scope
 
 - React + TypeScript with Next.js App Router (Vercel friendly)
@@ -14,9 +16,29 @@ Parla is a mobile-first, high-tempo English expression trainer focused on **non-
 - Focused drill modes may be empty depending on progress state; app provides an all-cards fallback CTA
 - Card detail mode with metadata and progress flags
 - Versioned static starter card dataset (`public/data/cards.json`)
-- Current starter dataset ships with **8 published cards** (usable immediately)
+- Current starter dataset ships with **44 published cards**:
+  - 8 original situational phrase cards
+  - 36 new core/foundation cards centered on reusable sentence patterns
 - Optional static audio URLs per card
 - Local-first persistence via `localStorage`
+
+## Product direction
+
+Parla is now designed around two complementary layers:
+
+1. **Situational phrases** for immediately useful expressions.
+2. **Core patterns** for early speaking/output training.
+
+The foundation layer prioritizes short, modern patterns learners can vary by swapping slots, for example:
+
+- `I am from ...`
+- `I want to ...`
+- `I usually ...`
+- `I think ...`
+- `Could you say that again?`
+- `What do you mean by ...?`
+
+These cards are meant to prepare learners for later AI conversation practice without adding chat features inside Parla itself.
 
 ## Architecture
 
@@ -55,7 +77,8 @@ The drill experience prioritizes English cueing for faster recall:
 
 - Front side shows `prompts.intent`, `prompts.situation`, and optional `prompts.cloze`
 - Japanese is optional support only (`support.jaHint`) and can be switched at runtime
-- Reveal keeps pace by showing phrase + example + short English usage note
+- Reveal keeps pace by showing phrase + pattern + example + short usage note
+- When present, `quick_variations` are shown compactly on reveal to reinforce reusable structure
 - Browse and card detail prioritize English copy by default
 
 ## Language support modes
@@ -68,12 +91,13 @@ Language support mode is persisted in `localStorage`:
 Use the nav toggle (`EN-first` / `EN-only`) to switch modes at runtime.
 
 Notes:
+
 - Cards can be authored without Japanese by omitting `support.jaHint`.
-- In the current starter dataset, all 8 published cards include `support.jaHint`, but `english-only` mode keeps the UI Japanese-free.
+- The current starter dataset includes Japanese hints for both the original situational cards and the new core starter layer, but `english-only` mode keeps the UI Japanese-free.
 
 ## Dataset schema
 
-`public/data/cards.json` now uses an extensible envelope:
+`public/data/cards.json` uses an extensible envelope:
 
 ```json
 {
@@ -82,19 +106,45 @@ Notes:
 }
 ```
 
-This allows future metadata/schema evolution without changing repository interfaces.
+Required card fields remain backward compatible with the original MVP. This iteration adds a few **optional** authoring fields for pattern learning support:
+
+- `family`: groups related patterns
+- `slots`: names replaceable parts of the phrase
+- `quick_variations`: 2–4 short natural variations shown compactly on reveal/detail
+- `practice_note`: one-line note about how the pattern changes
+- `ai_transfer_prompt`: a small suggestion for later AI conversation practice, shown only on card detail
 
 Repository behavior notes:
 
 - Supports current envelope format (`schema_version: 1`)
 - Gracefully rejects malformed datasets
-- Includes a temporary in-memory fallback for legacy top-level array datasets to ease migration windows
+- Includes temporary in-memory fallback for legacy top-level array datasets to ease migration windows
+- Validates new optional pattern fields when present
 
 ## Dataset authoring workflow
 
-Prompt templates for generating and polishing the initial 50-card dataset are documented in:
+Prompt templates for generating and polishing the dataset are documented in:
 
 - `docs/parla-dataset-prompt-playbook-ja.md`
+
+The recommended next content direction is:
+
+1. expand high-frequency core patterns first,
+2. keep situational phrases as a secondary layer,
+3. prefer learnable slot-based variation over raw volume.
+
+## Foundation starter coverage
+
+The current core starter layer focuses on six practical families:
+
+1. Self / identity / background
+2. Intent / need / plan
+3. Daily actions / time
+4. Opinions / uncertainty / comparison
+5. Repair / survival expressions
+6. Questions to continue conversation
+
+Use `/browse?tag=core` to browse the foundation layer separately from older situational cards.
 
 ## Vercel deployment checklist
 

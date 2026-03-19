@@ -21,10 +21,7 @@ export default function CardDetailPage() {
   useEffect(() => {
     if (!id) return;
     void (async () => {
-      const [cardData, progressData] = await Promise.all([
-        cardRepository.getCardById(id),
-        progressRepository.getProgress(id),
-      ]);
+      const [cardData, progressData] = await Promise.all([cardRepository.getCardById(id), progressRepository.getProgress(id)]);
       setCard(cardData);
       setProgress(progressData);
     })();
@@ -62,8 +59,24 @@ export default function CardDetailPage() {
             {showHint ? <p className="small">{japaneseHint}</p> : null}
           </div>
         ) : null}
+        <p className="small" style={{ marginBottom: 6 }}>Pattern</p>
+        <p style={{ fontWeight: 700, marginTop: 0 }}>{card.pattern}</p>
         <p className="small">{card.example}</p>
         <p className="small">{card.notes}</p>
+        {card.quick_variations?.length ? (
+          <div style={{ marginBottom: 12 }}>
+            <p className="small" style={{ marginBottom: 6 }}>Quick variations</p>
+            <div>
+              {card.quick_variations.map((variation) => (
+                <span key={variation} className="badge" style={{ marginBottom: 6 }}>
+                  {variation}
+                </span>
+              ))}
+            </div>
+          </div>
+        ) : null}
+        {card.practice_note ? <p className="small">Use this to say: {card.practice_note}</p> : null}
+        {card.ai_transfer_prompt ? <p className="small">AI practice later: {card.ai_transfer_prompt}</p> : null}
         <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
           <AudioButton label="Phrase" url={audioResolver.getPhraseAudioUrl(card)} />
           <AudioButton label="Example" url={audioResolver.getExampleAudioUrl(card)} />
