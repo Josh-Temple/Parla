@@ -2,43 +2,39 @@
 
 ## Session summary
 
-This session kept Parla’s existing mobile-first, local-first flash-drill architecture and repositioned the dataset toward a stronger **core English pattern training** direction.
+This session added a lightweight staged review layer on top of Parla's existing fast recall loop without introducing a backend or a full SRS.
 
 ## What changed
 
-1. **Foundation-layer dataset expansion**
-   - Expanded `public/data/cards.json` from 8 published cards to 44 published cards.
-   - Added 36 new core cards across:
-     - Self / identity / background
-     - Intent / plans
-     - Daily actions / time
-     - Opinions / uncertainty
-     - Repair / survival
-     - Conversation questions
-   - Preserved all existing cards.
+1. **Progress schema extension**
+   - Added optional progress fields:
+     - `interval_step`
+     - `same_day_requeue_count`
+     - `last_interval_days`
+   - `LocalProgressRepository` now normalizes missing fields on read/write so old saved progress still works.
 
-2. **Backward-compatible schema extension**
-   - Added optional card fields:
-     - `family`
-     - `slots`
-     - `quick_variations`
-     - `practice_note`
-     - `ai_transfer_prompt`
-   - `StaticCardRepository` validation now accepts and validates these optional fields.
+2. **Simple staged scheduler**
+   - `reviewScheduler.ts` now uses a fixed ladder:
+     - same-session
+     - 1 day
+     - 3 days
+     - 7 days
+     - 14 days
+     - 30 days
+   - `hard` resets streak, keeps weak cards in the same-session stage, and otherwise moves a card back one step.
+   - `close` advances one step.
+   - `easy` advances two steps.
 
-3. **Lightweight pattern-learning UI support**
-   - Reveal now emphasizes `Pattern` more clearly.
-   - Reveal and card detail show compact `Quick variations` when present.
-   - Card detail now shows `AI practice later` hints only there, keeping the main drill fast.
-   - Card metadata now exposes `family` and `slots` when available.
+3. **Same-session requeue in drill flow**
+   - Weak/new cards rated `hard` are reinserted a few cards later in the current drill session.
+   - Requeue stays lightweight and in-memory for the current session while still persisting the updated progress snapshot locally.
 
-4. **Foundation browsing support**
-   - Home page now highlights the foundation layer and links to `/browse?tag=core`.
-   - Browse page accepts `tag` from the URL and surfaces pattern/variation previews.
+4. **Due-first daily flow**
+   - The all-cards drill now prioritizes due cards first, then unseen cards, then later scheduled cards.
+   - Category diversification is preserved within the due-first ordering bands.
 
 5. **Docs refresh**
-   - `README.md` now explains the foundation-layer direction and optional schema fields.
-   - `docs/parla-dataset-prompt-playbook-ja.md` now needs future card generation to favor reusable core patterns first.
+   - `README.md` now documents the lightweight staged review behavior and backward-compatible migration approach.
 
 ## Validation run
 
@@ -47,7 +43,6 @@ This session kept Parla’s existing mobile-first, local-first flash-drill archi
 
 ## Suggested next steps
 
-1. Add small tests around dataset validation for the new optional fields.
-2. Add a tiny browse section or saved shortcut for major core families if users need faster navigation.
-3. Expand the next batch by deepening contrast pairs inside the core layer instead of chasing raw card count.
-4. Consider adding one lightweight “core only” drill preset if browse-to-drill becomes a frequent need.
+1. Add focused unit tests around `computeNextReview` for each rating and edge step.
+2. Consider a tiny UI hint when a card is requeued for the same session if users need more transparency.
+3. If daily flow needs stronger pacing later, add a very small cap for new cards introduced before finishing due cards.

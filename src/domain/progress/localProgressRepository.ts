@@ -5,8 +5,17 @@ import type { ProgressRepository } from "./progressRepository";
 
 const KEY = "parla_progress_v1";
 
-function fallback(cardId: string): ProgressItem {
+function normalizeProgress(item: ProgressItem): ProgressItem {
   return {
+    ...item,
+    interval_step: item.interval_step ?? 0,
+    same_day_requeue_count: item.same_day_requeue_count ?? 0,
+    last_interval_days: item.last_interval_days ?? 0,
+  };
+}
+
+function fallback(cardId: string): ProgressItem {
+  return normalizeProgress({
     card_id: cardId,
     last_reviewed_at: nowIso(),
     rating: "close",
@@ -17,7 +26,7 @@ function fallback(cardId: string): ProgressItem {
     want_to_use: false,
     confusing: false,
     hidden: false,
-  };
+  });
 }
 
 export class LocalProgressRepository implements ProgressRepository {
@@ -25,14 +34,15 @@ export class LocalProgressRepository implements ProgressRepository {
     const raw = safeStorage.getItem(KEY);
     if (!raw) return [];
     try {
-      return JSON.parse(raw) as ProgressItem[];
+      const parsed = JSON.parse(raw) as ProgressItem[];
+      return parsed.map(normalizeProgress);
     } catch {
       return [];
     }
   }
 
   private writeAll(items: ProgressItem[]) {
-    safeStorage.setItem(KEY, JSON.stringify(items));
+    safeStorage.setItem(KEY, JSON.stringify(items.map(normalizeProgress)));
   }
 
   async getProgress(cardId: string): Promise<ProgressItem | null> {
@@ -43,7 +53,7 @@ export class LocalProgressRepository implements ProgressRepository {
   async saveProgress(progress: ProgressItem): Promise<void> {
     const current = this.readAll();
     const next = current.filter((item) => item.card_id !== progress.card_id);
-    next.push(progress);
+    next.push(normalizeProgress(progress));
     this.writeAll(next);
   }
 
@@ -54,7 +64,7 @@ export class LocalProgressRepository implements ProgressRepository {
   private async mutate(cardId: string, fn: (item: ProgressItem) => ProgressItem) {
     const current = this.readAll();
     const base = current.find((item) => item.card_id === cardId) ?? fallback(cardId);
-    const updated = fn(base);
+    const updated = normalizeProgress(fn(base));
     const next = current.filter((item) => item.card_id !== cardId);
     next.push(updated);
     this.writeAll(next);
@@ -76,8 +86,17 @@ export class LocalProgressRepository implements ProgressRepository {
     return this.mutate(cardId, (item) => ({ ...item, hidden: true }));
   }
 
-  static createReviewProgress(cardId: string, rating: Rating, nextDue: Date, streak: number, reviewCount: number): ProgressItem {
-    return {
+  static createReviewProgress(
+    cardId: string,
+    rating: Rating,
+    nextDue: Date,
+    streak: number,
+    reviewCount: number,
+    intervalStep = 0,
+    sameDayRequeueCount = 0,
+    lastIntervalDays = 0,
+  ): ProgressItem {
+    return normalizeProgress({
       card_id: cardId,
       last_reviewed_at: nowIso(),
       rating,
@@ -88,6 +107,9 @@ export class LocalProgressRepository implements ProgressRepository {
       want_to_use: false,
       confusing: false,
       hidden: false,
-    };
+      interval_step: intervalStep,
+      same_day_requeue_count: sameDayRequeueCount,
+      last_interval_days: lastIntervalDays,
+    });
   }
 }

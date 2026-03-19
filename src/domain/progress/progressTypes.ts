@@ -11,4 +11,7 @@ export interface ProgressItem {
   want_to_use: boolean;
   confusing: boolean;
   hidden: boolean;
+  interval_step?: number;
+  same_day_requeue_count?: number;
+  last_interval_days?: number;
 }

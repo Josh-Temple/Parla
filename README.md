@@ -10,6 +10,7 @@ This iteration keeps that flash-drill loop intact, but shifts the starter conten
 
 - React + TypeScript with Next.js App Router (Vercel friendly)
 - Flash drill mode with self-rating (`easy`, `close`, `hard`)
+- Lightweight staged review: same-session requeue for weak cards plus day-based interval ladder
 - Focused drill mode via query (`mode=due|hard|confusing|want_to_use`)
 - Browse mode with category/function/register/tag filters
 - Review mode (due / hard / confusing / want-to-use)
@@ -80,6 +81,18 @@ The drill experience prioritizes English cueing for faster recall:
 - Reveal keeps pace by showing phrase + pattern + example + short usage note
 - When present, `quick_variations` are shown compactly on reveal to reinforce reusable structure
 - Browse and card detail prioritize English copy by default
+
+## Lightweight review scheduling
+
+Parla keeps the fast recall loop, but now adds a small staged review layer instead of a heavy SRS:
+
+- Interval ladder: `same-session -> 1 day -> 3 days -> 7 days -> 14 days -> 30 days`
+- `hard` keeps weak cards close and can requeue them later in the same session
+- `close` advances one step at a time
+- `easy` advances faster by skipping ahead two steps when possible
+- All-cards drill now prioritizes due cards first, then unseen cards, before later scheduled cards
+
+Progress remains local-first in `localStorage`, and existing saved progress is migrated in-place by treating new scheduling fields as optional defaults.
 
 ## Language support modes
 
