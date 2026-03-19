@@ -1,51 +1,86 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Card } from "@/domain/cards/cardTypes";
 import type { ProgressItem, Rating } from "@/domain/progress/progressTypes";
 import { getJapaneseHint } from "@/domain/cards/cardSupport";
-import { computeNextDueDate } from "@/domain/review/reviewScheduler";
+import { computeNextReview } from "@/domain/review/reviewScheduler";
 import { audioResolver, progressRepository } from "@/domain/services";
 import { RevealPanel } from "./RevealPanel";
 import { RatingButtons } from "./RatingButtons";
 
+const SAME_SESSION_REQUEUE_GAP = 2;
+
+function shouldInsertRequeue(cards: Card[], cardId: string, startIndex: number): boolean {
+  return !cards.slice(startIndex, startIndex + SAME_SESSION_REQUEUE_GAP + 1).some((item) => item.id === cardId);
+}
+
 export function DrillCard({ cards, initialProgress }: { cards: Card[]; initialProgress: ProgressItem[] }) {
+  const [sessionCards, setSessionCards] = useState(cards);
   const [index, setIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const [showHint, setShowHint] = useState(false);
   const [progressMap, setProgressMap] = useState(() => new Map(initialProgress.map((p) => [p.card_id, p])));
 
-  const card = cards[index];
+  useEffect(() => {
+    setSessionCards(cards);
+    setIndex(0);
+    setRevealed(false);
+    setShowHint(false);
+    setProgressMap(new Map(initialProgress.map((p) => [p.card_id, p])));
+  }, [cards, initialProgress]);
 
-  const queueLeft = useMemo(() => cards.length - index - 1, [cards.length, index]);
+  const card = sessionCards[index];
+
+  const queueLeft = useMemo(() => Math.max(sessionCards.length - index - 1, 0), [sessionCards.length, index]);
 
   const nextCard = () => {
     setRevealed(false);
     setShowHint(false);
-    setIndex((prev) => (prev + 1 >= cards.length ? 0 : prev + 1));
+    setIndex((prev) => (prev + 1 >= sessionCards.length ? 0 : prev + 1));
   };
 
   const rateCard = async (rating: Rating) => {
+    if (!card) return;
+
     const prev = progressMap.get(card.id);
     const reviewCount = (prev?.review_count ?? 0) + 1;
-    const streak = rating === "hard" ? 0 : (prev?.correct_streak ?? 0) + 1;
+    const schedule = computeNextReview(prev, rating, new Date());
     const updated: ProgressItem = {
       card_id: card.id,
       last_reviewed_at: new Date().toISOString(),
       rating,
       review_count: reviewCount,
-      correct_streak: streak,
-      next_due_at: computeNextDueDate(rating, new Date()).toISOString(),
+      correct_streak: schedule.correctStreak,
+      next_due_at: schedule.nextDueAt.toISOString(),
       favorite: prev?.favorite ?? false,
       want_to_use: prev?.want_to_use ?? false,
       confusing: prev?.confusing ?? false,
       hidden: prev?.hidden ?? false,
+      interval_step: schedule.intervalStep,
+      same_day_requeue_count: schedule.sameDayRequeueCount,
+      last_interval_days: schedule.intervalDays,
     };
+
     await progressRepository.saveProgress(updated);
+
     const nextMap = new Map(progressMap);
     nextMap.set(card.id, updated);
     setProgressMap(nextMap);
+
+    if (schedule.shouldRequeueInSession) {
+      setSessionCards((prevCards) => {
+        if (!shouldInsertRequeue(prevCards, card.id, index + 1)) {
+          return prevCards;
+        }
+        const insertAt = Math.min(index + SAME_SESSION_REQUEUE_GAP + 1, prevCards.length);
+        const nextCards = [...prevCards];
+        nextCards.splice(insertAt, 0, card);
+        return nextCards;
+      });
+    }
+
     nextCard();
   };
 
@@ -59,7 +94,7 @@ export function DrillCard({ cards, initialProgress }: { cards: Card[]; initialPr
     <div className="grid">
       <div className="panel">
         <p className="small" style={{ marginTop: 0 }}>
-          Card {index + 1}/{cards.length} · left {queueLeft}
+          Card {index + 1}/{sessionCards.length} · left {queueLeft}
         </p>
         <h2 style={{ marginBottom: 8 }}>{card.prompts.intent}</h2>
         <p className="small" style={{ marginBottom: 6 }}>

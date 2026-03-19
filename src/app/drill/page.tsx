@@ -5,7 +5,7 @@ import { Suspense, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import { DrillCard } from "@/components/DrillCard";
 import type { Card } from "@/domain/cards/cardTypes";
-import { selectDrillCards, type DrillMode } from "@/domain/review/reviewSelectors";
+import { prioritizeDailyCards, selectDrillCards, type DrillMode } from "@/domain/review/reviewSelectors";
 import { useParlaData } from "@/hooks/useParlaData";
 import { shuffle } from "@/lib/utils";
 
@@ -52,8 +52,19 @@ function DrillPageContent() {
   const { cards, progress, loading, loadState } = useParlaData();
 
   const drillCards = useMemo(() => {
+    if (mode === "all") {
+      const progressMap = new Map(progress.map((entry) => [entry.card_id, entry]));
+      const now = new Date();
+      const prioritized = prioritizeDailyCards(cards, progress, now);
+      const dueCount = prioritized.filter((card) => {
+        const item = progressMap.get(card.id);
+        return !item || new Date(item.next_due_at) <= now;
+      }).length;
+      return [...diversifyByCategory(prioritized.slice(0, dueCount)), ...diversifyByCategory(prioritized.slice(dueCount))];
+    }
+
     const selected = selectDrillCards(cards, progress, mode);
-    return mode === "all" ? diversifyByCategory(selected) : selected;
+    return selected;
   }, [cards, progress, mode]);
 
   if (loading) {

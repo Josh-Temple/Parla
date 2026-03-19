@@ -39,6 +39,29 @@ export function getWantToUseCards(cards: Card[], progress: ProgressItem[]): Card
   });
 }
 
+export function prioritizeDailyCards(cards: Card[], progress: ProgressItem[], now = new Date()): Card[] {
+  const map = toMap(progress);
+  const due: Card[] = [];
+  const unseen: Card[] = [];
+  const later: Card[] = [];
+
+  cards.forEach((card) => {
+    const item = map.get(card.id);
+    if (item?.hidden) return;
+    if (!item) {
+      unseen.push(card);
+      return;
+    }
+    if (new Date(item.next_due_at) <= now) {
+      due.push(card);
+      return;
+    }
+    later.push(card);
+  });
+
+  return [...due, ...unseen, ...later];
+}
+
 export function selectDrillCards(cards: Card[], progress: ProgressItem[], mode: DrillMode): Card[] {
   switch (mode) {
     case "due":
@@ -50,9 +73,7 @@ export function selectDrillCards(cards: Card[], progress: ProgressItem[], mode: 
     case "want_to_use":
       return getWantToUseCards(cards, progress);
     case "all":
-    default: {
-      const hiddenIds = new Set(progress.filter((item) => item.hidden).map((item) => item.card_id));
-      return cards.filter((card) => !hiddenIds.has(card.id));
-    }
+    default:
+      return prioritizeDailyCards(cards, progress);
   }
 }
