@@ -22,6 +22,7 @@ This iteration keeps that flash-drill loop intact, but shifts the starter conten
   - 36 new core/foundation cards centered on reusable sentence patterns
 - Optional static audio URLs per card
 - Local-first persistence via `localStorage`
+- Installable PWA shell with manifest, home-screen metadata, and offline asset caching
 
 ## Home flow
 
@@ -167,6 +168,20 @@ The current core starter layer focuses on six practical families:
 6. Questions to continue conversation
 
 Use `/browse?tag=core` to browse the foundation layer separately from older situational cards.
+
+## PWA support
+
+Parla now includes a lightweight Progressive Web App setup:
+
+- Web app manifest exposed at `/manifest.webmanifest`
+- Standalone install metadata for Android and iOS home-screen launch
+- Service worker registration on the client
+- Offline caching for the core app shell, dataset JSON, and app icons
+
+Notes:
+
+- Progress still lives in `localStorage`, so installed/offline use works on the same device/browser profile that has stored progress.
+- First install/offline availability happens after the app is visited once online so the service worker can cache the shell.
 
 ## Vercel deployment checklist
 
