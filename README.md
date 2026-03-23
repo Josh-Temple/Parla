@@ -17,9 +17,10 @@ This iteration keeps that flash-drill loop intact, but shifts the starter conten
 - Focused drill modes may be empty depending on progress state; app provides an all-cards fallback CTA
 - Card detail mode with metadata and progress flags
 - Versioned static starter card dataset (`public/data/cards.json`)
-- Current starter dataset ships with **44 published cards**:
+- Current starter dataset ships with **50 published cards**:
   - 8 original situational phrase cards
-  - 36 new core/foundation cards centered on reusable sentence patterns
+  - 36 original core/foundation cards centered on reusable sentence patterns
+  - 6 additional request-family cards for tighter contrast practice
 - Optional static audio URLs per card
 - Local-first persistence via `localStorage`
 - Installable PWA shell with manifest, home-screen metadata, and offline asset caching
@@ -86,7 +87,8 @@ Then open `http://localhost:3000`.
 
 The drill experience prioritizes English cueing for faster recall:
 
-- Front side shows `prompts.intent`, `prompts.situation`, and optional `prompts.cloze`
+- Front side keeps `prompts.intent` and `prompts.situation` as the primary cues
+- `prompts.cloze` is optional and should only appear when it strengthens phrase recall
 - Japanese is optional support only (`support.jaHint`) and can be switched at runtime
 - Reveal keeps pace by showing phrase + pattern + example + short usage note
 - When present, `quick_variations` are shown compactly on reveal to reinforce reusable structure
@@ -129,13 +131,20 @@ Notes:
 }
 ```
 
-Required card fields remain backward compatible with the original MVP. This iteration adds a few **optional** authoring fields for pattern learning support:
+Required card fields remain backward compatible with the original MVP. This iteration adds a few **optional** authoring fields for pattern learning support, with a stronger family-first interpretation:
 
-- `family`: groups related patterns
+- `family`: groups closely related patterns that should be compared and practiced together
 - `slots`: names replaceable parts of the phrase
 - `quick_variations`: 2–4 short natural variations shown compactly on reveal/detail
 - `practice_note`: one-line note about how the pattern changes
 - `ai_transfer_prompt`: a small suggestion for later AI conversation practice, shown only on card detail
+
+
+Cloze authoring rule:
+
+- a cloze should support phrase recall, not random vocabulary recall
+- if the strongest blank would only hide a noun, place name, or trivial content word, omit the cloze
+- cards without cloze remain complete because intent + situation stay primary
 
 Repository behavior notes:
 
@@ -152,9 +161,10 @@ Prompt templates for generating and polishing the dataset are documented in:
 
 The recommended next content direction is:
 
-1. expand high-frequency core patterns first,
+1. expand high-frequency patterns family-by-family,
 2. keep situational phrases as a secondary layer,
-3. prefer learnable slot-based variation over raw volume.
+3. prefer learnable slot-based variation over raw volume,
+4. treat cloze as optional and only keep it when it sharpens phrase recall.
 
 ## Foundation starter coverage
 

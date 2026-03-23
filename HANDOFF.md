@@ -2,28 +2,27 @@
 
 ## Session summary
 
-This session added baseline PWA support to Parla so the app can be installed and can keep its main shell available offline after the first online visit.
+This session reworked Parla’s content system toward family-first authoring, stronger request-cluster coverage, and optional higher-quality cloze prompts.
 
 ## What changed
 
-1. **PWA foundation added**
-   - Added a Next.js app manifest route at `src/app/manifest.ts`.
-   - Added install metadata in `src/app/layout.tsx` for manifest, icons, and Apple web app behavior.
+1. **Dataset quality pass**
+   - Reviewed the starter dataset and removed weak clozes that only tested random nouns, places, or other low-value vocabulary targets.
+   - Improved surviving clozes so they point more directly at phrase structure or meaningful usage slots.
 
-2. **Service worker registration**
-   - Added a small client component at `src/components/ServiceWorkerRegistration.tsx`.
-   - Root layout now registers `/sw.js` when the browser supports service workers.
+2. **Family-first content expansion**
+   - Added six new request cards so the request family now has a tighter comparison set across patterns like `Could you...?`, `Would you mind ...ing?`, `I was wondering if...`, `Would you be able to...?`, `If possible, could you...?`, and permission requests.
+   - Applied `family`, `slots`, `quick_variations`, `practice_note`, and `ai_transfer_prompt` more consistently across the older situational cards.
+   - Reclassified opinion/disagreement and clarification-related cards so those clusters are easier to expand later.
 
-3. **Offline shell caching**
-   - Added `public/sw.js` with a simple app-shell cache strategy.
-   - Pre-caches the main routes, dataset JSON, manifest, and icons.
-   - Navigation requests fall back to cached app routes when the network is unavailable.
+3. **Drill rendering update**
+   - Drill view now keeps intent and situation clearly primary.
+   - Cloze is visually de-emphasized and labeled as optional when present.
+   - Family is surfaced in the drill and browse list to make clusters more visible without redesigning the app.
 
-4. **Install assets**
-   - Added maskable-style app icons under `public/icons/`.
-
-5. **Docs refresh**
-   - README now documents the PWA capability and its current constraints.
+4. **Docs refresh**
+   - README now describes family-first expansion, optional cloze behavior, and the larger request cluster.
+   - The dataset playbook now documents family-first authoring and explicit cloze quality rules.
 
 ## Validation run
 
@@ -32,6 +31,6 @@ This session added baseline PWA support to Parla so the app can be installed and
 
 ## Suggested next steps
 
-1. If stronger offline behavior is needed, add an explicit offline page and more granular runtime caching rules for dynamic Next assets.
-2. Consider generating PNG icons in addition to SVG if you need broader install-surface compatibility across devices and stores.
-3. If Parla later syncs progress across devices, revisit the current `localStorage`-based persistence assumptions for installed PWA usage.
+1. Expand the clarification family with 2–4 more contrastive cards such as `Do you mean...?`, `So you’re saying...?`, and `Let me make sure I understand.`
+2. Add light browse-level family filtering once the next one or two families are expanded enough to justify a dedicated control.
+3. Continue reviewing older core cards and consider whether some very open slot cards should move toward family-based mini-sets with stronger contrasts.

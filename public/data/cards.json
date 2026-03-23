@@ -21,9 +21,9 @@
       ],
       "contrast": "More polite and softer than Can you...?",
       "prompts": {
-        "intent": "polite request",
-        "situation": "You want a quick status update from a coworker.",
-        "cloze": "Could you give me a quick ___?"
+        "intent": "ask for a quick update",
+        "situation": "You want a short status update from a coworker.",
+        "cloze": "Could you ___ me a quick update?"
       },
       "difficulty": 1,
       "audio": {
@@ -36,7 +36,19 @@
       },
       "support": {
         "jaHint": "簡単に進捗を教えてもらえますか"
-      }
+      },
+      "family": "requests",
+      "slots": [
+        "verb",
+        "object"
+      ],
+      "quick_variations": [
+        "Could you send me a quick update?",
+        "Could you give me a quick summary?",
+        "Could you let me know by noon?"
+      ],
+      "practice_note": "Use this for a direct but polite request for information or a short action.",
+      "ai_transfer_prompt": "Ask an AI to turn this request into three similar workplace requests with different objects."
     },
     {
       "id": "request_002",
@@ -58,7 +70,7 @@
       ],
       "contrast": "More formal and indirect than Could we...?",
       "prompts": {
-        "intent": "reschedule politely",
+        "intent": "ask to reschedule politely",
         "situation": "You want to ask if moving the meeting is possible.",
         "cloze": "Would it be possible to ___ this to Friday?"
       },
@@ -71,7 +83,284 @@
       },
       "support": {
         "jaHint": "これを金曜に移すことは可能でしょうか"
-      }
+      },
+      "family": "requests",
+      "slots": [
+        "verb",
+        "time"
+      ],
+      "quick_variations": [
+        "Would it be possible to move this to next week?",
+        "Would it be possible to push this back a little?",
+        "Would it be possible to start later?"
+      ],
+      "practice_note": "Use this when you want to sound formal and indirect about a change.",
+      "ai_transfer_prompt": "Ask an AI for three polite schedule-change requests using the same frame."
+    },
+    {
+      "id": "request_003",
+      "category": "Requests",
+      "phrase": "Would you mind opening the window?",
+      "function": "request",
+      "register": "polite",
+      "pattern": "Would you mind + -ing...?",
+      "example": "Would you mind opening the window for a minute?",
+      "notes": "Polite and soft when you want the other person to do something small.",
+      "tags": [
+        "request",
+        "polite",
+        "daily"
+      ],
+      "similar": [
+        "Could you...?",
+        "Would you be able to...?"
+      ],
+      "contrast": "Softer than Could you...? and especially natural for small favors.",
+      "prompts": {
+        "intent": "ask for a small favor politely",
+        "situation": "You want someone to do a small practical action for you.",
+        "cloze": "Would you mind ___ the window?"
+      },
+      "support": {
+        "jaHint": "窓を開けていただいてもいいですか"
+      },
+      "difficulty": 2,
+      "status": {
+        "published": true
+      },
+      "family": "requests",
+      "slots": [
+        "-ing verb",
+        "object"
+      ],
+      "quick_variations": [
+        "Would you mind checking that for me?",
+        "Would you mind waiting a moment?",
+        "Would you mind helping me with this?"
+      ],
+      "practice_note": "After mind, use an -ing form for the action.",
+      "ai_transfer_prompt": "Ask an AI for three everyday favors using Would you mind + -ing."
+    },
+    {
+      "id": "request_004",
+      "category": "Requests",
+      "phrase": "I was wondering if we could start a bit later.",
+      "function": "request",
+      "register": "polite",
+      "pattern": "I was wondering if + clause.",
+      "example": "I was wondering if we could start a bit later tomorrow.",
+      "notes": "A very soft way to make a request, especially for schedule changes.",
+      "tags": [
+        "request",
+        "schedule",
+        "polite"
+      ],
+      "similar": [
+        "Would it be possible to...?",
+        "Could we...?"
+      ],
+      "contrast": "More indirect and personal than Could we...?",
+      "prompts": {
+        "intent": "ask for a change very softly",
+        "situation": "You want to ask for a change without sounding pushy.",
+        "cloze": "I was wondering if we could ___ a bit later."
+      },
+      "support": {
+        "jaHint": "少し遅めに始められないかと思っていました"
+      },
+      "difficulty": 2,
+      "status": {
+        "published": true
+      },
+      "family": "requests",
+      "slots": [
+        "verb",
+        "time expression"
+      ],
+      "quick_variations": [
+        "I was wondering if we could meet next week.",
+        "I was wondering if you could take a look.",
+        "I was wondering if this could wait until tomorrow."
+      ],
+      "practice_note": "Use this when you want maximum softness for a request or change.",
+      "ai_transfer_prompt": "Ask an AI for three polite request sentences that begin with I was wondering if."
+    },
+    {
+      "id": "request_005",
+      "category": "Requests",
+      "phrase": "Would you be able to send that today?",
+      "function": "request",
+      "register": "polite",
+      "pattern": "Would you be able to + verb...?",
+      "example": "Would you be able to send that today if possible?",
+      "notes": "Useful when you want to ask about ability or availability politely.",
+      "tags": [
+        "request",
+        "work",
+        "polite"
+      ],
+      "similar": [
+        "Could you...?",
+        "Would it be possible to...?"
+      ],
+      "contrast": "Highlights the other person’s availability more than Could you...?",
+      "prompts": {
+        "intent": "ask whether someone can do something",
+        "situation": "You want to ask for help while sounding considerate of their situation.",
+        "cloze": "Would you be able to ___ that today?"
+      },
+      "support": {
+        "jaHint": "それを今日中に送っていただけそうですか"
+      },
+      "difficulty": 2,
+      "status": {
+        "published": true
+      },
+      "family": "requests",
+      "slots": [
+        "verb",
+        "object",
+        "time"
+      ],
+      "quick_variations": [
+        "Would you be able to join us tomorrow?",
+        "Would you be able to review this tonight?",
+        "Would you be able to help me after lunch?"
+      ],
+      "practice_note": "Use this when you want to sound polite and aware of the other person’s constraints.",
+      "ai_transfer_prompt": "Ask an AI to generate three considerate requests using Would you be able to."
+    },
+    {
+      "id": "request_006",
+      "category": "Requests",
+      "phrase": "If possible, could you check the last section?",
+      "function": "request",
+      "register": "polite",
+      "pattern": "If possible, could you + verb...?",
+      "example": "If possible, could you check the last section before we send it?",
+      "notes": "Adds a soft condition so the request feels lighter.",
+      "tags": [
+        "request",
+        "work",
+        "softening"
+      ],
+      "similar": [
+        "Could you...?",
+        "When you have a chance..."
+      ],
+      "contrast": "Softer than a plain Could you...? because it signals flexibility.",
+      "prompts": {
+        "intent": "make a polite low-pressure request",
+        "situation": "You want to ask for help while showing that timing is flexible.",
+        "cloze": "If possible, could you ___ the last section?"
+      },
+      "support": {
+        "jaHint": "可能であれば、最後の部分を確認してもらえますか"
+      },
+      "difficulty": 2,
+      "status": {
+        "published": true
+      },
+      "family": "requests",
+      "slots": [
+        "verb",
+        "object"
+      ],
+      "quick_variations": [
+        "If possible, could you send me the file today?",
+        "If possible, could you call me later?",
+        "If possible, could you explain that part again?"
+      ],
+      "practice_note": "Add If possible when you want to reduce pressure on the request.",
+      "ai_transfer_prompt": "Ask an AI to rewrite direct requests into lower-pressure requests with If possible."
+    },
+    {
+      "id": "request_007",
+      "category": "Requests",
+      "phrase": "Do you mind if I sit here?",
+      "function": "request",
+      "register": "polite",
+      "pattern": "Do you mind if I + verb...?",
+      "example": "Do you mind if I sit here for a few minutes?",
+      "notes": "Useful when you need permission for your own action.",
+      "tags": [
+        "request",
+        "permission",
+        "daily"
+      ],
+      "similar": [
+        "Is it okay if I...?",
+        "Would it be okay if I...?"
+      ],
+      "contrast": "Asks for permission for your action, not for the other person to act.",
+      "prompts": {
+        "intent": "ask for permission politely",
+        "situation": "You want to do something and need to check that it is okay.",
+        "cloze": "Do you mind if I ___ here?"
+      },
+      "support": {
+        "jaHint": "ここに座ってもいいですか"
+      },
+      "difficulty": 2,
+      "status": {
+        "published": true
+      },
+      "family": "requests",
+      "slots": [
+        "verb",
+        "place"
+      ],
+      "quick_variations": [
+        "Do you mind if I open the window?",
+        "Do you mind if I ask a quick question?",
+        "Do you mind if I leave a little early?"
+      ],
+      "practice_note": "Use this for permission requests when the action is yours.",
+      "ai_transfer_prompt": "Ask an AI for three permission requests built on Do you mind if I."
+    },
+    {
+      "id": "request_008",
+      "category": "Requests",
+      "phrase": "Would it be okay if I left a little early?",
+      "function": "request",
+      "register": "polite",
+      "pattern": "Would it be okay if + clause?",
+      "example": "Would it be okay if I left a little early today?",
+      "notes": "A polite permission frame that sounds softer than Can I...?",
+      "tags": [
+        "request",
+        "permission",
+        "polite"
+      ],
+      "similar": [
+        "Do you mind if I...?",
+        "Can I...?"
+      ],
+      "contrast": "More formal and cushioned than Can I...?",
+      "prompts": {
+        "intent": "ask permission in a soft way",
+        "situation": "You want permission for your own action in a polite setting.",
+        "cloze": "Would it be okay if I ___ a little early?"
+      },
+      "support": {
+        "jaHint": "少し早めに失礼しても大丈夫でしょうか"
+      },
+      "difficulty": 2,
+      "status": {
+        "published": true
+      },
+      "family": "requests",
+      "slots": [
+        "verb",
+        "time expression"
+      ],
+      "quick_variations": [
+        "Would it be okay if I joined later?",
+        "Would it be okay if I asked one more question?",
+        "Would it be okay if we moved this to tomorrow?"
+      ],
+      "practice_note": "Use this when you need permission and want the tone to stay soft and professional.",
+      "ai_transfer_prompt": "Ask an AI for three permission requests using Would it be okay if."
     },
     {
       "id": "refusal_001",
@@ -92,7 +381,7 @@
       ],
       "contrast": "Softer and a bit more polite than I can't...",
       "prompts": {
-        "intent": "soft refusal",
+        "intent": "turn down an invitation softly",
         "situation": "You cannot join this invitation this time.",
         "cloze": "I won't be able to ___ it this time."
       },
@@ -105,7 +394,18 @@
       },
       "support": {
         "jaHint": "今回は参加できなさそうです"
-      }
+      },
+      "family": "soft refusals",
+      "slots": [
+        "verb"
+      ],
+      "quick_variations": [
+        "I won't be able to join you this time.",
+        "I won't be able to make it tomorrow.",
+        "I won't be able to stay long."
+      ],
+      "practice_note": "Use this to say no without sounding abrupt, especially for invitations or plans.",
+      "ai_transfer_prompt": "Ask an AI to give you three gentle refusals for different social situations."
     },
     {
       "id": "refusal_002",
@@ -126,9 +426,8 @@
       ],
       "contrast": "Declines while offering a practical alternative.",
       "prompts": {
-        "intent": "decline with alternative",
-        "situation": "You cannot do that time, but you can offer another day.",
-        "cloze": "I'm tied up then, but I can do ___."
+        "intent": "decline but offer another time",
+        "situation": "You cannot do that time, but you can offer another day."
       },
       "difficulty": 2,
       "status": {
@@ -136,7 +435,19 @@
       },
       "support": {
         "jaHint": "その時間は埋まっていますが、月曜なら可能です"
-      }
+      },
+      "family": "soft refusals",
+      "slots": [
+        "time",
+        "alternative time"
+      ],
+      "quick_variations": [
+        "I'm tied up then, but I can do Tuesday.",
+        "I'm tied up this afternoon, but I can do tomorrow morning.",
+        "I'm tied up at three, but I can do later."
+      ],
+      "practice_note": "Pair a polite no with a concrete alternative to keep things moving.",
+      "ai_transfer_prompt": "Ask an AI to convert direct schedule refusals into softer alternatives using this pattern."
     },
     {
       "id": "opinion_001",
@@ -157,9 +468,8 @@
       ],
       "contrast": "Slightly more formal than I think.",
       "prompts": {
-        "intent": "state an opinion",
-        "situation": "You want to share your view calmly in a meeting.",
-        "cloze": "From my perspective, this is the safest ___."
+        "intent": "share your view calmly",
+        "situation": "You want to share your view calmly in a meeting."
       },
       "difficulty": 2,
       "status": {
@@ -167,7 +477,18 @@
       },
       "support": {
         "jaHint": "私の見方では、これが最も安全な選択です"
-      }
+      },
+      "family": "opinions / disagreement",
+      "slots": [
+        "opinion statement"
+      ],
+      "quick_variations": [
+        "From my perspective, this is the best place to start.",
+        "From my perspective, we should keep it simple.",
+        "From my perspective, the risk is manageable."
+      ],
+      "practice_note": "Use this frame when you want to signal that this is your view, not a hard fact.",
+      "ai_transfer_prompt": "Ask an AI for three meeting opinions that start with From my perspective."
     },
     {
       "id": "opinion_002",
@@ -188,9 +509,8 @@
       ],
       "contrast": "Less confrontational than I disagree.",
       "prompts": {
-        "intent": "partial disagreement",
-        "situation": "You are not convinced yet and want to stay diplomatic.",
-        "cloze": "I'm not fully ___ yet."
+        "intent": "show partial disagreement",
+        "situation": "You are not convinced yet and want to stay diplomatic."
       },
       "difficulty": 1,
       "status": {
@@ -198,7 +518,18 @@
       },
       "support": {
         "jaHint": "まだ完全には納得していません"
-      }
+      },
+      "family": "opinions / disagreement",
+      "slots": [
+        "adjective"
+      ],
+      "quick_variations": [
+        "I'm not fully convinced yet.",
+        "I'm not fully comfortable with that yet.",
+        "I'm not fully sure that's the best option."
+      ],
+      "practice_note": "Use this when you want to hold back agreement without sounding harsh.",
+      "ai_transfer_prompt": "Ask an AI for three soft disagreement examples built around not fully."
     },
     {
       "id": "softening_001",
@@ -221,7 +552,7 @@
       "prompts": {
         "intent": "soften a suggestion",
         "situation": "You want to suggest a cautious first step.",
-        "cloze": "It might make sense to start ___."
+        "cloze": "It might make sense to ___ small."
       },
       "difficulty": 1,
       "status": {
@@ -229,7 +560,18 @@
       },
       "support": {
         "jaHint": "まず小さく始めるのがよさそうです"
-      }
+      },
+      "family": "opinions / disagreement",
+      "slots": [
+        "verb"
+      ],
+      "quick_variations": [
+        "It might make sense to wait a little.",
+        "It might make sense to test this first.",
+        "It might make sense to keep the scope small."
+      ],
+      "practice_note": "Use this to make a suggestion feel collaborative instead of pushy.",
+      "ai_transfer_prompt": "Ask an AI to rewrite direct suggestions into softer ones with this frame."
     },
     {
       "id": "softening_002",
@@ -251,9 +593,8 @@
       ],
       "contrast": "Softer and less confrontational than This is risky.",
       "prompts": {
-        "intent": "soften concern",
-        "situation": "You want to raise risk concerns carefully.",
-        "cloze": "I may be wrong, but this feels ___."
+        "intent": "raise a concern carefully",
+        "situation": "You want to raise risk concerns carefully."
       },
       "difficulty": 2,
       "status": {
@@ -261,7 +602,18 @@
       },
       "support": {
         "jaHint": "間違っているかもしれませんが、これはリスクが高そうです"
-      }
+      },
+      "family": "opinions / disagreement",
+      "slots": [
+        "concern"
+      ],
+      "quick_variations": [
+        "I may be wrong, but this feels rushed.",
+        "I may be wrong, but this feels expensive.",
+        "I may be wrong, but this feels harder than it looks."
+      ],
+      "practice_note": "Use this when you want to signal caution before giving a concern.",
+      "ai_transfer_prompt": "Ask an AI to turn blunt risk statements into softer concerns with this frame."
     },
     {
       "id": "core_001",
@@ -284,8 +636,7 @@
       "contrast": "Use this for origin, not your current home.",
       "prompts": {
         "intent": "say where you are from",
-        "situation": "You are introducing yourself to someone new.",
-        "cloze": "I am from ___."
+        "situation": "You are introducing yourself to someone new."
       },
       "support": {
         "jaHint": "私は大阪出身です"
@@ -327,8 +678,7 @@
       "contrast": "Use this for where you live now.",
       "prompts": {
         "intent": "say where you live",
-        "situation": "Someone asks about your current city.",
-        "cloze": "I live in ___."
+        "situation": "Someone asks about your current city."
       },
       "support": {
         "jaHint": "私は横浜に住んでいます"
@@ -370,8 +720,7 @@
       "contrast": "In + field names the area, not your exact job title.",
       "prompts": {
         "intent": "say what field you work in",
-        "situation": "You want to explain your work in a simple way.",
-        "cloze": "I work in ___."
+        "situation": "You want to explain your work in a simple way."
       },
       "support": {
         "jaHint": "私はデザインの仕事をしています"
@@ -413,8 +762,7 @@
       "contrast": "Simple present works well for regular study habits.",
       "prompts": {
         "intent": "say what you study",
-        "situation": "You want to talk about your learning routine.",
-        "cloze": "I study ___ every day."
+        "situation": "You want to talk about your learning routine."
       },
       "support": {
         "jaHint": "私は毎日英語を勉強しています"
@@ -457,8 +805,7 @@
       "contrast": "Like is simpler and more casual than enjoy.",
       "prompts": {
         "intent": "say what you like",
-        "situation": "You want to share a hobby or preference.",
-        "cloze": "I like ___."
+        "situation": "You want to share a hobby or preference."
       },
       "support": {
         "jaHint": "私は家で料理するのが好きです"
@@ -500,8 +847,7 @@
       "contrast": "Interested in highlights a topic that holds your attention.",
       "prompts": {
         "intent": "say what interests you",
-        "situation": "You want to mention a personal interest clearly.",
-        "cloze": "I am interested in ___."
+        "situation": "You want to mention a personal interest clearly."
       },
       "support": {
         "jaHint": "私は地域の歴史に興味があります"
@@ -586,8 +932,7 @@
       "contrast": "Use a noun after need when the thing itself is the focus.",
       "prompts": {
         "intent": "say what you need",
-        "situation": "You want to state a simple need clearly.",
-        "cloze": "I need ___."
+        "situation": "You want to state a simple need clearly."
       },
       "support": {
         "jaHint": "もう少し時間が必要です"
@@ -630,7 +975,7 @@
       "prompts": {
         "intent": "say what you are trying to do",
         "situation": "You want to describe an effort or challenge.",
-        "cloze": "I am trying to ___."
+        "cloze": "I am trying to ___ earlier."
       },
       "support": {
         "jaHint": "私はもっと早く起きようとしています"
@@ -673,7 +1018,7 @@
       "prompts": {
         "intent": "say what you are going to do",
         "situation": "You want to describe a near-future plan.",
-        "cloze": "I am going to ___ tonight."
+        "cloze": "I am going to ___ her tonight."
       },
       "support": {
         "jaHint": "私は今夜彼女に電話するつもりです"
@@ -760,8 +1105,7 @@
       "contrast": "Looking for focuses on searching, not just needing.",
       "prompts": {
         "intent": "say what you are looking for",
-        "situation": "You need to find something specific.",
-        "cloze": "I am looking for ___."
+        "situation": "You need to find something specific."
       },
       "support": {
         "jaHint": "静かなカフェを探しています"
@@ -848,7 +1192,7 @@
       "prompts": {
         "intent": "describe something you often do",
         "situation": "You want to share a repeated action.",
-        "cloze": "I often ___."
+        "cloze": "I often ___ to podcasts."
       },
       "support": {
         "jaHint": "私はよくポッドキャストを聞きます"
@@ -890,8 +1234,7 @@
       "contrast": "This simple present pattern works for routines and general facts.",
       "prompts": {
         "intent": "say a simple daily action",
-        "situation": "You want to explain a small habit simply.",
-        "cloze": "I read ___."
+        "situation": "You want to explain a small habit simply."
       },
       "support": {
         "jaHint": "私は電車で読みます"
@@ -934,8 +1277,7 @@
       "contrast": "Practiced emphasizes training or repeated effort.",
       "prompts": {
         "intent": "say what you practiced",
-        "situation": "You want to talk about recent study or training.",
-        "cloze": "I practiced ___ yesterday."
+        "situation": "You want to talk about recent study or training."
       },
       "support": {
         "jaHint": "私は昨日スピーキングを練習しました"
@@ -978,8 +1320,7 @@
       "contrast": "Learned highlights a result, not just time spent.",
       "prompts": {
         "intent": "say what you learned",
-        "situation": "You want to mention something new you learned.",
-        "cloze": "I learned ___ today."
+        "situation": "You want to mention something new you learned."
       },
       "support": {
         "jaHint": "私は今日新しい単語を覚えました"
@@ -1022,8 +1363,7 @@
       "contrast": "Have been connects the recent past to now.",
       "prompts": {
         "intent": "describe your recent state",
-        "situation": "You want to explain how life has been recently.",
-        "cloze": "I have been ___ lately."
+        "situation": "You want to explain how life has been recently."
       },
       "support": {
         "jaHint": "最近ずっと忙しいです"
@@ -1066,7 +1406,7 @@
       "prompts": {
         "intent": "say what you think",
         "situation": "You want to share a simple opinion.",
-        "cloze": "I think ___."
+        "cloze": "I think this will ___."
       },
       "support": {
         "jaHint": "私はこれが役に立つと思います"
@@ -1075,7 +1415,7 @@
       "status": {
         "published": true
       },
-      "family": "opinions / uncertainty / comparison",
+      "family": "opinions / disagreement",
       "slots": [
         "clause"
       ],
@@ -1109,7 +1449,7 @@
       "prompts": {
         "intent": "say what you do not think",
         "situation": "You want to disagree without sounding harsh.",
-        "cloze": "I do not think ___."
+        "cloze": "I do not think that is ___."
       },
       "support": {
         "jaHint": "私はそれが本当だとは思いません"
@@ -1118,7 +1458,7 @@
       "status": {
         "published": true
       },
-      "family": "opinions / uncertainty / comparison",
+      "family": "opinions / disagreement",
       "slots": [
         "clause"
       ],
@@ -1151,8 +1491,7 @@
       "contrast": "Seems sounds a little less certain than think.",
       "prompts": {
         "intent": "give a soft opinion",
-        "situation": "You want to suggest an impression, not a hard claim.",
-        "cloze": "It seems ___."
+        "situation": "You want to suggest an impression, not a hard claim."
       },
       "support": {
         "jaHint": "こちらのほうがよさそうです"
@@ -1161,7 +1500,7 @@
       "status": {
         "published": true
       },
-      "family": "opinions / uncertainty / comparison",
+      "family": "opinions / disagreement",
       "slots": [
         "adjective or clause"
       ],
@@ -1194,8 +1533,7 @@
       "contrast": "Not sure is softer and more conversational than I do not know.",
       "prompts": {
         "intent": "say you are unsure",
-        "situation": "You need time before giving an answer.",
-        "cloze": "I am not sure ___."
+        "situation": "You need time before giving an answer."
       },
       "support": {
         "jaHint": "まだよくわかりません"
@@ -1204,7 +1542,7 @@
       "status": {
         "published": true
       },
-      "family": "opinions / uncertainty / comparison",
+      "family": "opinions / disagreement",
       "slots": [
         "clause or timing"
       ],
@@ -1237,8 +1575,7 @@
       "contrast": "Depends shows that the answer changes with conditions.",
       "prompts": {
         "intent": "say the answer changes",
-        "situation": "You want to avoid an overly simple yes or no.",
-        "cloze": "It depends on ___."
+        "situation": "You want to avoid an overly simple yes or no."
       },
       "support": {
         "jaHint": "状況によります"
@@ -1247,7 +1584,7 @@
       "status": {
         "published": true
       },
-      "family": "opinions / uncertainty / comparison",
+      "family": "opinions / disagreement",
       "slots": [
         "noun"
       ],
@@ -1281,7 +1618,7 @@
       "prompts": {
         "intent": "make a comparison",
         "situation": "You want to compare something with your expectation.",
-        "cloze": "This is ___ than I expected."
+        "cloze": "This is easier than I ___."
       },
       "support": {
         "jaHint": "これは思ったより簡単です"
@@ -1290,7 +1627,7 @@
       "status": {
         "published": true
       },
-      "family": "opinions / uncertainty / comparison",
+      "family": "opinions / disagreement",
       "slots": [
         "comparative",
         "comparison target"
@@ -1334,7 +1671,7 @@
       "status": {
         "published": true
       },
-      "family": "repair / survival",
+      "family": "clarification",
       "slots": [],
       "quick_variations": [
         "I do not understand this part.",
@@ -1375,7 +1712,7 @@
       "status": {
         "published": true
       },
-      "family": "repair / survival",
+      "family": "clarification",
       "slots": [
         "that / the last part"
       ],
@@ -1418,7 +1755,7 @@
       "status": {
         "published": true
       },
-      "family": "repair / survival",
+      "family": "clarification",
       "slots": [
         "verb"
       ],
@@ -1461,7 +1798,7 @@
       "status": {
         "published": true
       },
-      "family": "repair / survival",
+      "family": "clarification",
       "slots": [
         "verb"
       ],
@@ -1504,7 +1841,7 @@
       "status": {
         "published": true
       },
-      "family": "repair / survival",
+      "family": "clarification",
       "slots": [
         "noun"
       ],
@@ -1538,7 +1875,7 @@
       "prompts": {
         "intent": "ask how to say something in English",
         "situation": "You can imagine the idea, but not the English phrase.",
-        "cloze": "How do you say this in ___?"
+        "cloze": "How do you ___ this in English?"
       },
       "support": {
         "jaHint": "これは英語で何と言いますか"
@@ -1547,7 +1884,7 @@
       "status": {
         "published": true
       },
-      "family": "repair / survival",
+      "family": "clarification",
       "slots": [
         "this / X",
         "language"
@@ -1581,8 +1918,7 @@
       "contrast": "From asks about origin, not current location.",
       "prompts": {
         "intent": "ask where someone is from",
-        "situation": "You want to continue a simple introduction.",
-        "cloze": "Where are you ___?"
+        "situation": "You want to continue a simple introduction."
       },
       "support": {
         "jaHint": "どこの出身ですか"
@@ -1622,8 +1958,7 @@
       "contrast": "Very broad and natural for work or study small talk.",
       "prompts": {
         "intent": "ask what someone does",
-        "situation": "You want to keep an introduction going.",
-        "cloze": "What do you ___?"
+        "situation": "You want to keep an introduction going."
       },
       "support": {
         "jaHint": "お仕事は何をしていますか"
@@ -1663,8 +1998,7 @@
       "contrast": "Usually asks about normal routine, not a one-time plan.",
       "prompts": {
         "intent": "ask about someone’s routine",
-        "situation": "You want a simple question that keeps conversation moving.",
-        "cloze": "What do you usually do ___?"
+        "situation": "You want a simple question that keeps conversation moving."
       },
       "support": {
         "jaHint": "仕事の後はふだん何をしますか"
@@ -1749,8 +2083,7 @@
       "contrast": "This is neutral and curious, not confrontational.",
       "prompts": {
         "intent": "ask for a reason",
-        "situation": "Someone shares an opinion and you want to know more.",
-        "cloze": "Why do you think ___?"
+        "situation": "Someone shares an opinion and you want to know more."
       },
       "support": {
         "jaHint": "どうしてそう思うのですか"
@@ -1802,7 +2135,7 @@
       "status": {
         "published": true
       },
-      "family": "questions to continue conversation",
+      "family": "clarification",
       "slots": [
         "that / noun"
       ],

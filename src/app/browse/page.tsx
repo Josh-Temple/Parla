@@ -59,6 +59,11 @@ function BrowsePageContent() {
             <p className="small" style={{ marginTop: 0 }}>
               {card.category} · {card.function} · {card.register}
             </p>
+            {card.family ? (
+              <p className="small" style={{ margin: "0 0 6px" }}>
+                Family: {card.family}
+              </p>
+            ) : null}
             <h3 style={{ margin: "6px 0" }}>{card.phrase}</h3>
             <p className="small" style={{ margin: "0 0 6px" }}>
               Pattern: {card.pattern}

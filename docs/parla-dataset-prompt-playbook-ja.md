@@ -15,12 +15,12 @@ Parla は「役立つフレーズ集アプリ」を維持しつつ、今後の�
 
 推奨する foundation family:
 
-1. Self / identity / background
-2. Intent / need / plan
-3. Daily actions / time
-4. Opinions / uncertainty / comparison
-5. Repair / survival expressions
-6. Questions to continue conversation
+1. Requests
+2. Opinions / disagreement
+3. Clarification
+4. Self / identity / background
+5. Intent / need / plan
+6. Daily actions / time
 
 推奨タグ:
 
@@ -92,7 +92,7 @@ Base required card fields:
   "prompts": {
     "intent": "string",
     "situation": "string",
-    "cloze": "string"
+    "cloze": "string (optional)"
   },
   "support": {
     "jaHint": "string"
@@ -118,10 +118,13 @@ Authoring rules:
 - prompts should be concrete and easy to imagine
 - Japanese support should stay lightweight and optional
 - `pattern` must make the reusable structure obvious
+- expand cards family-by-family instead of scattering isolated additions
 - `quick_variations` should usually be 2–4 short natural variations
 - `practice_note` should explain how to swap or extend the pattern in one line
 - `ai_transfer_prompt` should be one short idea for later practice outside the main drill
 - tag foundation cards with `core`
+- use `family` consistently so related cards can be reviewed together
+- cloze is optional: only keep it when it strengthens phrase recall
 
 Output requirements:
 - return valid JSON only
@@ -155,6 +158,9 @@ Review checklist:
 10. Prefer high-frequency conversation English over niche professional language.
 11. Keep old IDs unless there is a critical issue.
 12. Remove near-duplicates unless the contrast is educationally meaningful.
+13. Treat `family` as a comparison cluster, not a decorative label.
+14. Remove weak clozes that only hide nouns, places, or random content words.
+15. Keep cloze only when it tests the structural core, a key transformation point, or a meaningful usage slot.
 
 Output valid JSON only.
 ```
@@ -200,12 +206,12 @@ Rules:
 
 おすすめ順:
 
-1. identity
-2. intent
-3. daily
-4. opinion / uncertainty
-5. survival / repair
-6. follow-up questions
+1. requests
+2. opinions / disagreement
+3. clarification
+4. identity
+5. intent
+6. daily
 
 特に最初の 20〜30 枚は、以下のような核文型を優先してください。
 
