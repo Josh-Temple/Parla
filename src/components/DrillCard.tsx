@@ -96,11 +96,12 @@ export function DrillCard({ cards, initialProgress }: { cards: Card[]; initialPr
         <p className="small" style={{ marginTop: 0 }}>
           Card {index + 1}/{sessionCards.length} · left {queueLeft}
         </p>
+        {card.family ? <p className="eyebrow" style={{ marginBottom: 6 }}>{card.family}</p> : null}
         <h2 style={{ marginBottom: 8 }}>{card.prompts.intent}</h2>
-        <p className="small" style={{ marginBottom: 6 }}>
+        <p className="small" style={{ marginBottom: card.prompts.cloze ? 8 : 12 }}>
           {card.prompts.situation}
         </p>
-        {card.prompts.cloze ? <p className="small">{card.prompts.cloze}</p> : null}
+        {card.prompts.cloze ? <p className="cloze-prompt">Optional cloze: {card.prompts.cloze}</p> : null}
         {japaneseHint ? (
           <div style={{ marginBottom: 10 }}>
             <button className="button ghost" onClick={() => setShowHint((prev) => !prev)}>
