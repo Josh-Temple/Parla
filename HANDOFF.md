@@ -2,35 +2,25 @@
 
 ## Session summary
 
-This session reworked Parla’s content system toward family-first authoring, stronger request-cluster coverage, and optional higher-quality cloze prompts.
+This session updated the drill UX so cloze (fill-in-the-blank) hints stay hidden by default and are revealed only on demand via a button, helping learners attempt recall from situation context first.
 
 ## What changed
 
-1. **Dataset quality pass**
-   - Reviewed the starter dataset and removed weak clozes that only tested random nouns, places, or other low-value vocabulary targets.
-   - Improved surviving clozes so they point more directly at phrase structure or meaningful usage slots.
+1. **Drill cloze hint toggle**
+   - Added dedicated UI state in the drill card to control cloze hint visibility per card.
+   - Cloze text is no longer shown immediately when a card loads.
+   - Added a `Show cloze hint` / `Hide cloze hint` button.
+   - Cloze hint visibility resets when switching cards or when a new drill set is loaded.
 
-2. **Family-first content expansion**
-   - Added six new request cards so the request family now has a tighter comparison set across patterns like `Could you...?`, `Would you mind ...ing?`, `I was wondering if...`, `Would you be able to...?`, `If possible, could you...?`, and permission requests.
-   - Applied `family`, `slots`, `quick_variations`, `practice_note`, and `ai_transfer_prompt` more consistently across the older situational cards.
-   - Reclassified opinion/disagreement and clarification-related cards so those clusters are easier to expand later.
-
-3. **Drill rendering update**
-   - Drill view now keeps intent and situation clearly primary.
-   - Cloze is visually de-emphasized and labeled as optional when present.
-   - Family is surfaced in the drill and browse list to make clusters more visible without redesigning the app.
-
-4. **Docs refresh**
-   - README now describes family-first expansion, optional cloze behavior, and the larger request cluster.
-   - The dataset playbook now documents family-first authoring and explicit cloze quality rules.
+2. **Documentation refresh**
+   - Updated README guidance to reflect that cloze hints are hidden by default and learner-triggered in drill mode.
 
 ## Validation run
 
 - `npm run lint`
-- `npm run build`
 
 ## Suggested next steps
 
-1. Expand the clarification family with 2–4 more contrastive cards such as `Do you mean...?`, `So you’re saying...?`, and `Let me make sure I understand.`
-2. Add light browse-level family filtering once the next one or two families are expanded enough to justify a dedicated control.
-3. Continue reviewing older core cards and consider whether some very open slot cards should move toward family-based mini-sets with stronger contrasts.
+1. Add a user option to auto-show cloze hints after a configurable delay (e.g., 5/10/15 seconds).
+2. Consider A/B testing or telemetry to compare recall outcomes between immediate cloze display vs delayed/manual reveal.
+3. If timed reveal is added, keep manual reveal available as an accessibility fallback.
