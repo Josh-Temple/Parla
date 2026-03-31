@@ -20,6 +20,7 @@ export function DrillCard({ cards, initialProgress }: { cards: Card[]; initialPr
   const [sessionCards, setSessionCards] = useState(cards);
   const [index, setIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
+  const [showClozeHint, setShowClozeHint] = useState(false);
   const [showHint, setShowHint] = useState(false);
   const [progressMap, setProgressMap] = useState(() => new Map(initialProgress.map((p) => [p.card_id, p])));
 
@@ -27,6 +28,7 @@ export function DrillCard({ cards, initialProgress }: { cards: Card[]; initialPr
     setSessionCards(cards);
     setIndex(0);
     setRevealed(false);
+    setShowClozeHint(false);
     setShowHint(false);
     setProgressMap(new Map(initialProgress.map((p) => [p.card_id, p])));
   }, [cards, initialProgress]);
@@ -37,6 +39,7 @@ export function DrillCard({ cards, initialProgress }: { cards: Card[]; initialPr
 
   const nextCard = () => {
     setRevealed(false);
+    setShowClozeHint(false);
     setShowHint(false);
     setIndex((prev) => (prev + 1 >= sessionCards.length ? 0 : prev + 1));
   };
@@ -101,7 +104,14 @@ export function DrillCard({ cards, initialProgress }: { cards: Card[]; initialPr
         <p className="small" style={{ marginBottom: card.prompts.cloze ? 8 : 12 }}>
           {card.prompts.situation}
         </p>
-        {card.prompts.cloze ? <p className="cloze-prompt">Optional cloze: {card.prompts.cloze}</p> : null}
+        {card.prompts.cloze ? (
+          <div style={{ marginBottom: 10 }}>
+            <button className="button ghost" onClick={() => setShowClozeHint((prev) => !prev)}>
+              {showClozeHint ? "Hide cloze hint" : "Show cloze hint"}
+            </button>
+            {showClozeHint ? <p className="cloze-prompt">Optional cloze: {card.prompts.cloze}</p> : null}
+          </div>
+        ) : null}
         {japaneseHint ? (
           <div style={{ marginBottom: 10 }}>
             <button className="button ghost" onClick={() => setShowHint((prev) => !prev)}>

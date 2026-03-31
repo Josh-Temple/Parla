@@ -89,6 +89,7 @@ The drill experience prioritizes English cueing for faster recall:
 
 - Front side keeps `prompts.intent` and `prompts.situation` as the primary cues
 - `prompts.cloze` is optional and should only appear when it strengthens phrase recall
+- Cloze hints are hidden by default in drill mode and are revealed only when the learner taps the cloze hint button
 - Japanese is optional support only (`support.jaHint`) and can be switched at runtime
 - Reveal keeps pace by showing phrase + pattern + example + short usage note
 - When present, `quick_variations` are shown compactly on reveal to reinforce reusable structure
