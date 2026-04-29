@@ -11,7 +11,15 @@ export type CardFunction =
   | "intent"
   | "daily"
   | "repair"
-  | "question";
+  | "question"
+  | "meaning"
+  | "expression"
+  | "simplification"
+  | "correction"
+  | "voice_control"
+  | "conversation_control"
+  | "topic_practice"
+  | "learning_state";
 
 export type CardRegister = "casual" | "neutral" | "polite" | "formal";
 
@@ -25,7 +33,15 @@ export type CardCategory =
   | "Daily Actions / Time"
   | "Opinions / Uncertainty"
   | "Repair / Survival"
-  | "Conversation Questions";
+  | "Conversation Questions"
+  | "AI Questions"
+  | "Meaning Help"
+  | "Simpler English"
+  | "Corrections"
+  | "Voice Practice"
+  | "Conversation Control"
+  | "Topic Practice"
+  | "Learning State";
 
 export interface Card {
   id: string;

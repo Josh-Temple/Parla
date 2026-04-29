@@ -2,6 +2,4207 @@
   "schema_version": 1,
   "cards": [
     {
+      "id": "ai_001",
+      "category": "Meaning Help",
+      "phrase": "What does this word mean?",
+      "function": "meaning",
+      "register": "neutral",
+      "pattern": "What ...",
+      "example": "What does this word mean? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "meaning_help",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "What does this word mean?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need meaning help support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_002",
+      "category": "Meaning Help",
+      "phrase": "What does \"___\" mean?",
+      "function": "meaning",
+      "register": "neutral",
+      "pattern": "What ...",
+      "example": "What does \"___\" mean? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI.",
+        "cloze": "What does \"___\" mean?"
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "meaning_help",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "What does \"___\" mean?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need meaning help support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_003",
+      "category": "Meaning Help",
+      "phrase": "Can you explain this word in simple English?",
+      "function": "meaning",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you explain this word in simple English? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "meaning_help",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you explain this word in simple English?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need meaning help support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_004",
+      "category": "Meaning Help",
+      "phrase": "Can you give me an example?",
+      "function": "meaning",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you give me an example? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "meaning_help",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you give me an example?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need meaning help support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_005",
+      "category": "Meaning Help",
+      "phrase": "Can you use it in a sentence?",
+      "function": "meaning",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you use it in a sentence? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "meaning_help",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you use it in a sentence?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need meaning help support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_006",
+      "category": "Meaning Help",
+      "phrase": "Is this word common?",
+      "function": "meaning",
+      "register": "neutral",
+      "pattern": "Is ...",
+      "example": "Is this word common? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "meaning_help",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Is this word common?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need meaning help support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_007",
+      "category": "Meaning Help",
+      "phrase": "Is this formal or casual?",
+      "function": "meaning",
+      "register": "neutral",
+      "pattern": "Is ...",
+      "example": "Is this formal or casual? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "meaning_help",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Is this formal or casual?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need meaning help support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_008",
+      "category": "Meaning Help",
+      "phrase": "What is the difference between A and B?",
+      "function": "meaning",
+      "register": "neutral",
+      "pattern": "What ...",
+      "example": "What is the difference between A and B? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "meaning_help",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "What is the difference between A and B?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need meaning help support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_009",
+      "category": "Meaning Help",
+      "phrase": "Does this sound natural?",
+      "function": "meaning",
+      "register": "neutral",
+      "pattern": "Does ...",
+      "example": "Does this sound natural? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "meaning_help",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Does this sound natural?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need meaning help support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_010",
+      "category": "Meaning Help",
+      "phrase": "What does this sentence mean?",
+      "function": "meaning",
+      "register": "neutral",
+      "pattern": "What ...",
+      "example": "What does this sentence mean? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "meaning_help",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "What does this sentence mean?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need meaning help support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_011",
+      "category": "Meaning Help",
+      "phrase": "Can you explain this phrase?",
+      "function": "meaning",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you explain this phrase? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "meaning_help",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you explain this phrase?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need meaning help support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_012",
+      "category": "Meaning Help",
+      "phrase": "When do people use this expression?",
+      "function": "meaning",
+      "register": "neutral",
+      "pattern": "When ...",
+      "example": "When do people use this expression? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "meaning_help",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "When do people use this expression?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need meaning help support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_013",
+      "category": "Meaning Help",
+      "phrase": "Is this the right meaning here?",
+      "function": "meaning",
+      "register": "neutral",
+      "pattern": "Is ...",
+      "example": "Is this the right meaning here? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "meaning_help",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Is this the right meaning here?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need meaning help support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_014",
+      "category": "Meaning Help",
+      "phrase": "Can you give me two simple examples?",
+      "function": "meaning",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you give me two simple examples? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "meaning_help",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you give me two simple examples?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need meaning help support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_015",
+      "category": "Meaning Help",
+      "phrase": "Can you compare these two words?",
+      "function": "meaning",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you compare these two words? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "meaning_help",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you compare these two words?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need meaning help support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_016",
+      "category": "AI Questions",
+      "phrase": "How can I say this in English?",
+      "function": "expression",
+      "register": "neutral",
+      "pattern": "How ...",
+      "example": "How can I say this in English? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "ai_questions",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "How can I say this in English?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need ai questions support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_017",
+      "category": "AI Questions",
+      "phrase": "How do native speakers say this?",
+      "function": "expression",
+      "register": "neutral",
+      "pattern": "How ...",
+      "example": "How do native speakers say this? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "ai_questions",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "How do native speakers say this?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need ai questions support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_018",
+      "category": "AI Questions",
+      "phrase": "What is a natural way to say this?",
+      "function": "expression",
+      "register": "neutral",
+      "pattern": "What ...",
+      "example": "What is a natural way to say this? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "ai_questions",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "What is a natural way to say this?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need ai questions support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_019",
+      "category": "AI Questions",
+      "phrase": "Can you give me three ways to say this?",
+      "function": "expression",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you give me three ways to say this? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "ai_questions",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you give me three ways to say this?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need ai questions support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_020",
+      "category": "AI Questions",
+      "phrase": "What is a simpler way to say this?",
+      "function": "expression",
+      "register": "neutral",
+      "pattern": "What ...",
+      "example": "What is a simpler way to say this? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "ai_questions",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "What is a simpler way to say this?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need ai questions support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_021",
+      "category": "AI Questions",
+      "phrase": "What is a more polite way to say this?",
+      "function": "expression",
+      "register": "neutral",
+      "pattern": "What ...",
+      "example": "What is a more polite way to say this? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "ai_questions",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "What is a more polite way to say this?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need ai questions support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_022",
+      "category": "AI Questions",
+      "phrase": "What is a more casual way to say this?",
+      "function": "expression",
+      "register": "neutral",
+      "pattern": "What ...",
+      "example": "What is a more casual way to say this? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "ai_questions",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "What is a more casual way to say this?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need ai questions support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_023",
+      "category": "AI Questions",
+      "phrase": "Can I say it like this?",
+      "function": "expression",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can I say it like this? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "ai_questions",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can I say it like this?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need ai questions support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_024",
+      "category": "AI Questions",
+      "phrase": "Is this phrase okay?",
+      "function": "expression",
+      "register": "neutral",
+      "pattern": "Is ...",
+      "example": "Is this phrase okay? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "ai_questions",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Is this phrase okay?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need ai questions support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_025",
+      "category": "AI Questions",
+      "phrase": "What should I say in this situation?",
+      "function": "expression",
+      "register": "neutral",
+      "pattern": "What ...",
+      "example": "What should I say in this situation? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "ai_questions",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "What should I say in this situation?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need ai questions support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_026",
+      "category": "AI Questions",
+      "phrase": "Can you help me phrase this question?",
+      "function": "expression",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you help me phrase this question? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "ai_questions",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you help me phrase this question?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need ai questions support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_027",
+      "category": "AI Questions",
+      "phrase": "How can I ask this more clearly?",
+      "function": "expression",
+      "register": "neutral",
+      "pattern": "How ...",
+      "example": "How can I ask this more clearly? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "ai_questions",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "How can I ask this more clearly?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need ai questions support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_028",
+      "category": "AI Questions",
+      "phrase": "Can you give me a short version?",
+      "function": "expression",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you give me a short version? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "ai_questions",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you give me a short version?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need ai questions support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_029",
+      "category": "AI Questions",
+      "phrase": "Can you give me a friendly version?",
+      "function": "expression",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you give me a friendly version? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "ai_questions",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you give me a friendly version?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need ai questions support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_030",
+      "category": "AI Questions",
+      "phrase": "Can you give me a formal version?",
+      "function": "expression",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you give me a formal version? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "ai_questions",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you give me a formal version?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need ai questions support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_031",
+      "category": "Simpler English",
+      "phrase": "Please use simpler English.",
+      "function": "simplification",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please use simpler English. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please use simple English.",
+        "Can you explain it step by step?"
+      ],
+      "contrast": "More direct than asking for details.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "simpler_english",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please use simpler English.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need simpler english support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_032",
+      "category": "Simpler English",
+      "phrase": "Please use easier words.",
+      "function": "simplification",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please use easier words. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please use simple English.",
+        "Can you explain it step by step?"
+      ],
+      "contrast": "More direct than asking for details.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "simpler_english",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please use easier words.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need simpler english support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_033",
+      "category": "Simpler English",
+      "phrase": "Please say that more simply.",
+      "function": "simplification",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please say that more simply. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please use simple English.",
+        "Can you explain it step by step?"
+      ],
+      "contrast": "More direct than asking for details.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "simpler_english",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please say that more simply.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need simpler english support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_034",
+      "category": "Simpler English",
+      "phrase": "Can you explain it like I’m a beginner?",
+      "function": "simplification",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you explain it like I’m a beginner? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please use simple English.",
+        "Can you explain it step by step?"
+      ],
+      "contrast": "More direct than asking for details.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "simpler_english",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you explain it like I’m a beginner?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need simpler english support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_035",
+      "category": "Simpler English",
+      "phrase": "Please use short sentences.",
+      "function": "simplification",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please use short sentences. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please use simple English.",
+        "Can you explain it step by step?"
+      ],
+      "contrast": "More direct than asking for details.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "simpler_english",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please use short sentences.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need simpler english support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_036",
+      "category": "Simpler English",
+      "phrase": "Please don’t use difficult words.",
+      "function": "simplification",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please don’t use difficult words. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please use simple English.",
+        "Can you explain it step by step?"
+      ],
+      "contrast": "More direct than asking for details.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "simpler_english",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please don’t use difficult words.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need simpler english support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_037",
+      "category": "Simpler English",
+      "phrase": "Can you say that in another way?",
+      "function": "simplification",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you say that in another way? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please use simple English.",
+        "Can you explain it step by step?"
+      ],
+      "contrast": "More direct than asking for details.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "simpler_english",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you say that in another way?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need simpler english support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_038",
+      "category": "Simpler English",
+      "phrase": "Can you break it down?",
+      "function": "simplification",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you break it down? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please use simple English.",
+        "Can you explain it step by step?"
+      ],
+      "contrast": "More direct than asking for details.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "simpler_english",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you break it down?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need simpler english support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_039",
+      "category": "Simpler English",
+      "phrase": "Can you explain it step by step?",
+      "function": "simplification",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you explain it step by step? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please use simple English.",
+        "Can you explain it step by step?"
+      ],
+      "contrast": "More direct than asking for details.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "simpler_english",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you explain it step by step?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need simpler english support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_040",
+      "category": "Simpler English",
+      "phrase": "Can you give me a very simple example?",
+      "function": "simplification",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you give me a very simple example? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please use simple English.",
+        "Can you explain it step by step?"
+      ],
+      "contrast": "More direct than asking for details.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "simpler_english",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you give me a very simple example?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need simpler english support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_041",
+      "category": "Simpler English",
+      "phrase": "Please keep it simple.",
+      "function": "simplification",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please keep it simple. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please use simple English.",
+        "Can you explain it step by step?"
+      ],
+      "contrast": "More direct than asking for details.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "simpler_english",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please keep it simple.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need simpler english support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_042",
+      "category": "Simpler English",
+      "phrase": "Can you explain this slowly and simply?",
+      "function": "simplification",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you explain this slowly and simply? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please use simple English.",
+        "Can you explain it step by step?"
+      ],
+      "contrast": "More direct than asking for details.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "simpler_english",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you explain this slowly and simply?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need simpler english support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_043",
+      "category": "Simpler English",
+      "phrase": "Please make your answer shorter.",
+      "function": "simplification",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please make your answer shorter. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please use simple English.",
+        "Can you explain it step by step?"
+      ],
+      "contrast": "More direct than asking for details.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "simpler_english",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please make your answer shorter.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need simpler english support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_044",
+      "category": "Simpler English",
+      "phrase": "Can you use everyday words?",
+      "function": "simplification",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you use everyday words? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please use simple English.",
+        "Can you explain it step by step?"
+      ],
+      "contrast": "More direct than asking for details.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "simpler_english",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you use everyday words?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need simpler english support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_045",
+      "category": "Simpler English",
+      "phrase": "Can you explain only the key point?",
+      "function": "simplification",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you explain only the key point? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please use simple English.",
+        "Can you explain it step by step?"
+      ],
+      "contrast": "More direct than asking for details.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "simpler_english",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you explain only the key point?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need simpler english support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_046",
+      "category": "Corrections",
+      "phrase": "Please correct my English.",
+      "function": "correction",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please correct my English. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please correct my English.",
+        "Can you rewrite this naturally?"
+      ],
+      "contrast": "Focuses on feedback, not new explanations.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "corrections",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please correct my English.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need corrections support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_047",
+      "category": "Corrections",
+      "phrase": "Please correct only big mistakes.",
+      "function": "correction",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please correct only big mistakes. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please correct my English.",
+        "Can you rewrite this naturally?"
+      ],
+      "contrast": "Focuses on feedback, not new explanations.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "corrections",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please correct only big mistakes.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need corrections support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_048",
+      "category": "Corrections",
+      "phrase": "Please correct my sentence.",
+      "function": "correction",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please correct my sentence. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please correct my English.",
+        "Can you rewrite this naturally?"
+      ],
+      "contrast": "Focuses on feedback, not new explanations.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "corrections",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please correct my sentence.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need corrections support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_049",
+      "category": "Corrections",
+      "phrase": "Please make this sentence more natural.",
+      "function": "correction",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please make this sentence more natural. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please correct my English.",
+        "Can you rewrite this naturally?"
+      ],
+      "contrast": "Focuses on feedback, not new explanations.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "corrections",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please make this sentence more natural.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need corrections support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_050",
+      "category": "Corrections",
+      "phrase": "Please explain why it is wrong.",
+      "function": "correction",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please explain why it is wrong. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please correct my English.",
+        "Can you rewrite this naturally?"
+      ],
+      "contrast": "Focuses on feedback, not new explanations.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "corrections",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please explain why it is wrong.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need corrections support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_051",
+      "category": "Corrections",
+      "phrase": "Please show me the better sentence.",
+      "function": "correction",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please show me the better sentence. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please correct my English.",
+        "Can you rewrite this naturally?"
+      ],
+      "contrast": "Focuses on feedback, not new explanations.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "corrections",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please show me the better sentence.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need corrections support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_052",
+      "category": "Corrections",
+      "phrase": "Please give me one sentence to practice.",
+      "function": "correction",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please give me one sentence to practice. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please correct my English.",
+        "Can you rewrite this naturally?"
+      ],
+      "contrast": "Focuses on feedback, not new explanations.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "corrections",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please give me one sentence to practice.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need corrections support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_053",
+      "category": "Corrections",
+      "phrase": "Please correct me at the end.",
+      "function": "correction",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please correct me at the end. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please correct my English.",
+        "Can you rewrite this naturally?"
+      ],
+      "contrast": "Focuses on feedback, not new explanations.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "corrections",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please correct me at the end.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need corrections support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_054",
+      "category": "Corrections",
+      "phrase": "Please don’t stop the conversation every time I make a mistake.",
+      "function": "correction",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please don’t stop the conversation every time I make a mistake. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please correct my English.",
+        "Can you rewrite this naturally?"
+      ],
+      "contrast": "Focuses on feedback, not new explanations.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "corrections",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please don’t stop the conversation every time I make a mistake.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need corrections support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_055",
+      "category": "Corrections",
+      "phrase": "Can you rewrite this in natural English?",
+      "function": "correction",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you rewrite this in natural English? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please correct my English.",
+        "Can you rewrite this naturally?"
+      ],
+      "contrast": "Focuses on feedback, not new explanations.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "corrections",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you rewrite this in natural English?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need corrections support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_056",
+      "category": "Corrections",
+      "phrase": "Can you check my question?",
+      "function": "correction",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you check my question? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please correct my English.",
+        "Can you rewrite this naturally?"
+      ],
+      "contrast": "Focuses on feedback, not new explanations.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "corrections",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you check my question?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need corrections support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_057",
+      "category": "Corrections",
+      "phrase": "Can you fix my grammar only?",
+      "function": "correction",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you fix my grammar only? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please correct my English.",
+        "Can you rewrite this naturally?"
+      ],
+      "contrast": "Focuses on feedback, not new explanations.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "corrections",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you fix my grammar only?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need corrections support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_058",
+      "category": "Corrections",
+      "phrase": "Can you fix my word choice?",
+      "function": "correction",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you fix my word choice? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please correct my English.",
+        "Can you rewrite this naturally?"
+      ],
+      "contrast": "Focuses on feedback, not new explanations.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "corrections",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you fix my word choice?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need corrections support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_059",
+      "category": "Corrections",
+      "phrase": "Can you show a native-like version?",
+      "function": "correction",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you show a native-like version? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please correct my English.",
+        "Can you rewrite this naturally?"
+      ],
+      "contrast": "Focuses on feedback, not new explanations.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "corrections",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you show a native-like version?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need corrections support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_060",
+      "category": "Corrections",
+      "phrase": "Can you give feedback after my answer?",
+      "function": "correction",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you give feedback after my answer? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please correct my English.",
+        "Can you rewrite this naturally?"
+      ],
+      "contrast": "Focuses on feedback, not new explanations.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "corrections",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you give feedback after my answer?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need corrections support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_061",
+      "category": "Voice Practice",
+      "phrase": "Please speak more slowly.",
+      "function": "voice_control",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please speak more slowly. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please speak more slowly.",
+        "Please repeat that."
+      ],
+      "contrast": "Targets listening speed and clarity.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "voice_practice",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please speak more slowly.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need voice practice support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_062",
+      "category": "Voice Practice",
+      "phrase": "Please say that again.",
+      "function": "voice_control",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please say that again. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please speak more slowly.",
+        "Please repeat that."
+      ],
+      "contrast": "Targets listening speed and clarity.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "voice_practice",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please say that again.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need voice practice support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_063",
+      "category": "Voice Practice",
+      "phrase": "Please repeat the question.",
+      "function": "voice_control",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please repeat the question. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please speak more slowly.",
+        "Please repeat that."
+      ],
+      "contrast": "Targets listening speed and clarity.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "voice_practice",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please repeat the question.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need voice practice support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_064",
+      "category": "Voice Practice",
+      "phrase": "Please ask me one question at a time.",
+      "function": "voice_control",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please ask me one question at a time. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please speak more slowly.",
+        "Please repeat that."
+      ],
+      "contrast": "Targets listening speed and clarity.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "voice_practice",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please ask me one question at a time.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need voice practice support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_065",
+      "category": "Voice Practice",
+      "phrase": "Please wait while I think.",
+      "function": "voice_control",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please wait while I think. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please speak more slowly.",
+        "Please repeat that."
+      ],
+      "contrast": "Targets listening speed and clarity.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "voice_practice",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please wait while I think.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need voice practice support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_066",
+      "category": "Voice Practice",
+      "phrase": "I didn’t catch that.",
+      "function": "voice_control",
+      "register": "neutral",
+      "pattern": "I ...",
+      "example": "I didn’t catch that. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please speak more slowly.",
+        "Please repeat that."
+      ],
+      "contrast": "Targets listening speed and clarity.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "voice_practice",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "I didn’t catch that.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need voice practice support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_067",
+      "category": "Voice Practice",
+      "phrase": "I heard the words, but I didn’t understand the meaning.",
+      "function": "voice_control",
+      "register": "neutral",
+      "pattern": "I ...",
+      "example": "I heard the words, but I didn’t understand the meaning. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please speak more slowly.",
+        "Please repeat that."
+      ],
+      "contrast": "Targets listening speed and clarity.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "voice_practice",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "I heard the words, but I didn’t understand the meaning.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need voice practice support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_068",
+      "category": "Voice Practice",
+      "phrase": "Can you say it more clearly?",
+      "function": "voice_control",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you say it more clearly? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please speak more slowly.",
+        "Please repeat that."
+      ],
+      "contrast": "Targets listening speed and clarity.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "voice_practice",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you say it more clearly?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need voice practice support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_069",
+      "category": "Voice Practice",
+      "phrase": "Can you ask an easier question?",
+      "function": "voice_control",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you ask an easier question? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please speak more slowly.",
+        "Please repeat that."
+      ],
+      "contrast": "Targets listening speed and clarity.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "voice_practice",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you ask an easier question?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need voice practice support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_070",
+      "category": "Voice Practice",
+      "phrase": "Please continue in simple English.",
+      "function": "voice_control",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please continue in simple English. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please speak more slowly.",
+        "Please repeat that."
+      ],
+      "contrast": "Targets listening speed and clarity.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "voice_practice",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please continue in simple English.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need voice practice support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_071",
+      "category": "Voice Practice",
+      "phrase": "Could you pause between sentences?",
+      "function": "voice_control",
+      "register": "neutral",
+      "pattern": "Could ...",
+      "example": "Could you pause between sentences? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please speak more slowly.",
+        "Please repeat that."
+      ],
+      "contrast": "Targets listening speed and clarity.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "voice_practice",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Could you pause between sentences?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need voice practice support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_072",
+      "category": "Voice Practice",
+      "phrase": "Please use a slower pace.",
+      "function": "voice_control",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please use a slower pace. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please speak more slowly.",
+        "Please repeat that."
+      ],
+      "contrast": "Targets listening speed and clarity.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "voice_practice",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please use a slower pace.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need voice practice support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_073",
+      "category": "Voice Practice",
+      "phrase": "Can you ask shorter questions?",
+      "function": "voice_control",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you ask shorter questions? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please speak more slowly.",
+        "Please repeat that."
+      ],
+      "contrast": "Targets listening speed and clarity.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "voice_practice",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you ask shorter questions?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need voice practice support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_074",
+      "category": "Voice Practice",
+      "phrase": "Please repeat the last part.",
+      "function": "voice_control",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please repeat the last part. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please speak more slowly.",
+        "Please repeat that."
+      ],
+      "contrast": "Targets listening speed and clarity.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "voice_practice",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please repeat the last part.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need voice practice support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_075",
+      "category": "Voice Practice",
+      "phrase": "Can you emphasize the key word?",
+      "function": "voice_control",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you emphasize the key word? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Please speak more slowly.",
+        "Please repeat that."
+      ],
+      "contrast": "Targets listening speed and clarity.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "voice_practice",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you emphasize the key word?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need voice practice support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_076",
+      "category": "Conversation Control",
+      "phrase": "I don’t understand.",
+      "function": "conversation_control",
+      "register": "neutral",
+      "pattern": "I ...",
+      "example": "I don’t understand. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "conversation_control",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "I don’t understand.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need conversation control support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_077",
+      "category": "Conversation Control",
+      "phrase": "I’m not sure.",
+      "function": "conversation_control",
+      "register": "neutral",
+      "pattern": "I’m ...",
+      "example": "I’m not sure. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "conversation_control",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "I’m not sure.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need conversation control support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_078",
+      "category": "Conversation Control",
+      "phrase": "Let me think.",
+      "function": "conversation_control",
+      "register": "neutral",
+      "pattern": "Let ...",
+      "example": "Let me think. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "conversation_control",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Let me think.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need conversation control support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_079",
+      "category": "Conversation Control",
+      "phrase": "I want to try again.",
+      "function": "conversation_control",
+      "register": "neutral",
+      "pattern": "I ...",
+      "example": "I want to try again. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "conversation_control",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "I want to try again.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need conversation control support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_080",
+      "category": "Conversation Control",
+      "phrase": "Please ask me another question.",
+      "function": "conversation_control",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please ask me another question. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "conversation_control",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please ask me another question.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need conversation control support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_081",
+      "category": "Conversation Control",
+      "phrase": "Can we practice this topic?",
+      "function": "conversation_control",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can we practice this topic? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "conversation_control",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can we practice this topic?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need conversation control support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_082",
+      "category": "Conversation Control",
+      "phrase": "Let’s talk about something easier.",
+      "function": "conversation_control",
+      "register": "neutral",
+      "pattern": "Let’s ...",
+      "example": "Let’s talk about something easier. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "conversation_control",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Let’s talk about something easier.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need conversation control support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_083",
+      "category": "Conversation Control",
+      "phrase": "Please give me a hint.",
+      "function": "conversation_control",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please give me a hint. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "conversation_control",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please give me a hint.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need conversation control support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_084",
+      "category": "Conversation Control",
+      "phrase": "Can you help me continue?",
+      "function": "conversation_control",
+      "register": "neutral",
+      "pattern": "Can ...",
+      "example": "Can you help me continue? For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "conversation_control",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Can you help me continue?",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need conversation control support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_085",
+      "category": "Conversation Control",
+      "phrase": "Please summarize what we talked about.",
+      "function": "conversation_control",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please summarize what we talked about. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "conversation_control",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please summarize what we talked about.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need conversation control support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_086",
+      "category": "Learning State",
+      "phrase": "I’m a beginner.",
+      "function": "learning_state",
+      "register": "neutral",
+      "pattern": "I’m ...",
+      "example": "I’m a beginner. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "learning_state",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "I’m a beginner.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need learning state support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_087",
+      "category": "Learning State",
+      "phrase": "I’m learning English.",
+      "function": "learning_state",
+      "register": "neutral",
+      "pattern": "I’m ...",
+      "example": "I’m learning English. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "learning_state",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "I’m learning English.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need learning state support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_088",
+      "category": "Learning State",
+      "phrase": "Listening is difficult for me.",
+      "function": "learning_state",
+      "register": "neutral",
+      "pattern": "Listening ...",
+      "example": "Listening is difficult for me. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "learning_state",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Listening is difficult for me.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need learning state support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_089",
+      "category": "Learning State",
+      "phrase": "I can read a little, but speaking is hard.",
+      "function": "learning_state",
+      "register": "neutral",
+      "pattern": "I ...",
+      "example": "I can read a little, but speaking is hard. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "learning_state",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "I can read a little, but speaking is hard.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need learning state support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_090",
+      "category": "Learning State",
+      "phrase": "I know this word, but I can’t hear it.",
+      "function": "learning_state",
+      "register": "neutral",
+      "pattern": "I ...",
+      "example": "I know this word, but I can’t hear it. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "learning_state",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "I know this word, but I can’t hear it.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need learning state support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_091",
+      "category": "Learning State",
+      "phrase": "I want to improve my listening.",
+      "function": "learning_state",
+      "register": "neutral",
+      "pattern": "I ...",
+      "example": "I want to improve my listening. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "learning_state",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "I want to improve my listening.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need learning state support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_092",
+      "category": "Learning State",
+      "phrase": "I want to speak more smoothly.",
+      "function": "learning_state",
+      "register": "neutral",
+      "pattern": "I ...",
+      "example": "I want to speak more smoothly. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "learning_state",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "I want to speak more smoothly.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need learning state support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_093",
+      "category": "Learning State",
+      "phrase": "I need more examples.",
+      "function": "learning_state",
+      "register": "neutral",
+      "pattern": "I ...",
+      "example": "I need more examples. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "learning_state",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "I need more examples.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need learning state support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_094",
+      "category": "Learning State",
+      "phrase": "That explanation was helpful.",
+      "function": "learning_state",
+      "register": "neutral",
+      "pattern": "That ...",
+      "example": "That explanation was helpful. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "learning_state",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "That explanation was helpful.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need learning state support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_095",
+      "category": "Learning State",
+      "phrase": "This is too difficult for me.",
+      "function": "learning_state",
+      "register": "neutral",
+      "pattern": "This ...",
+      "example": "This is too difficult for me. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "learning_state",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "This is too difficult for me.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need learning state support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_096",
+      "category": "Topic Practice",
+      "phrase": "I want to talk about language learning.",
+      "function": "topic_practice",
+      "register": "neutral",
+      "pattern": "I ...",
+      "example": "I want to talk about language learning. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "topic_practice",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "I want to talk about language learning.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need topic practice support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_097",
+      "category": "Topic Practice",
+      "phrase": "I want to talk about my daily routine.",
+      "function": "topic_practice",
+      "register": "neutral",
+      "pattern": "I ...",
+      "example": "I want to talk about my daily routine. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "topic_practice",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "I want to talk about my daily routine.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need topic practice support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_098",
+      "category": "Topic Practice",
+      "phrase": "I want to talk about books.",
+      "function": "topic_practice",
+      "register": "neutral",
+      "pattern": "I ...",
+      "example": "I want to talk about books. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "topic_practice",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "I want to talk about books.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need topic practice support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_099",
+      "category": "Topic Practice",
+      "phrase": "I want to talk about AI.",
+      "function": "topic_practice",
+      "register": "neutral",
+      "pattern": "I ...",
+      "example": "I want to talk about AI. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "topic_practice",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "I want to talk about AI.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need topic practice support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
+      "id": "ai_100",
+      "category": "Topic Practice",
+      "phrase": "Please ask me easy questions about this topic.",
+      "function": "topic_practice",
+      "register": "neutral",
+      "pattern": "Please ...",
+      "example": "Please ask me easy questions about this topic. For example, we can practice with travel vocabulary.",
+      "notes": "Useful phrase for guiding AI practice.",
+      "tags": [
+        "ai",
+        "survival",
+        "core"
+      ],
+      "similar": [
+        "Can you help me with this?",
+        "Please explain in simple English."
+      ],
+      "contrast": "Adjust depending on your goal.",
+      "prompts": {
+        "intent": "Use this phrase during AI practice",
+        "situation": "You need support while practicing English with AI."
+      },
+      "support": {
+        "jaHint": "AIと英語練習するときに使える一言です。"
+      },
+      "family": "topic_practice",
+      "slots": [
+        "topic",
+        "style"
+      ],
+      "quick_variations": [
+        "Please ask me easy questions about this topic.",
+        "Can you help me with this?"
+      ],
+      "practice_note": "Use it to control the lesson flow.",
+      "ai_transfer_prompt": "Use this phrase with an AI when you need topic practice support.",
+      "difficulty": 1,
+      "status": {
+        "published": true
+      }
+    },
+    {
       "id": "request_001",
       "category": "Requests",
       "phrase": "Could you give me a quick update?",

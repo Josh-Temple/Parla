@@ -39,6 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/drill">Drill</Link>
               <Link href="/browse">Browse</Link>
               <Link href="/review">Review</Link>
+              <Link href="/use-with-ai">Use with AI</Link>
               <JapaneseSupportToggle />
             </nav>
           </div>
