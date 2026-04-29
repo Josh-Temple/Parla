@@ -25,3 +25,12 @@ Refocused Parla from a general phrase trainer into an AI-survival English traine
 1. Improve card writing quality pass for style consistency (natural spoken English variants).
 2. Add optional onboarding that starts new users directly in AI-survival mode.
 3. Add lightweight analytics hooks (local-only or privacy-preserving) to measure card usefulness.
+
+
+## Session update (2026-04-29)
+
+- Unified `ai_survival` with core `DrillMode` and review selectors so hidden cards and scheduling are respected.
+- Added copy-success and copy-failure feedback on `/use-with-ai` and card mini-prompt copy.
+- Added AI-survival quick browse links on `/use-with-ai`.
+- Rewrote AI-survival card metadata fields in `public/data/cards.json` to replace generic scaffolding with practical learning cues.
+- Validation completed: `npm run lint` and `npm run build` passed.

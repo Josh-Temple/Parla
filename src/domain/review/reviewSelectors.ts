@@ -1,7 +1,7 @@
 import type { Card } from "../cards/cardTypes";
 import type { ProgressItem } from "../progress/progressTypes";
 
-export type DrillMode = "all" | "due" | "hard" | "confusing" | "want_to_use";
+export type DrillMode = "all" | "due" | "hard" | "confusing" | "want_to_use" | "ai_survival";
 
 const toMap = (progress: ProgressItem[]): Map<string, ProgressItem> => new Map(progress.map((item) => [item.card_id, item]));
 
@@ -62,6 +62,16 @@ export function prioritizeDailyCards(cards: Card[], progress: ProgressItem[], no
   return [...due, ...unseen, ...later];
 }
 
+
+
+export function getAiSurvivalCards(cards: Card[]): Card[] {
+  return cards.filter((card) => card.tags.includes("ai") && card.tags.includes("survival") && card.tags.includes("core"));
+}
+
+export function getPrioritizedAiSurvivalCards(cards: Card[], progress: ProgressItem[], now = new Date()): Card[] {
+  return prioritizeDailyCards(getAiSurvivalCards(cards), progress, now);
+}
+
 export function selectDrillCards(cards: Card[], progress: ProgressItem[], mode: DrillMode): Card[] {
   switch (mode) {
     case "due":
@@ -72,6 +82,8 @@ export function selectDrillCards(cards: Card[], progress: ProgressItem[], mode: 
       return getConfusingCards(cards, progress);
     case "want_to_use":
       return getWantToUseCards(cards, progress);
+    case "ai_survival":
+      return getPrioritizedAiSurvivalCards(cards, progress);
     case "all":
     default:
       return prioritizeDailyCards(cards, progress);

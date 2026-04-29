@@ -15,6 +15,7 @@ export default function CardDetailPage() {
   const [card, setCard] = useState<Card | null>(null);
   const [progress, setProgress] = useState<ProgressItem | null>(null);
   const [showHint, setShowHint] = useState(false);
+  const [copyStatus, setCopyStatus] = useState<string | null>(null);
 
   const id = params.id;
 
@@ -27,7 +28,15 @@ export default function CardDetailPage() {
     })();
   }, [id]);
 
-  const copyText = async (text: string) => navigator.clipboard.writeText(text);
+  const copyText = async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopyStatus("Copied.");
+    } catch {
+      setCopyStatus("Could not copy. Please copy manually.");
+    }
+    window.setTimeout(() => setCopyStatus(null), 1600);
+  };
 
   const refreshProgress = async () => {
     if (!id) return;
@@ -91,6 +100,7 @@ Please ask me simple questions and help me use this phrase naturally.`}</pre>
 "${card.phrase}"
 
 Please ask me simple questions and help me use this phrase naturally.`)}>Copy mini prompt</button>
+          {copyStatus ? <p className="small" aria-live="polite" style={{ marginBottom: 0 }}>{copyStatus}</p> : null}
         </div>
 
         <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
