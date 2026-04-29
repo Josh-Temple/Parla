@@ -40,6 +40,13 @@ function BrowsePageContent() {
 
   return (
     <main>
+      <div className="panel" style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+        <Link href="/browse?tag=ai" className="button ghost">AI survival</Link>
+        <Link href="/browse?category=Meaning%20Help" className="button ghost">Meaning help</Link>
+        <Link href="/browse?category=Simpler%20English" className="button ghost">Simpler English</Link>
+        <Link href="/browse?category=Corrections" className="button ghost">Corrections</Link>
+        <Link href="/browse?category=Voice%20Practice" className="button ghost">Voice practice</Link>
+      </div>
       <FilterBar
         filters={filters}
         categories={options.categories}
@@ -50,7 +57,7 @@ function BrowsePageContent() {
       />
       <div className="panel">
         <p className="small" style={{ margin: 0 }}>
-          {filtered.length} cards · core filter works via the <strong>core</strong> tag.
+          {filtered.length} cards · Filter by AI survival tags, category, function, and register.
         </p>
       </div>
       <div className="grid">
@@ -84,5 +91,12 @@ function BrowsePageContent() {
 }
 
 export default function BrowsePage() {
-  return <Suspense fallback={<main><p className="small">Loading filters...</p></main>}><BrowsePageContent /></Suspense>;
+  return <Suspense fallback={<main>
+      <div className="panel" style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+        <Link href="/browse?tag=ai" className="button ghost">AI survival</Link>
+        <Link href="/browse?category=Meaning%20Help" className="button ghost">Meaning help</Link>
+        <Link href="/browse?category=Simpler%20English" className="button ghost">Simpler English</Link>
+        <Link href="/browse?category=Corrections" className="button ghost">Corrections</Link>
+        <Link href="/browse?category=Voice%20Practice" className="button ghost">Voice practice</Link>
+      </div><p className="small">Loading filters...</p></main>}><BrowsePageContent /></Suspense>;
 }

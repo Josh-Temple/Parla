@@ -27,6 +27,8 @@ export default function CardDetailPage() {
     })();
   }, [id]);
 
+  const copyText = async (text: string) => navigator.clipboard.writeText(text);
+
   const refreshProgress = async () => {
     if (!id) return;
     setProgress(await progressRepository.getProgress(id));
@@ -76,7 +78,21 @@ export default function CardDetailPage() {
           </div>
         ) : null}
         {card.practice_note ? <p className="small">Use this to say: {card.practice_note}</p> : null}
-        {card.ai_transfer_prompt ? <p className="small">AI practice later: {card.ai_transfer_prompt}</p> : null}
+        <div className="panel" style={{ marginTop: 12, padding: 12 }}>
+          <p className="small" style={{ margin: "0 0 6px" }}>Use this with AI</p>
+          {card.ai_transfer_prompt ? <p className="small">{card.ai_transfer_prompt}</p> : null}
+          <pre style={{ whiteSpace: "pre-wrap", fontFamily: "inherit" }}>{`I want to practice this English phrase:
+
+"${card.phrase}"
+
+Please ask me simple questions and help me use this phrase naturally.`}</pre>
+          <button className="button secondary" onClick={() => void copyText(`I want to practice this English phrase:
+
+"${card.phrase}"
+
+Please ask me simple questions and help me use this phrase naturally.`)}>Copy mini prompt</button>
+        </div>
+
         <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
           <AudioButton label="Phrase" url={audioResolver.getPhraseAudioUrl(card)} />
           <AudioButton label="Example" url={audioResolver.getExampleAudioUrl(card)} />

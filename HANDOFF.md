@@ -2,25 +2,26 @@
 
 ## Session summary
 
-This session updated the drill UX so cloze (fill-in-the-blank) hints stay hidden by default and are revealed only on demand via a button, helping learners attempt recall from situation context first.
+Refocused Parla from a general phrase trainer into an AI-survival English trainer while keeping the existing local-first flash-drill architecture.
 
 ## What changed
 
-1. **Drill cloze hint toggle**
-   - Added dedicated UI state in the drill card to control cloze hint visibility per card.
-   - Cloze text is no longer shown immediately when a card loads.
-   - Added a `Show cloze hint` / `Hide cloze hint` button.
-   - Cloze hint visibility resets when switching cards or when a new drill set is loaded.
+1. Updated home flow and copy to emphasize AI-survival learning and external AI usage.
+2. Extended card type unions for new AI-focused categories and functions.
+3. Added ~100 AI-survival cards to `public/data/cards.json` and tagged them `ai/survival/core`.
+4. Added AI-survival drill mode priority via `/drill?mode=ai_survival`.
+5. Added `/use-with-ai` page with copyable external-AI prompt templates.
+6. Promoted “Use this with AI” in card detail with a copyable mini prompt.
+7. Added browse quick links for AI-survival-focused filtering.
+8. Updated navigation and README to reflect product direction.
 
-2. **Documentation refresh**
-   - Updated README guidance to reflect that cloze hints are hidden by default and learner-triggered in drill mode.
-
-## Validation run
+## Validation to run
 
 - `npm run lint`
+- `npm run build`
 
 ## Suggested next steps
 
-1. Add a user option to auto-show cloze hints after a configurable delay (e.g., 5/10/15 seconds).
-2. Consider A/B testing or telemetry to compare recall outcomes between immediate cloze display vs delayed/manual reveal.
-3. If timed reveal is added, keep manual reveal available as an accessibility fallback.
+1. Improve card writing quality pass for style consistency (natural spoken English variants).
+2. Add optional onboarding that starts new users directly in AI-survival mode.
+3. Add lightweight analytics hooks (local-only or privacy-preserving) to measure card usefulness.
