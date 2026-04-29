@@ -6,16 +6,14 @@ import { useSearchParams } from "next/navigation";
 import { DrillCard } from "@/components/DrillCard";
 import type { Card } from "@/domain/cards/cardTypes";
 import { prioritizeDailyCards, selectDrillCards, type DrillMode } from "@/domain/review/reviewSelectors";
-
-type ExtendedDrillMode = DrillMode | "ai_survival";
 import { useParlaData } from "@/hooks/useParlaData";
 import { shuffle } from "@/lib/utils";
 
-const validModes: ExtendedDrillMode[] = ["all", "due", "hard", "confusing", "want_to_use", "ai_survival"];
+const validModes: DrillMode[] = ["all", "due", "hard", "confusing", "want_to_use", "ai_survival"];
 
-function parseMode(rawMode: string | null): ExtendedDrillMode {
+function parseMode(rawMode: string | null): DrillMode {
   if (!rawMode) return "all";
-  return validModes.includes(rawMode as ExtendedDrillMode) ? (rawMode as ExtendedDrillMode) : "all";
+  return validModes.includes(rawMode as DrillMode) ? (rawMode as DrillMode) : "all";
 }
 
 function diversifyByCategory(cards: Card[]): Card[] {
@@ -54,10 +52,6 @@ function DrillPageContent() {
   const { cards, progress, loading, loadState } = useParlaData();
 
   const drillCards = useMemo(() => {
-    if (mode === "ai_survival") {
-      return cards.filter((c) => c.tags.includes("ai") && c.tags.includes("survival") && c.tags.includes("core"));
-    }
-
     if (mode === "all") {
       const progressMap = new Map(progress.map((entry) => [entry.card_id, entry]));
       const now = new Date();
@@ -69,8 +63,7 @@ function DrillPageContent() {
       return [...diversifyByCategory(prioritized.slice(0, dueCount)), ...diversifyByCategory(prioritized.slice(dueCount))];
     }
 
-    const selected = selectDrillCards(cards, progress, mode);
-    return selected;
+    return selectDrillCards(cards, progress, mode);
   }, [cards, progress, mode]);
 
   if (loading) {

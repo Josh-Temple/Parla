@@ -28,7 +28,7 @@ Parla is **not** a chatbot. It does not include in-app LLM chat APIs. It helps l
 - `survival`
 - `core`
 
-These cards are prioritized by the AI-survival drill mode (`/drill?mode=ai_survival`).
+These cards are prioritized by the same daily review logic used elsewhere: due first, then unseen, then later cards, while hidden cards stay excluded (`/drill?mode=ai_survival`).
 
 ## Run locally
 
