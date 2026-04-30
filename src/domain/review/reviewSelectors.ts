@@ -4,6 +4,29 @@ import type { ProgressItem } from "../progress/progressTypes";
 export type DrillMode = "all" | "due" | "hard" | "confusing" | "want_to_use" | "ai_survival";
 
 const toMap = (progress: ProgressItem[]): Map<string, ProgressItem> => new Map(progress.map((item) => [item.card_id, item]));
+function diversifyByCategory(cards: Card[]): Card[] {
+  const buckets = new Map<string, Card[]>();
+  cards.forEach((card) => {
+    const current = buckets.get(card.category) ?? [];
+    current.push(card);
+    buckets.set(card.category, current);
+  });
+
+  const categories = Array.from(buckets.keys());
+  const mixed: Card[] = [];
+  let remaining = true;
+  while (remaining) {
+    remaining = false;
+    categories.forEach((category) => {
+      const bucket = buckets.get(category);
+      if (bucket?.length) {
+        mixed.push(bucket.shift() as Card);
+        remaining = true;
+      }
+    });
+  }
+  return mixed;
+}
 
 export function getDueCards(cards: Card[], progress: ProgressItem[], now = new Date()): Card[] {
   const map = toMap(progress);
@@ -69,7 +92,27 @@ export function getAiSurvivalCards(cards: Card[]): Card[] {
 }
 
 export function getPrioritizedAiSurvivalCards(cards: Card[], progress: ProgressItem[], now = new Date()): Card[] {
-  return prioritizeDailyCards(getAiSurvivalCards(cards), progress, now);
+  const filtered = getAiSurvivalCards(cards);
+  const map = toMap(progress);
+  const due: Card[] = [];
+  const unseen: Card[] = [];
+  const later: Card[] = [];
+
+  filtered.forEach((card) => {
+    const item = map.get(card.id);
+    if (item?.hidden) return;
+    if (!item) {
+      unseen.push(card);
+      return;
+    }
+    if (new Date(item.next_due_at) <= now) {
+      due.push(card);
+      return;
+    }
+    later.push(card);
+  });
+
+  return [...diversifyByCategory(due), ...diversifyByCategory(unseen), ...diversifyByCategory(later)];
 }
 
 export function selectDrillCards(cards: Card[], progress: ProgressItem[], mode: DrillMode): Card[] {

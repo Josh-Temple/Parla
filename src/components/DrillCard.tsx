@@ -20,6 +20,7 @@ export function DrillCard({ cards, initialProgress }: { cards: Card[]; initialPr
   const [sessionCards, setSessionCards] = useState(cards);
   const [index, setIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
+  const [sessionComplete, setSessionComplete] = useState(false);
   const [showClozeHint, setShowClozeHint] = useState(false);
   const [showHint, setShowHint] = useState(false);
   const [progressMap, setProgressMap] = useState(() => new Map(initialProgress.map((p) => [p.card_id, p])));
@@ -28,6 +29,7 @@ export function DrillCard({ cards, initialProgress }: { cards: Card[]; initialPr
     setSessionCards(cards);
     setIndex(0);
     setRevealed(false);
+    setSessionComplete(false);
     setShowClozeHint(false);
     setShowHint(false);
     setProgressMap(new Map(initialProgress.map((p) => [p.card_id, p])));
@@ -38,10 +40,17 @@ export function DrillCard({ cards, initialProgress }: { cards: Card[]; initialPr
   const queueLeft = useMemo(() => Math.max(sessionCards.length - index - 1, 0), [sessionCards.length, index]);
 
   const nextCard = () => {
+    if (index + 1 >= sessionCards.length) {
+      setSessionComplete(true);
+      setRevealed(false);
+      setShowClozeHint(false);
+      setShowHint(false);
+      return;
+    }
     setRevealed(false);
     setShowClozeHint(false);
     setShowHint(false);
-    setIndex((prev) => (prev + 1 >= sessionCards.length ? 0 : prev + 1));
+    setIndex((prev) => prev + 1);
   };
 
   const rateCard = async (rating: Rating) => {
@@ -89,6 +98,22 @@ export function DrillCard({ cards, initialProgress }: { cards: Card[]; initialPr
 
   if (!card) {
     return <div className="panel">No cards available.</div>;
+  }
+
+  if (sessionComplete) {
+    return (
+      <div className="panel">
+        <h2 style={{ marginTop: 0 }}>Session complete</h2>
+        <p className="small">Reviewed {sessionCards.length} cards in this drill.</p>
+        <div style={{ display: "grid", gap: 8 }}>
+          <Link href="/use-with-ai" className="button primary">Use with AI</Link>
+          <Link href="/drill?mode=hard" className="button secondary">Review hard cards</Link>
+          <button className="button ghost" onClick={() => { setIndex(0); setSessionComplete(false); }}>
+            Start again
+          </button>
+        </div>
+      </div>
+    );
   }
 
   const japaneseHint = getJapaneseHint(card);
