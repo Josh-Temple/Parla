@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { Suspense, useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import { FilterBar, type BrowseFilters } from "@/components/FilterBar";
 import { useParlaData } from "@/hooks/useParlaData";
 import { unique } from "@/lib/utils";
@@ -10,11 +10,26 @@ import { unique } from "@/lib/utils";
 function BrowsePageContent() {
   const search = useSearchParams();
   const { cards } = useParlaData();
+  const searchCategory = (search.get("category") as BrowseFilters["category"]) || undefined;
+  const searchFunction = (search.get("function") as BrowseFilters["function"]) || undefined;
+  const searchRegister = (search.get("register") as BrowseFilters["register"]) || undefined;
+  const searchTag = search.get("tag") || undefined;
 
   const [filters, setFilters] = useState<BrowseFilters>({
-    category: (search.get("category") as BrowseFilters["category"]) || undefined,
-    tag: search.get("tag") || undefined,
+    category: searchCategory,
+    function: searchFunction,
+    register: searchRegister,
+    tag: searchTag,
   });
+
+  useEffect(() => {
+    setFilters({
+      category: searchCategory,
+      function: searchFunction,
+      register: searchRegister,
+      tag: searchTag,
+    });
+  }, [searchCategory, searchFunction, searchRegister, searchTag]);
 
   const options = useMemo(
     () => ({

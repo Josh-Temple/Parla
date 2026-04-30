@@ -49,6 +49,7 @@ function diversifyByCategory(cards: Card[]): Card[] {
 function DrillPageContent() {
   const searchParams = useSearchParams();
   const mode = parseMode(searchParams.get("mode"));
+  const categoryFilter = searchParams.get("category");
   const { cards, progress, loading, loadState } = useParlaData();
 
   const drillCards = useMemo(() => {
@@ -63,8 +64,12 @@ function DrillPageContent() {
       return [...diversifyByCategory(prioritized.slice(0, dueCount)), ...diversifyByCategory(prioritized.slice(dueCount))];
     }
 
+    if (mode === "ai_survival" && categoryFilter) {
+      const scopedCards = cards.filter((card) => card.category === categoryFilter);
+      return selectDrillCards(scopedCards, progress, mode);
+    }
     return selectDrillCards(cards, progress, mode);
-  }, [cards, progress, mode]);
+  }, [cards, progress, mode, categoryFilter]);
 
   if (loading) {
     return (
@@ -115,7 +120,7 @@ function DrillPageContent() {
     <main>
       <div className="panel">
         <p className="small" style={{ margin: 0 }}>
-          Mode: {mode}
+          Mode: {mode}{categoryFilter ? ` · ${categoryFilter}` : ""}
         </p>
       </div>
       <DrillCard cards={drillCards} initialProgress={progress} />

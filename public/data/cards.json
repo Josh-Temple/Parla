@@ -7,8 +7,8 @@
       "phrase": "What does this word mean?",
       "function": "meaning",
       "register": "neutral",
-      "pattern": "What does this word mean?",
-      "example": "What does this word mean? (e.g., with a word from today's chat)",
+      "pattern": "What does + word/phrase + mean?",
+      "example": "What does \"turnover\" mean in this sentence?",
       "notes": "Use this when one expression blocks your understanding and you want a direct meaning check.",
       "tags": [
         "ai",
@@ -25,19 +25,18 @@
         "situation": "You are practicing with AI and need to: ask what a word, phrase, or sentence means."
       },
       "support": {
-        "jaHint": "意味がわからない語をその場で確認する。"
+        "jaHint": "この単語・表現はどういう意味ですか"
       },
       "family": "meaning_help",
       "slots": [
-        "topic",
-        "style"
+        "word or phrase"
       ],
       "quick_variations": [
         "What does this word mean?",
         "What does this phrase mean?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Ask right after you see an unfamiliar word so context is still fresh.",
       "ai_transfer_prompt": "Use this with an AI during meaning help practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -50,7 +49,7 @@
       "phrase": "What does \"___\" mean?",
       "function": "meaning",
       "register": "neutral",
-      "pattern": "What does \"word/phrase\" mean?",
+      "pattern": "What does \"X\" mean?",
       "example": "What does \"reliable\" mean?",
       "notes": "Use this when one expression blocks your understanding and you want a direct meaning check.",
       "tags": [
@@ -69,18 +68,17 @@
         "cloze": "What does \"___\" mean?"
       },
       "support": {
-        "jaHint": "意味がわからない語をその場で確認する。"
+        "jaHint": "『X』はどういう意味ですか"
       },
       "family": "meaning_help",
       "slots": [
-        "topic",
-        "style"
+        "word or phrase"
       ],
       "quick_variations": [
         "What does \"___\" mean?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Put the unknown item in quotes to make the target clear.",
       "ai_transfer_prompt": "Use this with an AI during meaning help practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -93,8 +91,8 @@
       "phrase": "Can you explain this word in simple English?",
       "function": "meaning",
       "register": "neutral",
-      "pattern": "Can ...",
-      "example": "Can you explain this word in simple English? (e.g., with a word from today's chat)",
+      "pattern": "Can you explain + word/phrase + in simple English?",
+      "example": "Can you explain \"reliable\" in simple English?",
       "notes": "Use this when one expression blocks your understanding and you want a direct meaning check.",
       "tags": [
         "ai",
@@ -111,19 +109,18 @@
         "situation": "You are practicing with AI and need to: ask what a word, phrase, or sentence means."
       },
       "support": {
-        "jaHint": "意味がわからない語をその場で確認する。"
+        "jaHint": "この単語を簡単な英語で説明してもらえますか"
       },
       "family": "meaning_help",
       "slots": [
-        "topic",
-        "style"
+        "word or phrase"
       ],
       "quick_variations": [
         "Can you explain this word in simple English?",
         "Can you explain this phrase in simple English?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Replace 'this word' with the exact word or phrase you want explained.",
       "ai_transfer_prompt": "Use this with an AI during meaning help practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -136,8 +133,8 @@
       "phrase": "Can you give me an example?",
       "function": "meaning",
       "register": "neutral",
-      "pattern": "Can ...",
-      "example": "Can you give me an example? (e.g., with a word from today's chat)",
+      "pattern": "Can you give me an example of + word/phrase?",
+      "example": "Can you give me an example of \"on time\"?",
       "notes": "Use this when one expression blocks your understanding and you want a direct meaning check.",
       "tags": [
         "ai",
@@ -154,18 +151,17 @@
         "situation": "You are practicing with AI and need to: ask what a word, phrase, or sentence means."
       },
       "support": {
-        "jaHint": "意味がわからない語をその場で確認する。"
+        "jaHint": "その単語の例文を1つください"
       },
       "family": "meaning_help",
       "slots": [
-        "topic",
-        "style"
+        "word or phrase"
       ],
       "quick_variations": [
         "Can you give me an example?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Name the target word so the example is focused.",
       "ai_transfer_prompt": "Use this with an AI during meaning help practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -178,8 +174,8 @@
       "phrase": "Can you use it in a sentence?",
       "function": "meaning",
       "register": "neutral",
-      "pattern": "Can ...",
-      "example": "Can you use it in a sentence? (e.g., with a word from today's chat)",
+      "pattern": "Can you use + word/phrase + in a sentence?",
+      "example": "Can you use \"efficient\" in a sentence?",
       "notes": "Use this when one expression blocks your understanding and you want a direct meaning check.",
       "tags": [
         "ai",
@@ -196,18 +192,17 @@
         "situation": "You are practicing with AI and need to: ask what a word, phrase, or sentence means."
       },
       "support": {
-        "jaHint": "意味がわからない語をその場で確認する。"
+        "jaHint": "その語を文の中で使ってもらえますか"
       },
       "family": "meaning_help",
       "slots": [
-        "topic",
-        "style"
+        "word or phrase"
       ],
       "quick_variations": [
         "Can you use it in a sentence?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Great for checking whether a word fits real usage.",
       "ai_transfer_prompt": "Use this with an AI during meaning help practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -220,8 +215,8 @@
       "phrase": "Is this word common?",
       "function": "meaning",
       "register": "neutral",
-      "pattern": "Is ...",
-      "example": "Is this word common? (e.g., with a word from today's chat)",
+      "pattern": "Is + word/phrase + common in everyday English?",
+      "example": "Is \"moreover\" common in everyday English?",
       "notes": "Use this when one expression blocks your understanding and you want a direct meaning check.",
       "tags": [
         "ai",
@@ -238,19 +233,18 @@
         "situation": "You are practicing with AI and need to: ask what a word, phrase, or sentence means."
       },
       "support": {
-        "jaHint": "意味がわからない語をその場で確認する。"
+        "jaHint": "この語は日常会話でよく使いますか"
       },
       "family": "meaning_help",
       "slots": [
-        "topic",
-        "style"
+        "word or phrase"
       ],
       "quick_variations": [
         "Is this word common?",
         "Is this phrase common?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Use this to avoid textbook words that sound stiff.",
       "ai_transfer_prompt": "Use this with an AI during meaning help practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -263,8 +257,8 @@
       "phrase": "Is this formal or casual?",
       "function": "meaning",
       "register": "neutral",
-      "pattern": "Is ...",
-      "example": "Is this formal or casual? (e.g., with a word from today's chat)",
+      "pattern": "Is + word/phrase + formal or casual?",
+      "example": "Is \"Would you mind\" formal or casual?",
       "notes": "Use this when one expression blocks your understanding and you want a direct meaning check.",
       "tags": [
         "ai",
@@ -281,18 +275,17 @@
         "situation": "You are practicing with AI and need to: ask what a word, phrase, or sentence means."
       },
       "support": {
-        "jaHint": "意味がわからない語をその場で確認する。"
+        "jaHint": "この表現はフォーマルですか、カジュアルですか"
       },
       "family": "meaning_help",
       "slots": [
-        "topic",
-        "style"
+        "word or phrase"
       ],
       "quick_variations": [
         "Is this formal or casual?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Ask before using a phrase in work or school settings.",
       "ai_transfer_prompt": "Use this with an AI during meaning help practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -305,8 +298,8 @@
       "phrase": "What is the difference between A and B?",
       "function": "meaning",
       "register": "neutral",
-      "pattern": "What is the difference between A and B?",
-      "example": "What is the difference between A and B? (e.g., with a word from today's chat)",
+      "pattern": "What is the difference between + A + and + B + ?",
+      "example": "What is the difference between \"speak\" and \"talk\"?",
       "notes": "Use this when one expression blocks your understanding and you want a direct meaning check.",
       "tags": [
         "ai",
@@ -323,18 +316,18 @@
         "situation": "You are practicing with AI and need to: ask what a word, phrase, or sentence means."
       },
       "support": {
-        "jaHint": "意味がわからない語をその場で確認する。"
+        "jaHint": "A と B の違いは何ですか"
       },
       "family": "meaning_help",
       "slots": [
-        "topic",
-        "style"
+        "word A",
+        "word B"
       ],
       "quick_variations": [
         "What is the difference between A and B?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Pick two similar words you often confuse.",
       "ai_transfer_prompt": "Use this with an AI during meaning help practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -347,8 +340,8 @@
       "phrase": "Does this sound natural?",
       "function": "meaning",
       "register": "neutral",
-      "pattern": "Does ...",
-      "example": "Does this sound natural? (e.g., with a word from today's chat)",
+      "pattern": "Does + sentence + sound natural?",
+      "example": "Does \"I very like this\" sound natural?",
       "notes": "Use this when one expression blocks your understanding and you want a direct meaning check.",
       "tags": [
         "ai",
@@ -365,18 +358,17 @@
         "situation": "You are practicing with AI and need to: ask what a word, phrase, or sentence means."
       },
       "support": {
-        "jaHint": "意味がわからない語をその場で確認する。"
+        "jaHint": "この英文は自然ですか"
       },
       "family": "meaning_help",
       "slots": [
-        "topic",
-        "style"
+        "your sentence"
       ],
       "quick_variations": [
         "Does this sound natural?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Paste your full sentence to get precise feedback.",
       "ai_transfer_prompt": "Use this with an AI during meaning help practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -389,8 +381,8 @@
       "phrase": "What does this sentence mean?",
       "function": "meaning",
       "register": "neutral",
-      "pattern": "What does this sentence mean?",
-      "example": "What does this sentence mean? (e.g., with a word from today's chat)",
+      "pattern": "What does this sentence mean: + sentence + ?",
+      "example": "What does this sentence mean: \"I’m tied up this afternoon\"?",
       "notes": "Use this when one expression blocks your understanding and you want a direct meaning check.",
       "tags": [
         "ai",
@@ -407,18 +399,17 @@
         "situation": "You are practicing with AI and need to: ask what a word, phrase, or sentence means."
       },
       "support": {
-        "jaHint": "意味がわからない語をその場で確認する。"
+        "jaHint": "この文全体の意味を教えてください"
       },
       "family": "meaning_help",
       "slots": [
-        "topic",
-        "style"
+        "sentence"
       ],
       "quick_variations": [
         "What does this sentence mean?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Use this for idioms where word-by-word translation fails.",
       "ai_transfer_prompt": "Use this with an AI during meaning help practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -431,8 +422,8 @@
       "phrase": "Can you explain this phrase?",
       "function": "meaning",
       "register": "neutral",
-      "pattern": "Can ...",
-      "example": "Can you explain this phrase? (e.g., with a word from today's chat)",
+      "pattern": "Can you explain this phrase: + phrase + ?",
+      "example": "Can you explain this phrase: \"on the same page\"?",
       "notes": "Use this when one expression blocks your understanding and you want a direct meaning check.",
       "tags": [
         "ai",
@@ -449,18 +440,17 @@
         "situation": "You are practicing with AI and need to: ask what a word, phrase, or sentence means."
       },
       "support": {
-        "jaHint": "意味がわからない語をその場で確認する。"
+        "jaHint": "このフレーズの意味を説明してください"
       },
       "family": "meaning_help",
       "slots": [
-        "topic",
-        "style"
+        "phrase"
       ],
       "quick_variations": [
         "Can you explain this phrase?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Best for chunks that work as one unit.",
       "ai_transfer_prompt": "Use this with an AI during meaning help practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -473,8 +463,8 @@
       "phrase": "When do people use this expression?",
       "function": "meaning",
       "register": "neutral",
-      "pattern": "When ...",
-      "example": "When do people use this expression? (e.g., with a word from today's chat)",
+      "pattern": "When do people use + expression + ?",
+      "example": "When do people use \"No worries\"?",
       "notes": "Use this when one expression blocks your understanding and you want a direct meaning check.",
       "tags": [
         "ai",
@@ -491,18 +481,17 @@
         "situation": "You are practicing with AI and need to: ask what a word, phrase, or sentence means."
       },
       "support": {
-        "jaHint": "意味がわからない語をその場で確認する。"
+        "jaHint": "この表現はどんな場面で使いますか"
       },
       "family": "meaning_help",
       "slots": [
-        "topic",
-        "style"
+        "expression"
       ],
       "quick_variations": [
         "When do people use this expression?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Focus on timing and context, not only meaning.",
       "ai_transfer_prompt": "Use this with an AI during meaning help practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -515,8 +504,8 @@
       "phrase": "Is this the right meaning here?",
       "function": "meaning",
       "register": "neutral",
-      "pattern": "Is ...",
-      "example": "Is this the right meaning here? (e.g., with a word from today's chat)",
+      "pattern": "Is + meaning + the right meaning here?",
+      "example": "Is \"issue\" = problem the right meaning here?",
       "notes": "Use this when one expression blocks your understanding and you want a direct meaning check.",
       "tags": [
         "ai",
@@ -533,18 +522,17 @@
         "situation": "You are practicing with AI and need to: ask what a word, phrase, or sentence means."
       },
       "support": {
-        "jaHint": "意味がわからない語をその場で確認する。"
+        "jaHint": "ここではこの意味で合っていますか"
       },
       "family": "meaning_help",
       "slots": [
-        "topic",
-        "style"
+        "your meaning guess"
       ],
       "quick_variations": [
         "Is this the right meaning here?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Share your guess first; it helps you learn from corrections.",
       "ai_transfer_prompt": "Use this with an AI during meaning help practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -557,8 +545,8 @@
       "phrase": "Can you give me two simple examples?",
       "function": "meaning",
       "register": "neutral",
-      "pattern": "Can ...",
-      "example": "Can you give me two simple examples? (e.g., with a word from today's chat)",
+      "pattern": "Can you give me two simple examples of + word/phrase + ?",
+      "example": "Can you give me two simple examples of \"however\"?",
       "notes": "Use this when one expression blocks your understanding and you want a direct meaning check.",
       "tags": [
         "ai",
@@ -575,18 +563,17 @@
         "situation": "You are practicing with AI and need to: ask what a word, phrase, or sentence means."
       },
       "support": {
-        "jaHint": "意味がわからない語をその場で確認する。"
+        "jaHint": "その語の簡単な例を2つください"
       },
       "family": "meaning_help",
       "slots": [
-        "topic",
-        "style"
+        "word or phrase"
       ],
       "quick_variations": [
         "Can you give me two simple examples?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Two examples help you spot pattern and position.",
       "ai_transfer_prompt": "Use this with an AI during meaning help practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -599,8 +586,8 @@
       "phrase": "Can you compare these two words?",
       "function": "meaning",
       "register": "neutral",
-      "pattern": "Can ...",
-      "example": "Can you compare these two words? (e.g., with a word from today's chat)",
+      "pattern": "Can you compare + word A + and + word B + ?",
+      "example": "Can you compare \"job\" and \"work\"?",
       "notes": "Use this when one expression blocks your understanding and you want a direct meaning check.",
       "tags": [
         "ai",
@@ -617,19 +604,19 @@
         "situation": "You are practicing with AI and need to: ask what a word, phrase, or sentence means."
       },
       "support": {
-        "jaHint": "意味がわからない語をその場で確認する。"
+        "jaHint": "2つの単語を比べて説明してください"
       },
       "family": "meaning_help",
       "slots": [
-        "topic",
-        "style"
+        "word A",
+        "word B"
       ],
       "quick_variations": [
         "Can you compare these two words?",
         "Can you compare these two phrases?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Ask for comparison when meanings overlap.",
       "ai_transfer_prompt": "Use this with an AI during meaning help practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -642,8 +629,8 @@
       "phrase": "How can I say this in English?",
       "function": "expression",
       "register": "neutral",
-      "pattern": "How ...",
-      "example": "How can I say this in English? (e.g., with a word from today's chat)",
+      "pattern": "How can I say + Japanese/idea + in English?",
+      "example": "How can I say \"お先に失礼します\" in English?",
       "notes": "Use this phrase to keep the practice useful.",
       "tags": [
         "ai",
@@ -660,18 +647,17 @@
         "situation": "You are practicing with AI and need to: guide AI practice clearly."
       },
       "support": {
-        "jaHint": "AI練習を自分のペースに調整する。"
+        "jaHint": "これを英語でどう言えばいいですか"
       },
       "family": "ai_questions",
       "slots": [
-        "topic",
-        "style"
+        "idea in Japanese or your language"
       ],
       "quick_variations": [
         "How can I say this in English?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Use your original idea, not a partial English guess.",
       "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -684,8 +670,8 @@
       "phrase": "How do native speakers say this?",
       "function": "expression",
       "register": "neutral",
-      "pattern": "How ...",
-      "example": "How do native speakers say this? (e.g., with a word from today's chat)",
+      "pattern": "How do native speakers say + idea + ?",
+      "example": "How do native speakers say \"I have a stomach ache\" naturally?",
       "notes": "Use this phrase to keep the practice useful.",
       "tags": [
         "ai",
@@ -702,18 +688,17 @@
         "situation": "You are practicing with AI and need to: guide AI practice clearly."
       },
       "support": {
-        "jaHint": "AI練習を自分のペースに調整する。"
+        "jaHint": "ネイティブならどう言いますか"
       },
       "family": "ai_questions",
       "slots": [
-        "topic",
-        "style"
+        "your current wording"
       ],
       "quick_variations": [
         "How do native speakers say this?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Good for upgrading direct translations to natural phrasing.",
       "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -726,8 +711,8 @@
       "phrase": "What is a natural way to say this?",
       "function": "expression",
       "register": "neutral",
-      "pattern": "What is a natural way to say this?",
-      "example": "What is a natural way to say this? (e.g., with a word from today's chat)",
+      "pattern": "What is a natural way to say + sentence + ?",
+      "example": "What is a natural way to say \"I forgot my umbrella at home\"?",
       "notes": "Use this phrase to keep the practice useful.",
       "tags": [
         "ai",
@@ -744,18 +729,17 @@
         "situation": "You are practicing with AI and need to: guide AI practice clearly."
       },
       "support": {
-        "jaHint": "AI練習を自分のペースに調整する。"
+        "jaHint": "この文を自然に言うにはどうしますか"
       },
       "family": "ai_questions",
       "slots": [
-        "topic",
-        "style"
+        "your sentence"
       ],
       "quick_variations": [
         "What is a natural way to say this?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Ask this after drafting a sentence yourself.",
       "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -768,8 +752,8 @@
       "phrase": "Can you give me three ways to say this?",
       "function": "expression",
       "register": "neutral",
-      "pattern": "Can ...",
-      "example": "Can you give me three ways to say this? (e.g., with a word from today's chat)",
+      "pattern": "Can you give me three ways to say + message + ?",
+      "example": "Can you give me three ways to say \"I need more time\"?",
       "notes": "Use this phrase to keep the practice useful.",
       "tags": [
         "ai",
@@ -786,18 +770,17 @@
         "situation": "You are practicing with AI and need to: guide AI practice clearly."
       },
       "support": {
-        "jaHint": "AI練習を自分のペースに調整する。"
+        "jaHint": "同じ内容を3通りで言ってください"
       },
       "family": "ai_questions",
       "slots": [
-        "topic",
-        "style"
+        "message"
       ],
       "quick_variations": [
         "Can you give me three ways to say this?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Use this to collect options for different tones.",
       "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -810,8 +793,8 @@
       "phrase": "What is a simpler way to say this?",
       "function": "expression",
       "register": "neutral",
-      "pattern": "What is a simpler way to say this?",
-      "example": "What is a simpler way to say this? (e.g., with a word from today's chat)",
+      "pattern": "What is a simpler way to say + sentence + ?",
+      "example": "What is a simpler way to say \"I would appreciate your assistance\"?",
       "notes": "Use this phrase to keep the practice useful.",
       "tags": [
         "ai",
@@ -828,18 +811,17 @@
         "situation": "You are practicing with AI and need to: guide AI practice clearly."
       },
       "support": {
-        "jaHint": "AI練習を自分のペースに調整する。"
+        "jaHint": "この文をもっと簡単に言うと？"
       },
       "family": "ai_questions",
       "slots": [
-        "topic",
-        "style"
+        "sentence"
       ],
       "quick_variations": [
         "What is a simpler way to say this?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Helpful when your sentence feels too long or complex.",
       "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -852,8 +834,8 @@
       "phrase": "What is a more polite way to say this?",
       "function": "expression",
       "register": "neutral",
-      "pattern": "What is a more polite way to say this?",
-      "example": "What is a more polite way to say this? (e.g., with a word from today's chat)",
+      "pattern": "What is a more polite way to say + sentence/request + ?",
+      "example": "What is a more polite way to say \"Send me the file\"?",
       "notes": "Use this phrase to keep the practice useful.",
       "tags": [
         "ai",
@@ -870,18 +852,17 @@
         "situation": "You are practicing with AI and need to: guide AI practice clearly."
       },
       "support": {
-        "jaHint": "AI練習を自分のペースに調整する。"
+        "jaHint": "この言い方をもっと丁寧にできますか"
       },
       "family": "ai_questions",
       "slots": [
-        "topic",
-        "style"
+        "sentence or request"
       ],
       "quick_variations": [
         "What is a more polite way to say this?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Use for emails, teachers, customers, or senior coworkers.",
       "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -894,8 +875,8 @@
       "phrase": "What is a more casual way to say this?",
       "function": "expression",
       "register": "neutral",
-      "pattern": "What is a more casual way to say this?",
-      "example": "What is a more casual way to say this? (e.g., with a word from today's chat)",
+      "pattern": "What is a more casual way to say + sentence + ?",
+      "example": "What is a more casual way to say \"I apologize for the delay\"?",
       "notes": "Use this phrase to keep the practice useful.",
       "tags": [
         "ai",
@@ -912,18 +893,17 @@
         "situation": "You are practicing with AI and need to: guide AI practice clearly."
       },
       "support": {
-        "jaHint": "AI練習を自分のペースに調整する。"
+        "jaHint": "この文をもっとカジュアルに言うと？"
       },
       "family": "ai_questions",
       "slots": [
-        "topic",
-        "style"
+        "sentence"
       ],
       "quick_variations": [
         "What is a more casual way to say this?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Useful when your English sounds too formal with friends.",
       "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -936,8 +916,8 @@
       "phrase": "Can I say it like this?",
       "function": "expression",
       "register": "neutral",
-      "pattern": "Can ...",
-      "example": "Can I say it like this? (e.g., with a word from today's chat)",
+      "pattern": "Can I say it like this: + sentence + ?",
+      "example": "Can I say it like this: \"I’m not good at to swim\"?",
       "notes": "Use this phrase to keep the practice useful.",
       "tags": [
         "ai",
@@ -954,18 +934,17 @@
         "situation": "You are practicing with AI and need to: guide AI practice clearly."
       },
       "support": {
-        "jaHint": "AI練習を自分のペースに調整する。"
+        "jaHint": "この言い方で通じますか"
       },
       "family": "ai_questions",
       "slots": [
-        "topic",
-        "style"
+        "your sentence"
       ],
       "quick_variations": [
         "Can I say it like this?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Put your attempt after the colon for direct correction.",
       "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -978,8 +957,8 @@
       "phrase": "Is this phrase okay?",
       "function": "expression",
       "register": "neutral",
-      "pattern": "Is ...",
-      "example": "Is this phrase okay? (e.g., with a word from today's chat)",
+      "pattern": "Is this phrase okay in + situation + ?",
+      "example": "Is this phrase okay in a job interview: \"Hey guys\"?",
       "notes": "Use this phrase to keep the practice useful.",
       "tags": [
         "ai",
@@ -996,18 +975,18 @@
         "situation": "You are practicing with AI and need to: guide AI practice clearly."
       },
       "support": {
-        "jaHint": "AI練習を自分のペースに調整する。"
+        "jaHint": "この表現はこの場面で大丈夫ですか"
       },
       "family": "ai_questions",
       "slots": [
-        "topic",
-        "style"
+        "phrase",
+        "situation"
       ],
       "quick_variations": [
         "Is this phrase okay?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Always include context; appropriateness depends on audience.",
       "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -1020,8 +999,8 @@
       "phrase": "What should I say in this situation?",
       "function": "expression",
       "register": "neutral",
-      "pattern": "What should I say in this situation?",
-      "example": "What should I say in this situation? (e.g., with a word from today's chat)",
+      "pattern": "What should I say when + situation + ?",
+      "example": "What should I say when I join a Zoom meeting late?",
       "notes": "Use this phrase to keep the practice useful.",
       "tags": [
         "ai",
@@ -1038,18 +1017,17 @@
         "situation": "You are practicing with AI and need to: guide AI practice clearly."
       },
       "support": {
-        "jaHint": "AI練習を自分のペースに調整する。"
+        "jaHint": "この場面では何と言えばいいですか"
       },
       "family": "ai_questions",
       "slots": [
-        "topic",
-        "style"
+        "situation"
       ],
       "quick_variations": [
         "What should I say in this situation?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Ask for ready-to-use lines for specific moments.",
       "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -1062,8 +1040,8 @@
       "phrase": "Can you help me phrase this question?",
       "function": "expression",
       "register": "neutral",
-      "pattern": "Can ...",
-      "example": "Can you help me phrase this question? (e.g., with a word from today's chat)",
+      "pattern": "Can you help me phrase this question: + question idea + ?",
+      "example": "Can you help me phrase this question: \"why this graph down?\"",
       "notes": "Use this phrase to keep the practice useful.",
       "tags": [
         "ai",
@@ -1080,18 +1058,17 @@
         "situation": "You are practicing with AI and need to: guide AI practice clearly."
       },
       "support": {
-        "jaHint": "AI練習を自分のペースに調整する。"
+        "jaHint": "この質問を英語らしく直してほしいです"
       },
       "family": "ai_questions",
       "slots": [
-        "topic",
-        "style"
+        "question idea"
       ],
       "quick_variations": [
         "Can you help me phrase this question?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Paste your rough question to improve clarity before sending.",
       "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -1104,8 +1081,8 @@
       "phrase": "How can I ask this more clearly?",
       "function": "expression",
       "register": "neutral",
-      "pattern": "How ...",
-      "example": "How can I ask this more clearly? (e.g., with a word from today's chat)",
+      "pattern": "How can I ask + topic + more clearly?",
+      "example": "How can I ask about refund policy more clearly?",
       "notes": "Use this phrase to keep the practice useful.",
       "tags": [
         "ai",
@@ -1122,18 +1099,17 @@
         "situation": "You are practicing with AI and need to: guide AI practice clearly."
       },
       "support": {
-        "jaHint": "AI練習を自分のペースに調整する。"
+        "jaHint": "この質問をもっとわかりやすく言うには？"
       },
       "family": "ai_questions",
       "slots": [
-        "topic",
-        "style"
+        "topic or draft question"
       ],
       "quick_variations": [
         "How can I ask this more clearly?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Use when AI answers incorrectly because your question is vague.",
       "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -1146,8 +1122,8 @@
       "phrase": "Can you give me a short version?",
       "function": "expression",
       "register": "neutral",
-      "pattern": "Can ...",
-      "example": "Can you give me a short version? (e.g., with a word from today's chat)",
+      "pattern": "Can you give me a shorter version of + sentence + ?",
+      "example": "Can you give me a shorter version of \"I am writing to inquire about...\"?",
       "notes": "Use this phrase to keep the practice useful.",
       "tags": [
         "ai",
@@ -1164,18 +1140,17 @@
         "situation": "You are practicing with AI and need to: guide AI practice clearly."
       },
       "support": {
-        "jaHint": "AI練習を自分のペースに調整する。"
+        "jaHint": "この文を短くできますか"
       },
       "family": "ai_questions",
       "slots": [
-        "topic",
-        "style"
+        "sentence"
       ],
       "quick_variations": [
         "Can you give me a short version?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Ask for shorter versions for chat or voice replies.",
       "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -1188,8 +1163,8 @@
       "phrase": "Can you give me a friendly version?",
       "function": "expression",
       "register": "neutral",
-      "pattern": "Can ...",
-      "example": "Can you give me a friendly version? (e.g., with a word from today's chat)",
+      "pattern": "Can you give me a friendlier version of + sentence + ?",
+      "example": "Can you give me a friendlier version of \"Please respond by Friday\"?",
       "notes": "Use this phrase to keep the practice useful.",
       "tags": [
         "ai",
@@ -1206,18 +1181,17 @@
         "situation": "You are practicing with AI and need to: guide AI practice clearly."
       },
       "support": {
-        "jaHint": "AI練習を自分のペースに調整する。"
+        "jaHint": "この文をもう少し親しみやすくできますか"
       },
       "family": "ai_questions",
       "slots": [
-        "topic",
-        "style"
+        "sentence"
       ],
       "quick_variations": [
         "Can you give me a friendly version?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Great for softening requests to teammates.",
       "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {
@@ -1230,8 +1204,8 @@
       "phrase": "Can you give me a formal version?",
       "function": "expression",
       "register": "neutral",
-      "pattern": "Can ...",
-      "example": "Can you give me a formal version? (e.g., with a word from today's chat)",
+      "pattern": "Can you give me a more formal version of + sentence + ?",
+      "example": "Can you give me a more formal version of \"Can you send it soon?\"?",
       "notes": "Use this phrase to keep the practice useful.",
       "tags": [
         "ai",
@@ -1248,18 +1222,17 @@
         "situation": "You are practicing with AI and need to: guide AI practice clearly."
       },
       "support": {
-        "jaHint": "AI練習を自分のペースに調整する。"
+        "jaHint": "この文をもっとフォーマルに言えますか"
       },
       "family": "ai_questions",
       "slots": [
-        "topic",
-        "style"
+        "sentence"
       ],
       "quick_variations": [
         "Can you give me a formal version?",
         "Can you do that with a short example?"
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
+      "practice_note": "Use before writing to clients or professors.",
       "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
       "difficulty": 1,
       "status": {

@@ -29,9 +29,29 @@ export default function HomePage() {
       <div className="grid hero-actions" style={{ gridTemplateColumns: "1fr" }}>
         <Link href="/drill?mode=ai_survival" className="button primary" style={{ textAlign: "center" }}>Start AI survival drill</Link>
       </div>
-      <div className="grid" style={{ gridTemplateColumns: "1fr 1fr", marginTop: 8 }}>
-        <Link href="/drill?mode=hard" className="button secondary" style={{ textAlign: "center" }}>Review weak phrases</Link>
-        <Link href="/use-with-ai" className="button secondary" style={{ textAlign: "center" }}>Use with AI</Link>
+      <section style={{ marginTop: 14 }}>
+        <h2 style={{ margin: "0 0 8px" }}>Today&apos;s practice flow</h2>
+        <p className="small" style={{ marginTop: 0 }}>Learn → Use with AI → Review</p>
+        <div className="grid" style={{ gridTemplateColumns: "1fr", gap: 8 }}>
+          <div className="panel" style={{ padding: 10 }}>
+            <p className="small" style={{ margin: "0 0 6px" }}><strong>Step 1: Learn phrases</strong></p>
+            <Link href="/drill?mode=ai_survival" className="button primary" style={{ textAlign: "center", width: "100%" }}>Start AI survival drill</Link>
+          </div>
+          <div className="panel" style={{ padding: 10 }}>
+            <p className="small" style={{ margin: "0 0 6px" }}><strong>Step 2: Use them with AI</strong></p>
+            <Link href="/use-with-ai" className="button secondary" style={{ textAlign: "center", width: "100%" }}>Copy practice prompt</Link>
+          </div>
+          <div className="panel" style={{ padding: 10 }}>
+            <p className="small" style={{ margin: "0 0 6px" }}><strong>Step 3: Review weak phrases</strong></p>
+            <Link href="/drill?mode=hard" className="button ghost" style={{ textAlign: "center", width: "100%" }}>Review weak phrases</Link>
+          </div>
+        </div>
+      </section>
+      <div style={{ marginTop: 10, display: "flex", flexWrap: "wrap", gap: 8 }}>
+        <Link href="/drill?mode=ai_survival&category=Meaning%20Help" className="badge">Meaning help</Link>
+        <Link href="/drill?mode=ai_survival&category=Simpler%20English" className="badge">Simpler English</Link>
+        <Link href="/drill?mode=ai_survival&category=Corrections" className="badge">Corrections</Link>
+        <Link href="/drill?mode=ai_survival&category=Voice%20Practice" className="badge">Voice practice</Link>
       </div>
     </section>
     <section className="progress-inline" aria-label="Progress summary">
