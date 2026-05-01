@@ -38,3 +38,21 @@ Polished post-refactor learning UX with reliable Browse URL filter syncing, impr
   - A generated “Today’s AI practice prompt” using practiced phrases when available
   - Copy action with feedback
   - Practice pack quick links
+
+## Session update (2026-05-01)
+
+- Simplified Home hierarchy to remove duplicate top-level drill CTA and keep one dominant primary action inside Step 1 of Today’s practice flow.
+- Added explicit Practice packs section on Home so the page order is now: Hero + stats → Today’s practice flow → Practice packs.
+- Unified local-day logic by introducing `src/lib/date.ts` with `getLocalDayRange` and `isSameLocalDay`, then reused this logic in Home and Use with AI.
+- Updated drill routing to support `tag` filtering (`/drill?mode=hard&tag=ai`) and switched weak-review links/labels to **Review weak AI phrases**.
+- Refactored `DrillCard` completion logic:
+  - Tracks `ratedCount` based only on rating button actions.
+  - Completion panel now reports `Rated X phrases` and `Session cards: Y`.
+  - Requeue handling is computed synchronously before completion checks, preventing false early completion on last-card hard ratings.
+- Reordered `/use-with-ai` sections so Today’s prompt appears before browse links, following the requested priority flow.
+- Validation re-run completed successfully.
+
+### Validation run
+
+- `npm run lint` ✅
+- `npm run build` ✅

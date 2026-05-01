@@ -50,6 +50,7 @@ function DrillPageContent() {
   const searchParams = useSearchParams();
   const mode = parseMode(searchParams.get("mode"));
   const categoryFilter = searchParams.get("category");
+  const tagFilter = searchParams.get("tag");
   const { cards, progress, loading, loadState } = useParlaData();
 
   const drillCards = useMemo(() => {
@@ -64,12 +65,18 @@ function DrillPageContent() {
       return [...diversifyByCategory(prioritized.slice(0, dueCount)), ...diversifyByCategory(prioritized.slice(dueCount))];
     }
 
-    if (mode === "ai_survival" && categoryFilter) {
-      const scopedCards = cards.filter((card) => card.category === categoryFilter);
-      return selectDrillCards(scopedCards, progress, mode);
+    let scopedCards = cards;
+
+    if (tagFilter) {
+      scopedCards = scopedCards.filter((card) => card.tags.includes(tagFilter));
     }
-    return selectDrillCards(cards, progress, mode);
-  }, [cards, progress, mode, categoryFilter]);
+
+    if (mode === "ai_survival" && categoryFilter) {
+      scopedCards = scopedCards.filter((card) => card.category === categoryFilter);
+    }
+
+    return selectDrillCards(scopedCards, progress, mode);
+  }, [cards, progress, mode, categoryFilter, tagFilter]);
 
   if (loading) {
     return (
@@ -120,7 +127,7 @@ function DrillPageContent() {
     <main>
       <div className="panel">
         <p className="small" style={{ margin: 0 }}>
-          Mode: {mode}{categoryFilter ? ` · ${categoryFilter}` : ""}
+          Mode: {mode}{categoryFilter ? ` · ${categoryFilter}` : ""}{tagFilter ? ` · #${tagFilter}` : ""}
         </p>
       </div>
       <DrillCard cards={drillCards} initialProgress={progress} />
