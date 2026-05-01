@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { useParlaData } from "@/hooks/useParlaData";
+import { getLocalDayRange } from "@/lib/date";
 
 const prompts = [
   { title: "Beginner practice", text: `Please practice English with me.\n\nI am a beginner.\nPlease use simple English.\nAsk me one question at a time.\nIf I make a mistake, correct me at the end.\nPlease give me one better sentence I can practice.\nToday I want to practice asking questions in English.` },
@@ -18,10 +19,7 @@ export default function UseWithAIPage() {
   const { cards, progress, loading } = useParlaData();
 
   const practicedToday = useMemo(() => {
-    const start = new Date();
-    start.setHours(0, 0, 0, 0);
-    const end = new Date(start);
-    end.setDate(end.getDate() + 1);
+    const { start, end } = getLocalDayRange(new Date());
     const progressMap = new Map(progress.map((item) => [item.card_id, item]));
     return cards
       .filter((card) => card.tags.includes("ai") && card.tags.includes("survival") && card.tags.includes("core"))
@@ -67,16 +65,6 @@ export default function UseWithAIPage() {
         {copyStatus ? <p className="small" aria-live="polite" style={{ marginBottom: 0 }}>{copyStatus}</p> : null}
       </section>
       <section className="panel">
-        <p className="small" style={{ marginTop: 0, marginBottom: 6 }}>Quick browse links</p>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-          <Link href="/browse?tag=ai" className="badge">Browse AI survival cards</Link>
-          <Link href="/browse?category=Meaning%20Help" className="badge">Meaning help</Link>
-          <Link href="/browse?category=Simpler%20English" className="badge">Simpler English</Link>
-          <Link href="/browse?category=Corrections" className="badge">Corrections</Link>
-          <Link href="/browse?category=Voice%20Practice" className="badge">Voice practice</Link>
-        </div>
-      </section>
-      <section className="panel">
         <h2 style={{ marginTop: 0 }}>Today&apos;s AI practice prompt</h2>
         <pre style={{ whiteSpace: "pre-wrap", fontFamily: "inherit", margin: "8px 0 12px" }}>{todayPrompt}</pre>
         <button className="button primary" onClick={() => void copyText(todayPrompt)}>Copy today&apos;s prompt</button>
@@ -120,6 +108,16 @@ export default function UseWithAIPage() {
           </section>
         ))}
       </div>
+            <section className="panel">
+        <p className="small" style={{ marginTop: 0, marginBottom: 6 }}>Quick browse links</p>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+          <Link href="/browse?tag=ai" className="badge">Browse AI survival cards</Link>
+          <Link href="/browse?category=Meaning%20Help" className="badge">Meaning help</Link>
+          <Link href="/browse?category=Simpler%20English" className="badge">Simpler English</Link>
+          <Link href="/browse?category=Corrections" className="badge">Corrections</Link>
+          <Link href="/browse?category=Voice%20Practice" className="badge">Voice practice</Link>
+        </div>
+      </section>
       <div className="panel"><Link href="/drill?mode=ai_survival" className="button secondary">Back to AI survival drill</Link></div>
     </main>
   );

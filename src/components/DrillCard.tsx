@@ -21,6 +21,7 @@ export function DrillCard({ cards, initialProgress }: { cards: Card[]; initialPr
   const [index, setIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const [sessionComplete, setSessionComplete] = useState(false);
+  const [ratedCount, setRatedCount] = useState(0);
   const [showClozeHint, setShowClozeHint] = useState(false);
   const [showHint, setShowHint] = useState(false);
   const [progressMap, setProgressMap] = useState(() => new Map(initialProgress.map((p) => [p.card_id, p])));
@@ -32,26 +33,13 @@ export function DrillCard({ cards, initialProgress }: { cards: Card[]; initialPr
     setSessionComplete(false);
     setShowClozeHint(false);
     setShowHint(false);
+    setRatedCount(0);
     setProgressMap(new Map(initialProgress.map((p) => [p.card_id, p])));
   }, [cards, initialProgress]);
 
   const card = sessionCards[index];
 
   const queueLeft = useMemo(() => Math.max(sessionCards.length - index - 1, 0), [sessionCards.length, index]);
-
-  const nextCard = () => {
-    if (index + 1 >= sessionCards.length) {
-      setSessionComplete(true);
-      setRevealed(false);
-      setShowClozeHint(false);
-      setShowHint(false);
-      return;
-    }
-    setRevealed(false);
-    setShowClozeHint(false);
-    setShowHint(false);
-    setIndex((prev) => prev + 1);
-  };
 
   const rateCard = async (rating: Rating) => {
     if (!card) return;
@@ -81,19 +69,25 @@ export function DrillCard({ cards, initialProgress }: { cards: Card[]; initialPr
     nextMap.set(card.id, updated);
     setProgressMap(nextMap);
 
-    if (schedule.shouldRequeueInSession) {
-      setSessionCards((prevCards) => {
-        if (!shouldInsertRequeue(prevCards, card.id, index + 1)) {
-          return prevCards;
-        }
-        const insertAt = Math.min(index + SAME_SESSION_REQUEUE_GAP + 1, prevCards.length);
-        const nextCards = [...prevCards];
-        nextCards.splice(insertAt, 0, card);
-        return nextCards;
-      });
+    let nextSessionCards = sessionCards;
+    if (schedule.shouldRequeueInSession && shouldInsertRequeue(sessionCards, card.id, index + 1)) {
+      const insertAt = Math.min(index + SAME_SESSION_REQUEUE_GAP + 1, sessionCards.length);
+      nextSessionCards = [...sessionCards];
+      nextSessionCards.splice(insertAt, 0, card);
+      setSessionCards(nextSessionCards);
     }
 
-    nextCard();
+    setRatedCount((prevCount) => prevCount + 1);
+    setRevealed(false);
+    setShowClozeHint(false);
+    setShowHint(false);
+
+    if (index + 1 >= nextSessionCards.length) {
+      setSessionComplete(true);
+      return;
+    }
+
+    setIndex((prevIndex) => prevIndex + 1);
   };
 
   if (!card) {
@@ -104,10 +98,11 @@ export function DrillCard({ cards, initialProgress }: { cards: Card[]; initialPr
     return (
       <div className="panel">
         <h2 style={{ marginTop: 0 }}>Session complete</h2>
-        <p className="small">Reviewed {sessionCards.length} cards in this drill.</p>
+        <p className="small">Rated {ratedCount} phrases.</p>
+        <p className="small">Session cards: {sessionCards.length}</p>
         <div style={{ display: "grid", gap: 8 }}>
           <Link href="/use-with-ai" className="button primary">Use with AI</Link>
-          <Link href="/drill?mode=hard" className="button secondary">Review hard cards</Link>
+          <Link href="/drill?mode=hard&tag=ai" className="button secondary">Review weak AI phrases</Link>
           <button className="button ghost" onClick={() => { setIndex(0); setSessionComplete(false); }}>
             Start again
           </button>
@@ -161,7 +156,16 @@ export function DrillCard({ cards, initialProgress }: { cards: Card[]; initialPr
               <Link className="button ghost" href={`/card/${card.id}`}>
                 Detail
               </Link>
-              <button className="button ghost" onClick={nextCard}>
+              <button className="button ghost" onClick={() => {
+                setRevealed(false);
+                setShowClozeHint(false);
+                setShowHint(false);
+                if (index + 1 >= sessionCards.length) {
+                  setSessionComplete(true);
+                  return;
+                }
+                setIndex((prev) => prev + 1);
+              }}>
                 Skip
               </button>
             </div>
