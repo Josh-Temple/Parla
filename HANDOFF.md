@@ -56,3 +56,15 @@ Polished post-refactor learning UX with reliable Browse URL filter syncing, impr
 
 - `npm run lint` ✅
 - `npm run build` ✅
+
+## Session update (2026-05-01, layout refinement)
+
+- Refined Home page layout to remove visual overlap in the daily flow cards and make each step vertically structured (label above full-width action).
+- Introduced minimalist section rhythm using divider lines and consistent spacing (`home-section`, `flow-list`, `flow-item`).
+- Updated button base style to `inline-flex` for reliable sizing/alignment and ensured flow CTAs render full width consistently.
+- Improved top navigation responsiveness by allowing wrap and adding a mobile divider so nav links and the language toggle no longer collide on narrow viewports.
+- Kept existing IA/content while simplifying presentation through typography, whitespace, and subtle borders.
+
+### Validation run
+
+- `npm run lint` ✅

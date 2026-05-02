@@ -16,46 +16,53 @@ export default function HomePage() {
   const hard = useMemo(() => getHardCards(cards, progress), [cards, progress]);
   const reviewedToday = useMemo(() => countReviewedToday(progress, new Date()), [progress]);
   const aiCoreCount = cards.filter((c) => c.tags.includes("ai") && c.tags.includes("survival") && c.tags.includes("core")).length;
+
   return (<main>
     <section className="panel hero-panel">
       <div className="eyebrow">AI English Training</div>
       <h1 className="hero-title">Learn the English you need to ask AI.</h1>
       <p className="small">Practice the phrases for asking meanings, getting simpler explanations, correcting your English, and continuing conversation.</p>
+
       <div className="today-stats" aria-label="Today summary">
         <div><span className="today-stat-label">Today practiced</span><strong className="today-stat-value">{loading ? "..." : reviewedToday}</strong></div>
         <div><span className="today-stat-label">Needs review</span><strong className="today-stat-value">{loading ? "..." : due.length}</strong></div>
         <div><span className="today-stat-label">AI core phrases</span><strong className="today-stat-value">{loading ? "..." : aiCoreCount}</strong></div>
       </div>
-      <section style={{ marginTop: 14 }}>
-        <h2 style={{ margin: "0 0 8px" }}>Today&apos;s practice flow</h2>
-        <p className="small" style={{ marginTop: 0 }}>Learn → Use with AI → Review</p>
-        <div className="grid" style={{ gridTemplateColumns: "1fr", gap: 8 }}>
-          <div className="panel" style={{ padding: 10 }}>
-            <p className="small" style={{ margin: "0 0 6px" }}><strong>Step 1: Learn phrases</strong></p>
-            <Link href="/drill?mode=ai_survival" className="button primary" style={{ textAlign: "center", width: "100%" }}>Start AI survival drill</Link>
+
+      <section className="home-section">
+        <h2 className="section-title">Today&apos;s practice flow</h2>
+        <p className="small section-caption">Learn → Use with AI → Review</p>
+        <div className="flow-list">
+          <div className="flow-item">
+            <p className="flow-label">Step 1 · Learn phrases</p>
+            <Link href="/drill?mode=ai_survival" className="button primary flow-action">Start AI survival drill</Link>
           </div>
-          <div className="panel" style={{ padding: 10 }}>
-            <p className="small" style={{ margin: "0 0 6px" }}><strong>Step 2: Use them with AI</strong></p>
-            <Link href="/use-with-ai" className="button secondary" style={{ textAlign: "center", width: "100%" }}>Copy practice prompt</Link>
+          <div className="flow-item">
+            <p className="flow-label">Step 2 · Use them with AI</p>
+            <Link href="/use-with-ai" className="button secondary flow-action">Copy practice prompt</Link>
           </div>
-          <div className="panel" style={{ padding: 10 }}>
-            <p className="small" style={{ margin: "0 0 6px" }}><strong>Step 3: Review weak phrases</strong></p>
-            <Link href="/drill?mode=hard&tag=ai" className="button ghost" style={{ textAlign: "center", width: "100%" }}>Review weak AI phrases</Link>
+          <div className="flow-item">
+            <p className="flow-label">Step 3 · Review weak phrases</p>
+            <Link href="/drill?mode=hard&tag=ai" className="button ghost flow-action">Review weak AI phrases</Link>
           </div>
         </div>
       </section>
-      <section style={{ marginTop: 14 }}>
-        <h2 style={{ margin: "0 0 8px" }}>Practice packs</h2>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-        <Link href="/drill?mode=ai_survival&category=Meaning%20Help" className="badge">Meaning help</Link>
-        <Link href="/drill?mode=ai_survival&category=Simpler%20English" className="badge">Simpler English</Link>
-        <Link href="/drill?mode=ai_survival&category=Corrections" className="badge">Corrections</Link>
-        <Link href="/drill?mode=ai_survival&category=Voice%20Practice" className="badge">Voice practice</Link>
+
+      <section className="home-section">
+        <h2 className="section-title">Practice packs</h2>
+        <div className="pack-list">
+          <Link href="/drill?mode=ai_survival&category=Meaning%20Help" className="badge">Meaning help</Link>
+          <Link href="/drill?mode=ai_survival&category=Simpler%20English" className="badge">Simpler English</Link>
+          <Link href="/drill?mode=ai_survival&category=Corrections" className="badge">Corrections</Link>
+          <Link href="/drill?mode=ai_survival&category=Voice%20Practice" className="badge">Voice practice</Link>
         </div>
       </section>
     </section>
+
     <section className="progress-inline" aria-label="Progress summary">
-      <span>Goal progress: {loading ? "..." : `${Math.min(reviewedToday, DAILY_GOAL)} / ${DAILY_GOAL}`}</span><span>Due now: {loading ? "..." : due.length}</span><span>Hard cards: {loading ? "..." : hard.length}</span>
+      <span>Goal progress: {loading ? "..." : `${Math.min(reviewedToday, DAILY_GOAL)} / ${DAILY_GOAL}`}</span>
+      <span>Due now: {loading ? "..." : due.length}</span>
+      <span>Hard cards: {loading ? "..." : hard.length}</span>
     </section>
   </main>);
 }
