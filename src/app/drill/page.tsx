@@ -67,6 +67,7 @@ function DrillPageContent() {
 
     let scopedCards = cards;
 
+    // Tag filters scope normal review modes (for example, /drill?mode=hard&tag=ai).
     if (tagFilter) {
       scopedCards = scopedCards.filter((card) => card.tags.includes(tagFilter));
     }

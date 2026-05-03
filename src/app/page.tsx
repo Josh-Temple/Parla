@@ -4,18 +4,23 @@ import Link from "next/link";
 import { useMemo } from "react";
 import { isSameLocalDay } from "@/lib/date";
 import { getDueCards, getHardCards } from "@/domain/review/reviewSelectors";
-import type { ProgressItem } from "@/domain/progress/progressTypes";
 import { useParlaData } from "@/hooks/useParlaData";
 
 const DAILY_GOAL = 10;
-function countReviewedToday(progress: ProgressItem[], now: Date): number { return progress.filter((i)=>i.last_reviewed_at&&isSameLocalDay(i.last_reviewed_at, now)).length; }
 
 export default function HomePage() {
   const { cards, progress, loading } = useParlaData();
-  const due = useMemo(() => getDueCards(cards, progress), [cards, progress]);
-  const hard = useMemo(() => getHardCards(cards, progress), [cards, progress]);
-  const reviewedToday = useMemo(() => countReviewedToday(progress, new Date()), [progress]);
-  const aiCoreCount = cards.filter((c) => c.tags.includes("ai") && c.tags.includes("survival") && c.tags.includes("core")).length;
+  const aiSurvivalCards = useMemo(
+    () => cards.filter((c) => c.tags.includes("ai") && c.tags.includes("survival") && c.tags.includes("core")),
+    [cards],
+  );
+  const dueAiCards = useMemo(() => getDueCards(aiSurvivalCards, progress), [aiSurvivalCards, progress]);
+  const hardAiCards = useMemo(() => getHardCards(aiSurvivalCards, progress), [aiSurvivalCards, progress]);
+  const reviewedTodayAi = useMemo(() => {
+    const now = new Date();
+    const aiIds = new Set(aiSurvivalCards.map((card) => card.id));
+    return progress.filter((item) => item.last_reviewed_at && aiIds.has(item.card_id) && isSameLocalDay(item.last_reviewed_at, now)).length;
+  }, [aiSurvivalCards, progress]);
 
   return (<main>
     <section className="panel hero-panel">
@@ -24,9 +29,9 @@ export default function HomePage() {
       <p className="small">Practice the phrases for asking meanings, getting simpler explanations, correcting your English, and continuing conversation.</p>
 
       <div className="today-stats" aria-label="Today summary">
-        <div><span className="today-stat-label">Today practiced</span><strong className="today-stat-value">{loading ? "..." : reviewedToday}</strong></div>
-        <div><span className="today-stat-label">Needs review</span><strong className="today-stat-value">{loading ? "..." : due.length}</strong></div>
-        <div><span className="today-stat-label">AI core phrases</span><strong className="today-stat-value">{loading ? "..." : aiCoreCount}</strong></div>
+        <div><span className="today-stat-label">Today practiced</span><strong className="today-stat-value">{loading ? "..." : reviewedTodayAi}</strong></div>
+        <div><span className="today-stat-label">Available now</span><strong className="today-stat-value">{loading ? "..." : dueAiCards.length}</strong></div>
+        <div><span className="today-stat-label">Weak AI phrases</span><strong className="today-stat-value">{loading ? "..." : hardAiCards.length}</strong></div>
       </div>
 
       <section className="home-section">
@@ -60,9 +65,9 @@ export default function HomePage() {
     </section>
 
     <section className="progress-inline" aria-label="Progress summary">
-      <span>Goal progress: {loading ? "..." : `${Math.min(reviewedToday, DAILY_GOAL)} / ${DAILY_GOAL}`}</span>
-      <span>Due now: {loading ? "..." : due.length}</span>
-      <span>Hard cards: {loading ? "..." : hard.length}</span>
+      <span>Goal progress: {loading ? "..." : `${Math.min(reviewedTodayAi, DAILY_GOAL)} / ${DAILY_GOAL}`}</span>
+      <span>Due AI phrases: {loading ? "..." : dueAiCards.length}</span>
+      <span>Weak AI phrases: {loading ? "..." : hardAiCards.length}</span>
     </section>
   </main>);
 }
