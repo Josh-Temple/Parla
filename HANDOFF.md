@@ -68,3 +68,20 @@ Polished post-refactor learning UX with reliable Browse URL filter syncing, impr
 ### Validation run
 
 - `npm run lint` ✅
+
+## Session update (2026-05-03)
+
+- Fixed `DrillCard` completion-panel **Start again** behavior to fully reset session state (`index`, `ratedCount`, `revealed`, hints, completion flag).
+- Updated Home stats to be AI-survival scoped by deriving `ai + survival + core` cards and computing:
+  - Today practiced (AI survival only)
+  - Available now (AI survival due/unseen via existing selector behavior)
+  - Weak AI phrases (AI survival hard cards)
+- Replaced misleading Home stat label **Needs review** with **Available now**.
+- Added an inline drill-page comment clarifying how `tag` query scoping works for normal review modes (e.g. `/drill?mode=hard&tag=ai`).
+- Enhanced `/use-with-ai` today prompt to include practiced phrase categories and an explicit simple-questions/end-corrections instruction.
+- Re-ran validation checks successfully.
+
+### Validation run
+
+- `npm run lint` ✅
+- `npm run build` ✅

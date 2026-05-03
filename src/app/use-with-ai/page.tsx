@@ -42,9 +42,10 @@ export default function UseWithAIPage() {
     if (practicedToday.length === 0) return base;
     const list = practicedToday
       .slice(0, 5)
-      .map((card, index) => `${index + 1}. \"${card.phrase}\"`)
+      .map((card, index) => `${index + 1}. \"${card.phrase}\" — ${card.category}`)
       .join("\n");
-    return `${base}\n\nToday I want to practice these phrases:\n${list}\n\nPlease create a short conversation where I can naturally use these phrases.`;
+    return `${base}\n\nToday I want to practice these phrases:\n${list}\n\nPlease create a short conversation where I can naturally use these phrases.
+Keep your questions simple and correct my biggest mistakes at the end.`;
   }, [practicedToday]);
 
   const copyText = async (text: string) => {

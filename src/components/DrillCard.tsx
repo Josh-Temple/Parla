@@ -103,7 +103,17 @@ export function DrillCard({ cards, initialProgress }: { cards: Card[]; initialPr
         <div style={{ display: "grid", gap: 8 }}>
           <Link href="/use-with-ai" className="button primary">Use with AI</Link>
           <Link href="/drill?mode=hard&tag=ai" className="button secondary">Review weak AI phrases</Link>
-          <button className="button ghost" onClick={() => { setIndex(0); setSessionComplete(false); }}>
+          <button
+            className="button ghost"
+            onClick={() => {
+              setIndex(0);
+              setRatedCount(0);
+              setRevealed(false);
+              setShowClozeHint(false);
+              setShowHint(false);
+              setSessionComplete(false);
+            }}
+          >
             Start again
           </button>
         </div>
