@@ -625,13 +625,13 @@
     },
     {
       "id": "ai_016",
-      "category": "AI Questions",
+      "category": "Expression Help",
       "phrase": "How can I say this in English?",
       "function": "expression",
       "register": "neutral",
-      "pattern": "How can I say + Japanese/idea + in English?",
+      "pattern": "How can I say + Japanese idea + in English?",
       "example": "How can I say \"お先に失礼します\" in English?",
-      "notes": "Use this phrase to keep the practice useful.",
+      "notes": "Use this when you have the meaning but no English wording.",
       "tags": [
         "ai",
         "survival",
@@ -641,10 +641,10 @@
         "Can you help me with this?",
         "Please explain in simple English."
       ],
-      "contrast": "Choose a more specific phrase when needed.",
+      "contrast": "Broader than “How do native speakers say this?” because it starts from Japanese.",
       "prompts": {
-        "intent": "guide AI practice clearly",
-        "situation": "You are practicing with AI and need to: guide AI practice clearly."
+        "intent": "Ask how to say a Japanese idea in natural English.",
+        "situation": "You know what you want to say in Japanese, but not in English."
       },
       "support": {
         "jaHint": "これを英語でどう言えばいいですか"
@@ -655,10 +655,11 @@
       ],
       "quick_variations": [
         "How can I say this in English?",
-        "Can you do that with a short example?"
+        "How can I say this more naturally?",
+        "How can I say this in one short sentence?"
       ],
-      "practice_note": "Use your original idea, not a partial English guess.",
-      "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
+      "practice_note": "Replace the Japanese part with your exact message.",
+      "ai_transfer_prompt": "Use this with AI when you think in Japanese first and need a usable English line.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -666,13 +667,13 @@
     },
     {
       "id": "ai_017",
-      "category": "AI Questions",
+      "category": "Expression Help",
       "phrase": "How do native speakers say this?",
       "function": "expression",
       "register": "neutral",
       "pattern": "How do native speakers say + idea + ?",
       "example": "How do native speakers say \"I have a stomach ache\" naturally?",
-      "notes": "Use this phrase to keep the practice useful.",
+      "notes": "Use this to upgrade textbook wording to everyday phrasing.",
       "tags": [
         "ai",
         "survival",
@@ -682,10 +683,10 @@
         "Can you help me with this?",
         "Please explain in simple English."
       ],
-      "contrast": "Choose a more specific phrase when needed.",
+      "contrast": "More naturalness-focused than “How can I say this in English?”.",
       "prompts": {
-        "intent": "guide AI practice clearly",
-        "situation": "You are practicing with AI and need to: guide AI practice clearly."
+        "intent": "Ask how native speakers usually say your idea.",
+        "situation": "Your translation is understandable, but you want a more natural phrase."
       },
       "support": {
         "jaHint": "ネイティブならどう言いますか"
@@ -695,11 +696,12 @@
         "your current wording"
       ],
       "quick_variations": [
-        "How do native speakers say this?",
-        "Can you do that with a short example?"
+        "How do people usually say this?",
+        "What would a native speaker say here?",
+        "How would you say this in daily conversation?"
       ],
-      "practice_note": "Good for upgrading direct translations to natural phrasing.",
-      "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
+      "practice_note": "Say your current sentence first, then ask this.",
+      "ai_transfer_prompt": "Use this after drafting a sentence and wanting a native-like version.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -707,13 +709,13 @@
     },
     {
       "id": "ai_018",
-      "category": "AI Questions",
+      "category": "Expression Help",
       "phrase": "What is a natural way to say this?",
       "function": "expression",
       "register": "neutral",
       "pattern": "What is a natural way to say + sentence + ?",
       "example": "What is a natural way to say \"I forgot my umbrella at home\"?",
-      "notes": "Use this phrase to keep the practice useful.",
+      "notes": "Use this when your first sentence is close, but not fit for the situation.",
       "tags": [
         "ai",
         "survival",
@@ -723,10 +725,10 @@
         "Can you help me with this?",
         "Please explain in simple English."
       ],
-      "contrast": "Choose a more specific phrase when needed.",
+      "contrast": "Different from direct correction requests because this asks for rephrasing choices.",
       "prompts": {
-        "intent": "guide AI practice clearly",
-        "situation": "You are practicing with AI and need to: guide AI practice clearly."
+        "intent": "Ask for a natural rewrite of your sentence.",
+        "situation": "You wrote a sentence, but it sounds stiff or direct."
       },
       "support": {
         "jaHint": "この文を自然に言うにはどうしますか"
@@ -736,11 +738,12 @@
         "your sentence"
       ],
       "quick_variations": [
-        "What is a natural way to say this?",
-        "Can you do that with a short example?"
+        "Can you show two alternatives?",
+        "Can you give a short version too?",
+        "Which one sounds most natural?"
       ],
-      "practice_note": "Ask this after drafting a sentence yourself.",
-      "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
+      "practice_note": "Say your own sentence first, then request alternatives.",
+      "ai_transfer_prompt": "Use this with AI right after writing your own line to get better options.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -748,13 +751,13 @@
     },
     {
       "id": "ai_019",
-      "category": "AI Questions",
+      "category": "Expression Help",
       "phrase": "Can you give me three ways to say this?",
       "function": "expression",
       "register": "neutral",
       "pattern": "Can you give me three ways to say + message + ?",
       "example": "Can you give me three ways to say \"I need more time\"?",
-      "notes": "Use this phrase to keep the practice useful.",
+      "notes": "Use this when your first sentence is close, but not fit for the situation.",
       "tags": [
         "ai",
         "survival",
@@ -764,10 +767,10 @@
         "Can you help me with this?",
         "Please explain in simple English."
       ],
-      "contrast": "Choose a more specific phrase when needed.",
+      "contrast": "Different from direct correction requests because this asks for rephrasing choices.",
       "prompts": {
-        "intent": "guide AI practice clearly",
-        "situation": "You are practicing with AI and need to: guide AI practice clearly."
+        "intent": "Ask for multiple ways to express one message.",
+        "situation": "You want options with different tones for the same meaning."
       },
       "support": {
         "jaHint": "同じ内容を3通りで言ってください"
@@ -777,11 +780,12 @@
         "message"
       ],
       "quick_variations": [
-        "Can you give me three ways to say this?",
-        "Can you do that with a short example?"
+        "Can you show two alternatives?",
+        "Can you give a short version too?",
+        "Which one sounds most natural?"
       ],
-      "practice_note": "Use this to collect options for different tones.",
-      "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
+      "practice_note": "Say your own sentence first, then request alternatives.",
+      "ai_transfer_prompt": "Use this with AI right after writing your own line to get better options.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -789,13 +793,13 @@
     },
     {
       "id": "ai_020",
-      "category": "AI Questions",
+      "category": "Expression Help",
       "phrase": "What is a simpler way to say this?",
       "function": "expression",
       "register": "neutral",
       "pattern": "What is a simpler way to say + sentence + ?",
       "example": "What is a simpler way to say \"I would appreciate your assistance\"?",
-      "notes": "Use this phrase to keep the practice useful.",
+      "notes": "Use this when your first sentence is close, but not fit for the situation.",
       "tags": [
         "ai",
         "survival",
@@ -805,10 +809,10 @@
         "Can you help me with this?",
         "Please explain in simple English."
       ],
-      "contrast": "Choose a more specific phrase when needed.",
+      "contrast": "Different from direct correction requests because this asks for rephrasing choices.",
       "prompts": {
-        "intent": "guide AI practice clearly",
-        "situation": "You are practicing with AI and need to: guide AI practice clearly."
+        "intent": "Ask for a simpler version of your sentence.",
+        "situation": "Your sentence is correct but too long for quick conversation."
       },
       "support": {
         "jaHint": "この文をもっと簡単に言うと？"
@@ -818,11 +822,12 @@
         "sentence"
       ],
       "quick_variations": [
-        "What is a simpler way to say this?",
-        "Can you do that with a short example?"
+        "Can you show two alternatives?",
+        "Can you give a short version too?",
+        "Which one sounds most natural?"
       ],
-      "practice_note": "Helpful when your sentence feels too long or complex.",
-      "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
+      "practice_note": "Say your own sentence first, then request alternatives.",
+      "ai_transfer_prompt": "Use this with AI right after writing your own line to get better options.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -830,13 +835,13 @@
     },
     {
       "id": "ai_021",
-      "category": "AI Questions",
+      "category": "Expression Help",
       "phrase": "What is a more polite way to say this?",
       "function": "expression",
       "register": "neutral",
       "pattern": "What is a more polite way to say + sentence/request + ?",
       "example": "What is a more polite way to say \"Send me the file\"?",
-      "notes": "Use this phrase to keep the practice useful.",
+      "notes": "Use this when your first sentence is close, but not fit for the situation.",
       "tags": [
         "ai",
         "survival",
@@ -846,10 +851,10 @@
         "Can you help me with this?",
         "Please explain in simple English."
       ],
-      "contrast": "Choose a more specific phrase when needed.",
+      "contrast": "Different from direct correction requests because this asks for rephrasing choices.",
       "prompts": {
-        "intent": "guide AI practice clearly",
-        "situation": "You are practicing with AI and need to: guide AI practice clearly."
+        "intent": "Ask for a more polite version of your sentence.",
+        "situation": "You are writing to a teacher, customer, or senior colleague."
       },
       "support": {
         "jaHint": "この言い方をもっと丁寧にできますか"
@@ -859,11 +864,12 @@
         "sentence or request"
       ],
       "quick_variations": [
-        "What is a more polite way to say this?",
-        "Can you do that with a short example?"
+        "Can you show two alternatives?",
+        "Can you give a short version too?",
+        "Which one sounds most natural?"
       ],
-      "practice_note": "Use for emails, teachers, customers, or senior coworkers.",
-      "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
+      "practice_note": "Say your own sentence first, then request alternatives.",
+      "ai_transfer_prompt": "Use this with AI right after writing your own line to get better options.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -871,13 +877,13 @@
     },
     {
       "id": "ai_022",
-      "category": "AI Questions",
+      "category": "Expression Help",
       "phrase": "What is a more casual way to say this?",
       "function": "expression",
       "register": "neutral",
       "pattern": "What is a more casual way to say + sentence + ?",
       "example": "What is a more casual way to say \"I apologize for the delay\"?",
-      "notes": "Use this phrase to keep the practice useful.",
+      "notes": "Use this when your first sentence is close, but not fit for the situation.",
       "tags": [
         "ai",
         "survival",
@@ -887,10 +893,10 @@
         "Can you help me with this?",
         "Please explain in simple English."
       ],
-      "contrast": "Choose a more specific phrase when needed.",
+      "contrast": "Different from direct correction requests because this asks for rephrasing choices.",
       "prompts": {
-        "intent": "guide AI practice clearly",
-        "situation": "You are practicing with AI and need to: guide AI practice clearly."
+        "intent": "Ask for a more casual version of your sentence.",
+        "situation": "Your sentence sounds too formal for friends or teammates."
       },
       "support": {
         "jaHint": "この文をもっとカジュアルに言うと？"
@@ -900,11 +906,12 @@
         "sentence"
       ],
       "quick_variations": [
-        "What is a more casual way to say this?",
-        "Can you do that with a short example?"
+        "Can you show two alternatives?",
+        "Can you give a short version too?",
+        "Which one sounds most natural?"
       ],
-      "practice_note": "Useful when your English sounds too formal with friends.",
-      "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
+      "practice_note": "Say your own sentence first, then request alternatives.",
+      "ai_transfer_prompt": "Use this with AI right after writing your own line to get better options.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -912,13 +919,13 @@
     },
     {
       "id": "ai_023",
-      "category": "AI Questions",
+      "category": "Expression Help",
       "phrase": "Can I say it like this?",
       "function": "expression",
       "register": "neutral",
       "pattern": "Can I say it like this: + sentence + ?",
       "example": "Can I say it like this: \"I’m not good at to swim\"?",
-      "notes": "Use this phrase to keep the practice useful.",
+      "notes": "Use this just before sending or saying the sentence to someone.",
       "tags": [
         "ai",
         "survival",
@@ -928,13 +935,13 @@
         "Can you help me with this?",
         "Please explain in simple English."
       ],
-      "contrast": "Choose a more specific phrase when needed.",
+      "contrast": "Unlike meaning questions, this checks output quality and context fit.",
       "prompts": {
-        "intent": "guide AI practice clearly",
-        "situation": "You are practicing with AI and need to: guide AI practice clearly."
+        "intent": "Check whether your wording fits the situation and tone.",
+        "situation": "You have a draft sentence and want quick feedback before using it."
       },
       "support": {
-        "jaHint": "この言い方で通じますか"
+        "jaHint": "この言い方で自然に通じますか"
       },
       "family": "ai_questions",
       "slots": [
@@ -942,10 +949,11 @@
       ],
       "quick_variations": [
         "Can I say it like this?",
-        "Can you do that with a short example?"
+        "Is this okay in this situation?",
+        "Can you give a better version?"
       ],
-      "practice_note": "Put your attempt after the colon for direct correction.",
-      "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
+      "practice_note": "Insert your real sentence; avoid placeholder text.",
+      "ai_transfer_prompt": "Use this with AI before real chats, emails, or meetings.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -953,13 +961,13 @@
     },
     {
       "id": "ai_024",
-      "category": "AI Questions",
+      "category": "Expression Help",
       "phrase": "Is this phrase okay?",
       "function": "expression",
       "register": "neutral",
       "pattern": "Is this phrase okay in + situation + ?",
       "example": "Is this phrase okay in a job interview: \"Hey guys\"?",
-      "notes": "Use this phrase to keep the practice useful.",
+      "notes": "Use this just before sending or saying the sentence to someone.",
       "tags": [
         "ai",
         "survival",
@@ -969,13 +977,13 @@
         "Can you help me with this?",
         "Please explain in simple English."
       ],
-      "contrast": "Choose a more specific phrase when needed.",
+      "contrast": "Unlike meaning questions, this checks output quality and context fit.",
       "prompts": {
-        "intent": "guide AI practice clearly",
-        "situation": "You are practicing with AI and need to: guide AI practice clearly."
+        "intent": "Check whether your wording fits the situation and tone.",
+        "situation": "You have a draft sentence and want quick feedback before using it."
       },
       "support": {
-        "jaHint": "この表現はこの場面で大丈夫ですか"
+        "jaHint": "この言い方で自然に通じますか"
       },
       "family": "ai_questions",
       "slots": [
@@ -984,10 +992,11 @@
       ],
       "quick_variations": [
         "Is this phrase okay?",
-        "Can you do that with a short example?"
+        "Is this okay in this situation?",
+        "Can you give a better version?"
       ],
-      "practice_note": "Always include context; appropriateness depends on audience.",
-      "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
+      "practice_note": "Insert your real sentence; avoid placeholder text.",
+      "ai_transfer_prompt": "Use this with AI before real chats, emails, or meetings.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -995,13 +1004,13 @@
     },
     {
       "id": "ai_025",
-      "category": "AI Questions",
+      "category": "Expression Help",
       "phrase": "What should I say in this situation?",
       "function": "expression",
       "register": "neutral",
       "pattern": "What should I say when + situation + ?",
       "example": "What should I say when I join a Zoom meeting late?",
-      "notes": "Use this phrase to keep the practice useful.",
+      "notes": "Use this just before sending or saying the sentence to someone.",
       "tags": [
         "ai",
         "survival",
@@ -1011,13 +1020,13 @@
         "Can you help me with this?",
         "Please explain in simple English."
       ],
-      "contrast": "Choose a more specific phrase when needed.",
+      "contrast": "Unlike meaning questions, this checks output quality and context fit.",
       "prompts": {
-        "intent": "guide AI practice clearly",
-        "situation": "You are practicing with AI and need to: guide AI practice clearly."
+        "intent": "Check whether your wording fits the situation and tone.",
+        "situation": "You have a draft sentence and want quick feedback before using it."
       },
       "support": {
-        "jaHint": "この場面では何と言えばいいですか"
+        "jaHint": "この言い方で自然に通じますか"
       },
       "family": "ai_questions",
       "slots": [
@@ -1025,10 +1034,11 @@
       ],
       "quick_variations": [
         "What should I say in this situation?",
-        "Can you do that with a short example?"
+        "Is this okay in this situation?",
+        "Can you give a better version?"
       ],
-      "practice_note": "Ask for ready-to-use lines for specific moments.",
-      "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
+      "practice_note": "Insert your real sentence; avoid placeholder text.",
+      "ai_transfer_prompt": "Use this with AI before real chats, emails, or meetings.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -1036,13 +1046,13 @@
     },
     {
       "id": "ai_026",
-      "category": "AI Questions",
+      "category": "Expression Help",
       "phrase": "Can you help me phrase this question?",
       "function": "expression",
       "register": "neutral",
       "pattern": "Can you help me phrase this question: + question idea + ?",
       "example": "Can you help me phrase this question: \"why this graph down?\"",
-      "notes": "Use this phrase to keep the practice useful.",
+      "notes": "Use this just before sending or saying the sentence to someone.",
       "tags": [
         "ai",
         "survival",
@@ -1052,13 +1062,13 @@
         "Can you help me with this?",
         "Please explain in simple English."
       ],
-      "contrast": "Choose a more specific phrase when needed.",
+      "contrast": "Unlike meaning questions, this checks output quality and context fit.",
       "prompts": {
-        "intent": "guide AI practice clearly",
-        "situation": "You are practicing with AI and need to: guide AI practice clearly."
+        "intent": "Check whether your wording fits the situation and tone.",
+        "situation": "You have a draft sentence and want quick feedback before using it."
       },
       "support": {
-        "jaHint": "この質問を英語らしく直してほしいです"
+        "jaHint": "この言い方で自然に通じますか"
       },
       "family": "ai_questions",
       "slots": [
@@ -1066,10 +1076,11 @@
       ],
       "quick_variations": [
         "Can you help me phrase this question?",
-        "Can you do that with a short example?"
+        "Is this okay in this situation?",
+        "Can you give a better version?"
       ],
-      "practice_note": "Paste your rough question to improve clarity before sending.",
-      "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
+      "practice_note": "Insert your real sentence; avoid placeholder text.",
+      "ai_transfer_prompt": "Use this with AI before real chats, emails, or meetings.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -1077,13 +1088,13 @@
     },
     {
       "id": "ai_027",
-      "category": "AI Questions",
+      "category": "Expression Help",
       "phrase": "How can I ask this more clearly?",
       "function": "expression",
       "register": "neutral",
       "pattern": "How can I ask + topic + more clearly?",
       "example": "How can I ask about refund policy more clearly?",
-      "notes": "Use this phrase to keep the practice useful.",
+      "notes": "Use this just before sending or saying the sentence to someone.",
       "tags": [
         "ai",
         "survival",
@@ -1093,13 +1104,13 @@
         "Can you help me with this?",
         "Please explain in simple English."
       ],
-      "contrast": "Choose a more specific phrase when needed.",
+      "contrast": "Unlike meaning questions, this checks output quality and context fit.",
       "prompts": {
-        "intent": "guide AI practice clearly",
-        "situation": "You are practicing with AI and need to: guide AI practice clearly."
+        "intent": "Check whether your wording fits the situation and tone.",
+        "situation": "You have a draft sentence and want quick feedback before using it."
       },
       "support": {
-        "jaHint": "この質問をもっとわかりやすく言うには？"
+        "jaHint": "この言い方で自然に通じますか"
       },
       "family": "ai_questions",
       "slots": [
@@ -1107,10 +1118,11 @@
       ],
       "quick_variations": [
         "How can I ask this more clearly?",
-        "Can you do that with a short example?"
+        "Is this okay in this situation?",
+        "Can you give a better version?"
       ],
-      "practice_note": "Use when AI answers incorrectly because your question is vague.",
-      "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
+      "practice_note": "Insert your real sentence; avoid placeholder text.",
+      "ai_transfer_prompt": "Use this with AI before real chats, emails, or meetings.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -1118,13 +1130,13 @@
     },
     {
       "id": "ai_028",
-      "category": "AI Questions",
+      "category": "Expression Help",
       "phrase": "Can you give me a short version?",
       "function": "expression",
       "register": "neutral",
       "pattern": "Can you give me a shorter version of + sentence + ?",
       "example": "Can you give me a shorter version of \"I am writing to inquire about...\"?",
-      "notes": "Use this phrase to keep the practice useful.",
+      "notes": "Use this just before sending or saying the sentence to someone.",
       "tags": [
         "ai",
         "survival",
@@ -1134,13 +1146,13 @@
         "Can you help me with this?",
         "Please explain in simple English."
       ],
-      "contrast": "Choose a more specific phrase when needed.",
+      "contrast": "Unlike meaning questions, this checks output quality and context fit.",
       "prompts": {
-        "intent": "guide AI practice clearly",
-        "situation": "You are practicing with AI and need to: guide AI practice clearly."
+        "intent": "Check whether your wording fits the situation and tone.",
+        "situation": "You have a draft sentence and want quick feedback before using it."
       },
       "support": {
-        "jaHint": "この文を短くできますか"
+        "jaHint": "この言い方で自然に通じますか"
       },
       "family": "ai_questions",
       "slots": [
@@ -1148,10 +1160,11 @@
       ],
       "quick_variations": [
         "Can you give me a short version?",
-        "Can you do that with a short example?"
+        "Is this okay in this situation?",
+        "Can you give a better version?"
       ],
-      "practice_note": "Ask for shorter versions for chat or voice replies.",
-      "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
+      "practice_note": "Insert your real sentence; avoid placeholder text.",
+      "ai_transfer_prompt": "Use this with AI before real chats, emails, or meetings.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -1159,13 +1172,13 @@
     },
     {
       "id": "ai_029",
-      "category": "AI Questions",
+      "category": "Expression Help",
       "phrase": "Can you give me a friendly version?",
       "function": "expression",
       "register": "neutral",
       "pattern": "Can you give me a friendlier version of + sentence + ?",
       "example": "Can you give me a friendlier version of \"Please respond by Friday\"?",
-      "notes": "Use this phrase to keep the practice useful.",
+      "notes": "Use this just before sending or saying the sentence to someone.",
       "tags": [
         "ai",
         "survival",
@@ -1175,13 +1188,13 @@
         "Can you help me with this?",
         "Please explain in simple English."
       ],
-      "contrast": "Choose a more specific phrase when needed.",
+      "contrast": "Unlike meaning questions, this checks output quality and context fit.",
       "prompts": {
-        "intent": "guide AI practice clearly",
-        "situation": "You are practicing with AI and need to: guide AI practice clearly."
+        "intent": "Check whether your wording fits the situation and tone.",
+        "situation": "You have a draft sentence and want quick feedback before using it."
       },
       "support": {
-        "jaHint": "この文をもう少し親しみやすくできますか"
+        "jaHint": "この言い方で自然に通じますか"
       },
       "family": "ai_questions",
       "slots": [
@@ -1189,10 +1202,11 @@
       ],
       "quick_variations": [
         "Can you give me a friendly version?",
-        "Can you do that with a short example?"
+        "Is this okay in this situation?",
+        "Can you give a better version?"
       ],
-      "practice_note": "Great for softening requests to teammates.",
-      "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
+      "practice_note": "Insert your real sentence; avoid placeholder text.",
+      "ai_transfer_prompt": "Use this with AI before real chats, emails, or meetings.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -1200,13 +1214,13 @@
     },
     {
       "id": "ai_030",
-      "category": "AI Questions",
+      "category": "Expression Help",
       "phrase": "Can you give me a formal version?",
       "function": "expression",
       "register": "neutral",
       "pattern": "Can you give me a more formal version of + sentence + ?",
       "example": "Can you give me a more formal version of \"Can you send it soon?\"?",
-      "notes": "Use this phrase to keep the practice useful.",
+      "notes": "Use this just before sending or saying the sentence to someone.",
       "tags": [
         "ai",
         "survival",
@@ -1216,13 +1230,13 @@
         "Can you help me with this?",
         "Please explain in simple English."
       ],
-      "contrast": "Choose a more specific phrase when needed.",
+      "contrast": "Unlike meaning questions, this checks output quality and context fit.",
       "prompts": {
-        "intent": "guide AI practice clearly",
-        "situation": "You are practicing with AI and need to: guide AI practice clearly."
+        "intent": "Check whether your wording fits the situation and tone.",
+        "situation": "You have a draft sentence and want quick feedback before using it."
       },
       "support": {
-        "jaHint": "この文をもっとフォーマルに言えますか"
+        "jaHint": "この言い方で自然に通じますか"
       },
       "family": "ai_questions",
       "slots": [
@@ -1230,10 +1244,11 @@
       ],
       "quick_variations": [
         "Can you give me a formal version?",
-        "Can you do that with a short example?"
+        "Is this okay in this situation?",
+        "Can you give a better version?"
       ],
-      "practice_note": "Use before writing to clients or professors.",
-      "ai_transfer_prompt": "Use this with an AI during ai questions practice so the response matches your level and goal.",
+      "practice_note": "Insert your real sentence; avoid placeholder text.",
+      "ai_transfer_prompt": "Use this with AI before real chats, emails, or meetings.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -1245,9 +1260,9 @@
       "phrase": "Please use simpler English.",
       "function": "simplification",
       "register": "neutral",
-      "pattern": "Please ...",
-      "example": "Please use simpler English. (e.g., with a word from today's chat)",
-      "notes": "Use this when the AI answer is accurate but too difficult to follow at your current level.",
+      "pattern": "Please use simpler English.",
+      "example": "Please use simpler English.",
+      "notes": "Use this the moment comprehension drops, before switching to Japanese.",
       "tags": [
         "ai",
         "survival",
@@ -1257,13 +1272,13 @@
         "Please use simple English.",
         "Can you explain it step by step?"
       ],
-      "contrast": "Different from meaning-help phrases: this asks to simplify the whole explanation.",
+      "contrast": "Broader than asking one word meaning because it simplifies the whole response.",
       "prompts": {
-        "intent": "ask for easier English or a step-by-step explanation",
-        "situation": "You are practicing with AI and need to: ask for easier English or a step-by-step explanation."
+        "intent": "Ask AI to make its explanation easier to understand.",
+        "situation": "AI answered correctly, but the language is still too difficult."
       },
       "support": {
-        "jaHint": "説明が難しいときに、もっとやさしくしてもらう。"
+        "jaHint": "もっと簡単な英語で説明してください"
       },
       "family": "simpler_english",
       "slots": [
@@ -1272,10 +1287,10 @@
       ],
       "quick_variations": [
         "Please use simpler English.",
-        "Can you do that with a short example?"
+        "Please keep your answer at A2 level."
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
-      "ai_transfer_prompt": "Use this with an AI during simpler english practice so the response matches your level and goal.",
+      "practice_note": "Say this immediately, then ask one follow-up question in English.",
+      "ai_transfer_prompt": "Use this with AI when you can follow the topic but not the wording level.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -1287,9 +1302,9 @@
       "phrase": "Please use easier words.",
       "function": "simplification",
       "register": "neutral",
-      "pattern": "Please ...",
-      "example": "Please use easier words. (e.g., with a word from today's chat)",
-      "notes": "Use this when the AI answer is accurate but too difficult to follow at your current level.",
+      "pattern": "Please use easier words.",
+      "example": "Please use easier words.",
+      "notes": "Use this the moment comprehension drops, before switching to Japanese.",
       "tags": [
         "ai",
         "survival",
@@ -1299,13 +1314,13 @@
         "Please use simple English.",
         "Can you explain it step by step?"
       ],
-      "contrast": "Different from meaning-help phrases: this asks to simplify the whole explanation.",
+      "contrast": "Broader than asking one word meaning because it simplifies the whole response.",
       "prompts": {
-        "intent": "ask for easier English or a step-by-step explanation",
-        "situation": "You are practicing with AI and need to: ask for easier English or a step-by-step explanation."
+        "intent": "Ask AI to make its explanation easier to understand.",
+        "situation": "AI answered correctly, but the language is still too difficult."
       },
       "support": {
-        "jaHint": "説明が難しいときに、もっとやさしくしてもらう。"
+        "jaHint": "もっと簡単な英語で説明してください"
       },
       "family": "simpler_english",
       "slots": [
@@ -1315,10 +1330,10 @@
       "quick_variations": [
         "Please use easier words.",
         "Please use easier phrases.",
-        "Can you do that with a short example?"
+        "Please keep your answer at A2 level."
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
-      "ai_transfer_prompt": "Use this with an AI during simpler english practice so the response matches your level and goal.",
+      "practice_note": "Say this immediately, then ask one follow-up question in English.",
+      "ai_transfer_prompt": "Use this with AI when you can follow the topic but not the wording level.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -1330,9 +1345,9 @@
       "phrase": "Please say that more simply.",
       "function": "simplification",
       "register": "neutral",
-      "pattern": "Please ...",
-      "example": "Please say that more simply. (e.g., with a word from today's chat)",
-      "notes": "Use this when the AI answer is accurate but too difficult to follow at your current level.",
+      "pattern": "Please say that more simply.",
+      "example": "Please say that more simply.",
+      "notes": "Use this the moment comprehension drops, before switching to Japanese.",
       "tags": [
         "ai",
         "survival",
@@ -1342,13 +1357,13 @@
         "Please use simple English.",
         "Can you explain it step by step?"
       ],
-      "contrast": "Different from meaning-help phrases: this asks to simplify the whole explanation.",
+      "contrast": "Broader than asking one word meaning because it simplifies the whole response.",
       "prompts": {
-        "intent": "ask for easier English or a step-by-step explanation",
-        "situation": "You are practicing with AI and need to: ask for easier English or a step-by-step explanation."
+        "intent": "Ask AI to make its explanation easier to understand.",
+        "situation": "AI answered correctly, but the language is still too difficult."
       },
       "support": {
-        "jaHint": "説明が難しいときに、もっとやさしくしてもらう。"
+        "jaHint": "もっと簡単な英語で説明してください"
       },
       "family": "simpler_english",
       "slots": [
@@ -1357,10 +1372,10 @@
       ],
       "quick_variations": [
         "Please say that more simply.",
-        "Can you do that with a short example?"
+        "Please keep your answer at A2 level."
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
-      "ai_transfer_prompt": "Use this with an AI during simpler english practice so the response matches your level and goal.",
+      "practice_note": "Say this immediately, then ask one follow-up question in English.",
+      "ai_transfer_prompt": "Use this with AI when you can follow the topic but not the wording level.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -1372,9 +1387,9 @@
       "phrase": "Can you explain it like I’m a beginner?",
       "function": "simplification",
       "register": "neutral",
-      "pattern": "Can ...",
-      "example": "Can you explain it like I’m a beginner? (e.g., with a word from today's chat)",
-      "notes": "Use this when the AI answer is accurate but too difficult to follow at your current level.",
+      "pattern": "Can you explain it like I’m a beginner?",
+      "example": "Can you explain it like I’m a beginner?",
+      "notes": "Use this the moment comprehension drops, before switching to Japanese.",
       "tags": [
         "ai",
         "survival",
@@ -1384,13 +1399,13 @@
         "Please use simple English.",
         "Can you explain it step by step?"
       ],
-      "contrast": "Different from meaning-help phrases: this asks to simplify the whole explanation.",
+      "contrast": "Broader than asking one word meaning because it simplifies the whole response.",
       "prompts": {
-        "intent": "ask for easier English or a step-by-step explanation",
-        "situation": "You are practicing with AI and need to: ask for easier English or a step-by-step explanation."
+        "intent": "Ask AI to make its explanation easier to understand.",
+        "situation": "AI answered correctly, but the language is still too difficult."
       },
       "support": {
-        "jaHint": "説明が難しいときに、もっとやさしくしてもらう。"
+        "jaHint": "もっと簡単な英語で説明してください"
       },
       "family": "simpler_english",
       "slots": [
@@ -1399,10 +1414,10 @@
       ],
       "quick_variations": [
         "Can you explain it like I’m a beginner?",
-        "Can you do that with a short example?"
+        "Please keep your answer at A2 level."
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
-      "ai_transfer_prompt": "Use this with an AI during simpler english practice so the response matches your level and goal.",
+      "practice_note": "Say this immediately, then ask one follow-up question in English.",
+      "ai_transfer_prompt": "Use this with AI when you can follow the topic but not the wording level.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -1414,9 +1429,9 @@
       "phrase": "Please use short sentences.",
       "function": "simplification",
       "register": "neutral",
-      "pattern": "Please ...",
-      "example": "Please use short sentences. (e.g., with a word from today's chat)",
-      "notes": "Use this when the AI answer is accurate but too difficult to follow at your current level.",
+      "pattern": "Please use short sentences.",
+      "example": "Please use short sentences.",
+      "notes": "Use this the moment comprehension drops, before switching to Japanese.",
       "tags": [
         "ai",
         "survival",
@@ -1426,13 +1441,13 @@
         "Please use simple English.",
         "Can you explain it step by step?"
       ],
-      "contrast": "Different from meaning-help phrases: this asks to simplify the whole explanation.",
+      "contrast": "Broader than asking one word meaning because it simplifies the whole response.",
       "prompts": {
-        "intent": "ask for easier English or a step-by-step explanation",
-        "situation": "You are practicing with AI and need to: ask for easier English or a step-by-step explanation."
+        "intent": "Ask AI to make its explanation easier to understand.",
+        "situation": "AI answered correctly, but the language is still too difficult."
       },
       "support": {
-        "jaHint": "説明が難しいときに、もっとやさしくしてもらう。"
+        "jaHint": "もっと簡単な英語で説明してください"
       },
       "family": "simpler_english",
       "slots": [
@@ -1441,10 +1456,10 @@
       ],
       "quick_variations": [
         "Please use short sentences.",
-        "Can you do that with a short example?"
+        "Please keep your answer at A2 level."
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
-      "ai_transfer_prompt": "Use this with an AI during simpler english practice so the response matches your level and goal.",
+      "practice_note": "Say this immediately, then ask one follow-up question in English.",
+      "ai_transfer_prompt": "Use this with AI when you can follow the topic but not the wording level.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -1456,9 +1471,9 @@
       "phrase": "Please don’t use difficult words.",
       "function": "simplification",
       "register": "neutral",
-      "pattern": "Please ...",
-      "example": "Please don’t use difficult words. (e.g., with a word from today's chat)",
-      "notes": "Use this when the AI answer is accurate but too difficult to follow at your current level.",
+      "pattern": "Please don’t use difficult words.",
+      "example": "Please don’t use difficult words.",
+      "notes": "Use this the moment comprehension drops, before switching to Japanese.",
       "tags": [
         "ai",
         "survival",
@@ -1468,13 +1483,13 @@
         "Please use simple English.",
         "Can you explain it step by step?"
       ],
-      "contrast": "Different from meaning-help phrases: this asks to simplify the whole explanation.",
+      "contrast": "Broader than asking one word meaning because it simplifies the whole response.",
       "prompts": {
-        "intent": "ask for easier English or a step-by-step explanation",
-        "situation": "You are practicing with AI and need to: ask for easier English or a step-by-step explanation."
+        "intent": "Ask AI to make its explanation easier to understand.",
+        "situation": "AI answered correctly, but the language is still too difficult."
       },
       "support": {
-        "jaHint": "説明が難しいときに、もっとやさしくしてもらう。"
+        "jaHint": "もっと簡単な英語で説明してください"
       },
       "family": "simpler_english",
       "slots": [
@@ -1484,10 +1499,10 @@
       "quick_variations": [
         "Please don’t use difficult words.",
         "Please don’t use difficult phrases.",
-        "Can you do that with a short example?"
+        "Please keep your answer at A2 level."
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
-      "ai_transfer_prompt": "Use this with an AI during simpler english practice so the response matches your level and goal.",
+      "practice_note": "Say this immediately, then ask one follow-up question in English.",
+      "ai_transfer_prompt": "Use this with AI when you can follow the topic but not the wording level.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -1499,9 +1514,9 @@
       "phrase": "Can you say that in another way?",
       "function": "simplification",
       "register": "neutral",
-      "pattern": "Can ...",
-      "example": "Can you say that in another way? (e.g., with a word from today's chat)",
-      "notes": "Use this when the AI answer is accurate but too difficult to follow at your current level.",
+      "pattern": "Can you say that in another way?",
+      "example": "Can you say that in another way?",
+      "notes": "Use this the moment comprehension drops, before switching to Japanese.",
       "tags": [
         "ai",
         "survival",
@@ -1511,13 +1526,13 @@
         "Please use simple English.",
         "Can you explain it step by step?"
       ],
-      "contrast": "Different from meaning-help phrases: this asks to simplify the whole explanation.",
+      "contrast": "Broader than asking one word meaning because it simplifies the whole response.",
       "prompts": {
-        "intent": "ask for easier English or a step-by-step explanation",
-        "situation": "You are practicing with AI and need to: ask for easier English or a step-by-step explanation."
+        "intent": "Ask AI to make its explanation easier to understand.",
+        "situation": "AI answered correctly, but the language is still too difficult."
       },
       "support": {
-        "jaHint": "説明が難しいときに、もっとやさしくしてもらう。"
+        "jaHint": "もっと簡単な英語で説明してください"
       },
       "family": "simpler_english",
       "slots": [
@@ -1526,10 +1541,10 @@
       ],
       "quick_variations": [
         "Can you say that in another way?",
-        "Can you do that with a short example?"
+        "Please keep your answer at A2 level."
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
-      "ai_transfer_prompt": "Use this with an AI during simpler english practice so the response matches your level and goal.",
+      "practice_note": "Say this immediately, then ask one follow-up question in English.",
+      "ai_transfer_prompt": "Use this with AI when you can follow the topic but not the wording level.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -1541,9 +1556,9 @@
       "phrase": "Can you break it down?",
       "function": "simplification",
       "register": "neutral",
-      "pattern": "Can ...",
-      "example": "Can you break it down? (e.g., with a word from today's chat)",
-      "notes": "Use this when the AI answer is accurate but too difficult to follow at your current level.",
+      "pattern": "Can you break it down?",
+      "example": "Can you break it down?",
+      "notes": "Use this the moment comprehension drops, before switching to Japanese.",
       "tags": [
         "ai",
         "survival",
@@ -1553,13 +1568,13 @@
         "Please use simple English.",
         "Can you explain it step by step?"
       ],
-      "contrast": "Different from meaning-help phrases: this asks to simplify the whole explanation.",
+      "contrast": "Broader than asking one word meaning because it simplifies the whole response.",
       "prompts": {
-        "intent": "ask for easier English or a step-by-step explanation",
-        "situation": "You are practicing with AI and need to: ask for easier English or a step-by-step explanation."
+        "intent": "Ask AI to make its explanation easier to understand.",
+        "situation": "AI answered correctly, but the language is still too difficult."
       },
       "support": {
-        "jaHint": "説明が難しいときに、もっとやさしくしてもらう。"
+        "jaHint": "もっと簡単な英語で説明してください"
       },
       "family": "simpler_english",
       "slots": [
@@ -1568,10 +1583,10 @@
       ],
       "quick_variations": [
         "Can you break it down?",
-        "Can you do that with a short example?"
+        "Please keep your answer at A2 level."
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
-      "ai_transfer_prompt": "Use this with an AI during simpler english practice so the response matches your level and goal.",
+      "practice_note": "Say this immediately, then ask one follow-up question in English.",
+      "ai_transfer_prompt": "Use this with AI when you can follow the topic but not the wording level.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -1583,9 +1598,9 @@
       "phrase": "Can you explain it step by step?",
       "function": "simplification",
       "register": "neutral",
-      "pattern": "Can ...",
-      "example": "Can you explain it step by step? (e.g., with a word from today's chat)",
-      "notes": "Use this when the AI answer is accurate but too difficult to follow at your current level.",
+      "pattern": "Can you explain it step by step?",
+      "example": "Can you explain it step by step?",
+      "notes": "Use this the moment comprehension drops, before switching to Japanese.",
       "tags": [
         "ai",
         "survival",
@@ -1595,13 +1610,13 @@
         "Please use simple English.",
         "Can you explain it step by step?"
       ],
-      "contrast": "Different from meaning-help phrases: this asks to simplify the whole explanation.",
+      "contrast": "Broader than asking one word meaning because it simplifies the whole response.",
       "prompts": {
-        "intent": "ask for easier English or a step-by-step explanation",
-        "situation": "You are practicing with AI and need to: ask for easier English or a step-by-step explanation."
+        "intent": "Ask AI to make its explanation easier to understand.",
+        "situation": "AI answered correctly, but the language is still too difficult."
       },
       "support": {
-        "jaHint": "説明が難しいときに、もっとやさしくしてもらう。"
+        "jaHint": "もっと簡単な英語で説明してください"
       },
       "family": "simpler_english",
       "slots": [
@@ -1610,10 +1625,10 @@
       ],
       "quick_variations": [
         "Can you explain it step by step?",
-        "Can you do that with a short example?"
+        "Please keep your answer at A2 level."
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
-      "ai_transfer_prompt": "Use this with an AI during simpler english practice so the response matches your level and goal.",
+      "practice_note": "Say this immediately, then ask one follow-up question in English.",
+      "ai_transfer_prompt": "Use this with AI when you can follow the topic but not the wording level.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -1625,9 +1640,9 @@
       "phrase": "Can you give me a very simple example?",
       "function": "simplification",
       "register": "neutral",
-      "pattern": "Can ...",
-      "example": "Can you give me a very simple example? (e.g., with a word from today's chat)",
-      "notes": "Use this when the AI answer is accurate but too difficult to follow at your current level.",
+      "pattern": "Can you give me a very simple example?",
+      "example": "Can you give me a very simple example?",
+      "notes": "Use this the moment comprehension drops, before switching to Japanese.",
       "tags": [
         "ai",
         "survival",
@@ -1637,13 +1652,13 @@
         "Please use simple English.",
         "Can you explain it step by step?"
       ],
-      "contrast": "Different from meaning-help phrases: this asks to simplify the whole explanation.",
+      "contrast": "Broader than asking one word meaning because it simplifies the whole response.",
       "prompts": {
-        "intent": "ask for easier English or a step-by-step explanation",
-        "situation": "You are practicing with AI and need to: ask for easier English or a step-by-step explanation."
+        "intent": "Ask AI to make its explanation easier to understand.",
+        "situation": "AI answered correctly, but the language is still too difficult."
       },
       "support": {
-        "jaHint": "説明が難しいときに、もっとやさしくしてもらう。"
+        "jaHint": "もっと簡単な英語で説明してください"
       },
       "family": "simpler_english",
       "slots": [
@@ -1652,10 +1667,10 @@
       ],
       "quick_variations": [
         "Can you give me a very simple example?",
-        "Can you do that with a short example?"
+        "Please keep your answer at A2 level."
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
-      "ai_transfer_prompt": "Use this with an AI during simpler english practice so the response matches your level and goal.",
+      "practice_note": "Say this immediately, then ask one follow-up question in English.",
+      "ai_transfer_prompt": "Use this with AI when you can follow the topic but not the wording level.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -1667,9 +1682,9 @@
       "phrase": "Please keep it simple.",
       "function": "simplification",
       "register": "neutral",
-      "pattern": "Please ...",
-      "example": "Please keep it simple. (e.g., with a word from today's chat)",
-      "notes": "Use this when the AI answer is accurate but too difficult to follow at your current level.",
+      "pattern": "Please keep it simple.",
+      "example": "Please keep it simple.",
+      "notes": "Use this the moment comprehension drops, before switching to Japanese.",
       "tags": [
         "ai",
         "survival",
@@ -1679,13 +1694,13 @@
         "Please use simple English.",
         "Can you explain it step by step?"
       ],
-      "contrast": "Different from meaning-help phrases: this asks to simplify the whole explanation.",
+      "contrast": "Broader than asking one word meaning because it simplifies the whole response.",
       "prompts": {
-        "intent": "ask for easier English or a step-by-step explanation",
-        "situation": "You are practicing with AI and need to: ask for easier English or a step-by-step explanation."
+        "intent": "Ask AI to make its explanation easier to understand.",
+        "situation": "AI answered correctly, but the language is still too difficult."
       },
       "support": {
-        "jaHint": "説明が難しいときに、もっとやさしくしてもらう。"
+        "jaHint": "もっと簡単な英語で説明してください"
       },
       "family": "simpler_english",
       "slots": [
@@ -1694,10 +1709,10 @@
       ],
       "quick_variations": [
         "Please keep it simple.",
-        "Can you do that with a short example?"
+        "Please keep your answer at A2 level."
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
-      "ai_transfer_prompt": "Use this with an AI during simpler english practice so the response matches your level and goal.",
+      "practice_note": "Say this immediately, then ask one follow-up question in English.",
+      "ai_transfer_prompt": "Use this with AI when you can follow the topic but not the wording level.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -1709,9 +1724,9 @@
       "phrase": "Can you explain this slowly and simply?",
       "function": "simplification",
       "register": "neutral",
-      "pattern": "Can ...",
-      "example": "Can you explain this slowly and simply? (e.g., with a word from today's chat)",
-      "notes": "Use this when the AI answer is accurate but too difficult to follow at your current level.",
+      "pattern": "Can you explain this slowly and simply?",
+      "example": "Can you explain this slowly and simply?",
+      "notes": "Use this the moment comprehension drops, before switching to Japanese.",
       "tags": [
         "ai",
         "survival",
@@ -1721,13 +1736,13 @@
         "Please use simple English.",
         "Can you explain it step by step?"
       ],
-      "contrast": "Different from meaning-help phrases: this asks to simplify the whole explanation.",
+      "contrast": "Broader than asking one word meaning because it simplifies the whole response.",
       "prompts": {
-        "intent": "ask for easier English or a step-by-step explanation",
-        "situation": "You are practicing with AI and need to: ask for easier English or a step-by-step explanation."
+        "intent": "Ask AI to make its explanation easier to understand.",
+        "situation": "AI answered correctly, but the language is still too difficult."
       },
       "support": {
-        "jaHint": "説明が難しいときに、もっとやさしくしてもらう。"
+        "jaHint": "もっと簡単な英語で説明してください"
       },
       "family": "simpler_english",
       "slots": [
@@ -1736,10 +1751,10 @@
       ],
       "quick_variations": [
         "Can you explain this slowly and simply?",
-        "Can you do that with a short example?"
+        "Please keep your answer at A2 level."
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
-      "ai_transfer_prompt": "Use this with an AI during simpler english practice so the response matches your level and goal.",
+      "practice_note": "Say this immediately, then ask one follow-up question in English.",
+      "ai_transfer_prompt": "Use this with AI when you can follow the topic but not the wording level.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -1751,9 +1766,9 @@
       "phrase": "Please make your answer shorter.",
       "function": "simplification",
       "register": "neutral",
-      "pattern": "Please ...",
-      "example": "Please make your answer shorter. (e.g., with a word from today's chat)",
-      "notes": "Use this when the AI answer is accurate but too difficult to follow at your current level.",
+      "pattern": "Please make your answer shorter.",
+      "example": "Please make your answer shorter.",
+      "notes": "Use this the moment comprehension drops, before switching to Japanese.",
       "tags": [
         "ai",
         "survival",
@@ -1763,13 +1778,13 @@
         "Please use simple English.",
         "Can you explain it step by step?"
       ],
-      "contrast": "Different from meaning-help phrases: this asks to simplify the whole explanation.",
+      "contrast": "Broader than asking one word meaning because it simplifies the whole response.",
       "prompts": {
-        "intent": "ask for easier English or a step-by-step explanation",
-        "situation": "You are practicing with AI and need to: ask for easier English or a step-by-step explanation."
+        "intent": "Ask AI to make its explanation easier to understand.",
+        "situation": "AI answered correctly, but the language is still too difficult."
       },
       "support": {
-        "jaHint": "説明が難しいときに、もっとやさしくしてもらう。"
+        "jaHint": "もっと簡単な英語で説明してください"
       },
       "family": "simpler_english",
       "slots": [
@@ -1778,10 +1793,10 @@
       ],
       "quick_variations": [
         "Please make your answer shorter.",
-        "Can you do that with a short example?"
+        "Please keep your answer at A2 level."
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
-      "ai_transfer_prompt": "Use this with an AI during simpler english practice so the response matches your level and goal.",
+      "practice_note": "Say this immediately, then ask one follow-up question in English.",
+      "ai_transfer_prompt": "Use this with AI when you can follow the topic but not the wording level.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -1793,9 +1808,9 @@
       "phrase": "Can you use everyday words?",
       "function": "simplification",
       "register": "neutral",
-      "pattern": "Can ...",
-      "example": "Can you use everyday words? (e.g., with a word from today's chat)",
-      "notes": "Use this when the AI answer is accurate but too difficult to follow at your current level.",
+      "pattern": "Can you use everyday words?",
+      "example": "Can you use everyday words?",
+      "notes": "Use this the moment comprehension drops, before switching to Japanese.",
       "tags": [
         "ai",
         "survival",
@@ -1805,13 +1820,13 @@
         "Please use simple English.",
         "Can you explain it step by step?"
       ],
-      "contrast": "Different from meaning-help phrases: this asks to simplify the whole explanation.",
+      "contrast": "Broader than asking one word meaning because it simplifies the whole response.",
       "prompts": {
-        "intent": "ask for easier English or a step-by-step explanation",
-        "situation": "You are practicing with AI and need to: ask for easier English or a step-by-step explanation."
+        "intent": "Ask AI to make its explanation easier to understand.",
+        "situation": "AI answered correctly, but the language is still too difficult."
       },
       "support": {
-        "jaHint": "説明が難しいときに、もっとやさしくしてもらう。"
+        "jaHint": "もっと簡単な英語で説明してください"
       },
       "family": "simpler_english",
       "slots": [
@@ -1821,10 +1836,10 @@
       "quick_variations": [
         "Can you use everyday words?",
         "Can you use everyday phrases?",
-        "Can you do that with a short example?"
+        "Please keep your answer at A2 level."
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
-      "ai_transfer_prompt": "Use this with an AI during simpler english practice so the response matches your level and goal.",
+      "practice_note": "Say this immediately, then ask one follow-up question in English.",
+      "ai_transfer_prompt": "Use this with AI when you can follow the topic but not the wording level.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -1836,9 +1851,9 @@
       "phrase": "Can you explain only the key point?",
       "function": "simplification",
       "register": "neutral",
-      "pattern": "Can ...",
-      "example": "Can you explain only the key point? (e.g., with a word from today's chat)",
-      "notes": "Use this when the AI answer is accurate but too difficult to follow at your current level.",
+      "pattern": "Can you explain only the key point?",
+      "example": "Can you explain only the key point?",
+      "notes": "Use this the moment comprehension drops, before switching to Japanese.",
       "tags": [
         "ai",
         "survival",
@@ -1848,13 +1863,13 @@
         "Please use simple English.",
         "Can you explain it step by step?"
       ],
-      "contrast": "Different from meaning-help phrases: this asks to simplify the whole explanation.",
+      "contrast": "Broader than asking one word meaning because it simplifies the whole response.",
       "prompts": {
-        "intent": "ask for easier English or a step-by-step explanation",
-        "situation": "You are practicing with AI and need to: ask for easier English or a step-by-step explanation."
+        "intent": "Ask AI to make its explanation easier to understand.",
+        "situation": "AI answered correctly, but the language is still too difficult."
       },
       "support": {
-        "jaHint": "説明が難しいときに、もっとやさしくしてもらう。"
+        "jaHint": "もっと簡単な英語で説明してください"
       },
       "family": "simpler_english",
       "slots": [
@@ -1863,10 +1878,10 @@
       ],
       "quick_variations": [
         "Can you explain only the key point?",
-        "Can you do that with a short example?"
+        "Please keep your answer at A2 level."
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
-      "ai_transfer_prompt": "Use this with an AI during simpler english practice so the response matches your level and goal.",
+      "practice_note": "Say this immediately, then ask one follow-up question in English.",
+      "ai_transfer_prompt": "Use this with AI when you can follow the topic but not the wording level.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -1878,9 +1893,9 @@
       "phrase": "Please correct my English.",
       "function": "correction",
       "register": "neutral",
-      "pattern": "Please ...",
-      "example": "Please correct my English. (e.g., with a word from today's chat)",
-      "notes": "Use this after you answer so you improve accuracy without stopping the conversation too often.",
+      "pattern": "Please correct my English.",
+      "example": "Please correct my English.",
+      "notes": "Use this after speaking or writing your own answer first.",
       "tags": [
         "ai",
         "survival",
@@ -1890,13 +1905,13 @@
         "Please correct my English.",
         "Can you rewrite this naturally?"
       ],
-      "contrast": "Different from “What does this mean?” because the goal is improving your output, not understanding input.",
+      "contrast": "Unlike “Does this sound natural?”, this explicitly requests correction feedback.",
       "prompts": {
-        "intent": "ask for correction and a more natural sentence",
-        "situation": "You are practicing with AI and need to: ask for correction and a more natural sentence."
+        "intent": "Ask AI to correct your English after you answer.",
+        "situation": "You finished your response and want feedback without stopping the flow."
       },
       "support": {
-        "jaHint": "自分の英語を直して、自然な言い方をもらう。"
+        "jaHint": "答えた後で英語を直してください"
       },
       "family": "corrections",
       "slots": [
@@ -1904,11 +1919,12 @@
         "style"
       ],
       "quick_variations": [
-        "Please correct my English.",
-        "Can you show one natural version I can repeat?"
+        "Please correct only important mistakes.",
+        "Please correct me at the end.",
+        "Please give one natural rewrite I can repeat."
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
-      "ai_transfer_prompt": "Use this with an AI during corrections practice so the response matches your level and goal.",
+      "practice_note": "Give your full answer, then ask for corrections at the end.",
+      "ai_transfer_prompt": "Use this with AI after each practice turn to improve output accuracy.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -1920,9 +1936,9 @@
       "phrase": "Please correct only big mistakes.",
       "function": "correction",
       "register": "neutral",
-      "pattern": "Please ...",
-      "example": "Please correct only big mistakes. (e.g., with a word from today's chat)",
-      "notes": "Use this after you answer so you improve accuracy without stopping the conversation too often.",
+      "pattern": "Please correct only big mistakes.",
+      "example": "Please correct only big mistakes.",
+      "notes": "Use this after speaking or writing your own answer first.",
       "tags": [
         "ai",
         "survival",
@@ -1932,13 +1948,13 @@
         "Please correct my English.",
         "Can you rewrite this naturally?"
       ],
-      "contrast": "Different from “What does this mean?” because the goal is improving your output, not understanding input.",
+      "contrast": "Unlike “Does this sound natural?”, this explicitly requests correction feedback.",
       "prompts": {
-        "intent": "ask for correction and a more natural sentence",
-        "situation": "You are practicing with AI and need to: ask for correction and a more natural sentence."
+        "intent": "Ask AI to correct your English after you answer.",
+        "situation": "You finished your response and want feedback without stopping the flow."
       },
       "support": {
-        "jaHint": "自分の英語を直して、自然な言い方をもらう。"
+        "jaHint": "答えた後で英語を直してください"
       },
       "family": "corrections",
       "slots": [
@@ -1946,11 +1962,12 @@
         "style"
       ],
       "quick_variations": [
-        "Please correct only big mistakes.",
-        "Can you show one natural version I can repeat?"
+        "Please correct only important mistakes.",
+        "Please correct me at the end.",
+        "Please give one natural rewrite I can repeat."
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
-      "ai_transfer_prompt": "Use this with an AI during corrections practice so the response matches your level and goal.",
+      "practice_note": "Give your full answer, then ask for corrections at the end.",
+      "ai_transfer_prompt": "Use this with AI after each practice turn to improve output accuracy.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -1962,9 +1979,9 @@
       "phrase": "Please correct my sentence.",
       "function": "correction",
       "register": "neutral",
-      "pattern": "Please ...",
-      "example": "Please correct my sentence. (e.g., with a word from today's chat)",
-      "notes": "Use this after you answer so you improve accuracy without stopping the conversation too often.",
+      "pattern": "Please correct my sentence.",
+      "example": "Please correct my sentence.",
+      "notes": "Use this after speaking or writing your own answer first.",
       "tags": [
         "ai",
         "survival",
@@ -1974,13 +1991,13 @@
         "Please correct my English.",
         "Can you rewrite this naturally?"
       ],
-      "contrast": "Different from “What does this mean?” because the goal is improving your output, not understanding input.",
+      "contrast": "Unlike “Does this sound natural?”, this explicitly requests correction feedback.",
       "prompts": {
-        "intent": "ask for correction and a more natural sentence",
-        "situation": "You are practicing with AI and need to: ask for correction and a more natural sentence."
+        "intent": "Ask AI to correct your English after you answer.",
+        "situation": "You finished your response and want feedback without stopping the flow."
       },
       "support": {
-        "jaHint": "自分の英語を直して、自然な言い方をもらう。"
+        "jaHint": "答えた後で英語を直してください"
       },
       "family": "corrections",
       "slots": [
@@ -1988,11 +2005,12 @@
         "style"
       ],
       "quick_variations": [
-        "Please correct my sentence.",
-        "Can you show one natural version I can repeat?"
+        "Please correct only important mistakes.",
+        "Please correct me at the end.",
+        "Please give one natural rewrite I can repeat."
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
-      "ai_transfer_prompt": "Use this with an AI during corrections practice so the response matches your level and goal.",
+      "practice_note": "Give your full answer, then ask for corrections at the end.",
+      "ai_transfer_prompt": "Use this with AI after each practice turn to improve output accuracy.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -2004,9 +2022,9 @@
       "phrase": "Please make this sentence more natural.",
       "function": "correction",
       "register": "neutral",
-      "pattern": "Please ...",
-      "example": "Please make this sentence more natural. (e.g., with a word from today's chat)",
-      "notes": "Use this after you answer so you improve accuracy without stopping the conversation too often.",
+      "pattern": "Please make this sentence more natural.",
+      "example": "Please make this sentence more natural.",
+      "notes": "Use this after speaking or writing your own answer first.",
       "tags": [
         "ai",
         "survival",
@@ -2016,13 +2034,13 @@
         "Please correct my English.",
         "Can you rewrite this naturally?"
       ],
-      "contrast": "Different from “What does this mean?” because the goal is improving your output, not understanding input.",
+      "contrast": "Unlike “Does this sound natural?”, this explicitly requests correction feedback.",
       "prompts": {
-        "intent": "ask for correction and a more natural sentence",
-        "situation": "You are practicing with AI and need to: ask for correction and a more natural sentence."
+        "intent": "Ask AI to correct your English after you answer.",
+        "situation": "You finished your response and want feedback without stopping the flow."
       },
       "support": {
-        "jaHint": "自分の英語を直して、自然な言い方をもらう。"
+        "jaHint": "答えた後で英語を直してください"
       },
       "family": "corrections",
       "slots": [
@@ -2030,11 +2048,12 @@
         "style"
       ],
       "quick_variations": [
-        "Please make this sentence more natural.",
-        "Can you show one natural version I can repeat?"
+        "Please correct only important mistakes.",
+        "Please correct me at the end.",
+        "Please give one natural rewrite I can repeat."
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
-      "ai_transfer_prompt": "Use this with an AI during corrections practice so the response matches your level and goal.",
+      "practice_note": "Give your full answer, then ask for corrections at the end.",
+      "ai_transfer_prompt": "Use this with AI after each practice turn to improve output accuracy.",
       "difficulty": 1,
       "status": {
         "published": true
@@ -2046,9 +2065,9 @@
       "phrase": "Please explain why it is wrong.",
       "function": "correction",
       "register": "neutral",
-      "pattern": "Please ...",
-      "example": "Please explain why it is wrong. (e.g., with a word from today's chat)",
-      "notes": "Use this after you answer so you improve accuracy without stopping the conversation too often.",
+      "pattern": "Please explain why it is wrong.",
+      "example": "Please explain why it is wrong.",
+      "notes": "Use this after speaking or writing your own answer first.",
       "tags": [
         "ai",
         "survival",
@@ -2058,13 +2077,13 @@
         "Please correct my English.",
         "Can you rewrite this naturally?"
       ],
-      "contrast": "Different from “What does this mean?” because the goal is improving your output, not understanding input.",
+      "contrast": "Unlike “Does this sound natural?”, this explicitly requests correction feedback.",
       "prompts": {
-        "intent": "ask for correction and a more natural sentence",
-        "situation": "You are practicing with AI and need to: ask for correction and a more natural sentence."
+        "intent": "Ask AI to correct your English after you answer.",
+        "situation": "You finished your response and want feedback without stopping the flow."
       },
       "support": {
-        "jaHint": "自分の英語を直して、自然な言い方をもらう。"
+        "jaHint": "答えた後で英語を直してください"
       },
       "family": "corrections",
       "slots": [
@@ -2072,11 +2091,12 @@
         "style"
       ],
       "quick_variations": [
-        "Please explain why it is wrong.",
-        "Can you show one natural version I can repeat?"
+        "Please correct only important mistakes.",
+        "Please correct me at the end.",
+        "Please give one natural rewrite I can repeat."
       ],
-      "practice_note": "Swap in your real word, sentence, or situation from the current AI chat.",
-      "ai_transfer_prompt": "Use this with an AI during corrections practice so the response matches your level and goal.",
+      "practice_note": "Give your full answer, then ask for corrections at the end.",
+      "ai_transfer_prompt": "Use this with AI after each practice turn to improve output accuracy.",
       "difficulty": 1,
       "status": {
         "published": true
