@@ -34,7 +34,7 @@ export type CardCategory =
   | "Opinions / Uncertainty"
   | "Repair / Survival"
   | "Conversation Questions"
-  | "AI Questions"
+  | "Expression Help"
   | "Meaning Help"
   | "Simpler English"
   | "Corrections"

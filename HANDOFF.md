@@ -85,3 +85,19 @@ Polished post-refactor learning UX with reliable Browse URL filter syncing, impr
 
 - `npm run lint` ✅
 - `npm run build` ✅
+
+
+## Session update (2026-05-03, curriculum-quality phase)
+
+- Improved AI-survival dataset quality for cards `ai_016` through `ai_050` in `public/data/cards.json`.
+  - Renamed category usage from **AI Questions** to **Expression Help** for `ai_016`-`ai_030`.
+  - Rewrote card-front recall fields (`prompts.intent`, `prompts.situation`, `support.jaHint`) to be concrete and actionable.
+  - Reworked low-information metadata (`pattern`, `example`, `notes`, `contrast`, `quick_variations`, `practice_note`, `ai_transfer_prompt`) to reduce generic repetition.
+  - Removed template-like example suffixes and placeholder phrasing in Simpler English/Corrections blocks.
+- Updated `CardCategory` type union to include `Expression Help` instead of `AI Questions`.
+- Added `docs/card-quality-checklist.md` for future dataset edits.
+
+### Validation run
+
+- `npm run lint` ✅
+- `npm run build` ✅
