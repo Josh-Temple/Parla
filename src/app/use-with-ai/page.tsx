@@ -99,6 +99,7 @@ Keep your questions simple and correct my biggest mistakes at the end.`;
           <Link href="/drill?mode=ai_survival&category=Corrections" className="badge">Corrections</Link>
           <Link href="/drill?mode=ai_survival&category=Voice%20Practice" className="badge">Voice practice</Link>
         </div>
+        <p className="small" style={{ marginTop: 10, marginBottom: 0 }}><Link href="/practice-sets">Practice by scenario → Practice Sets</Link></p>
       </section>
       <div className="grid">
         {prompts.map((p) => (
