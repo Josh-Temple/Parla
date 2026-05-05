@@ -12,3 +12,6 @@ Use this checklist when adding or editing AI-survival cards.
 - `practice_note` should tell the learner exactly how to drill the phrase.
 - `ai_transfer_prompt` should describe when to use it with an external AI partner.
 - `prompts.intent` + `prompts.situation` should make front-side recall possible before reveal.
+
+
+- Practice sets should combine 5–8 cards that form a realistic conversation flow.

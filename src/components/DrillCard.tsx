@@ -16,7 +16,7 @@ function shouldInsertRequeue(cards: Card[], cardId: string, startIndex: number):
   return !cards.slice(startIndex, startIndex + SAME_SESSION_REQUEUE_GAP + 1).some((item) => item.id === cardId);
 }
 
-export function DrillCard({ cards, initialProgress }: { cards: Card[]; initialProgress: ProgressItem[] }) {
+export function DrillCard({ cards, initialProgress, practiceSetTitle }: { cards: Card[]; initialProgress: ProgressItem[]; practiceSetTitle?: string }) {
   const [sessionCards, setSessionCards] = useState(cards);
   const [index, setIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
@@ -97,12 +97,16 @@ export function DrillCard({ cards, initialProgress }: { cards: Card[]; initialPr
   if (sessionComplete) {
     return (
       <div className="panel">
-        <h2 style={{ marginTop: 0 }}>Session complete</h2>
+        <h2 style={{ marginTop: 0 }}>{practiceSetTitle ? "Set complete" : "Session complete"}</h2>
         <p className="small">Rated {ratedCount} phrases.</p>
         <p className="small">Session cards: {sessionCards.length}</p>
         <div style={{ display: "grid", gap: 8 }}>
           <Link href="/use-with-ai" className="button primary">Use with AI</Link>
+          {practiceSetTitle ? (
+          <Link href="/practice-sets" className="button secondary">Practice another set</Link>
+        ) : (
           <Link href="/drill?mode=hard&tag=ai" className="button secondary">Review weak AI phrases</Link>
+        )}
           <button
             className="button ghost"
             onClick={() => {

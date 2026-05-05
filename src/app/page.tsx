@@ -62,6 +62,11 @@ export default function HomePage() {
           <Link href="/drill?mode=ai_survival&category=Voice%20Practice" className="badge">Voice practice</Link>
         </div>
       </section>
+      <section className="home-section">
+        <h2 className="section-title">Practice by scenario</h2>
+        <p className="small" style={{ marginBottom: 8 }}>Use lightweight sets that combine phrases for realistic AI conversations.</p>
+        <Link href="/practice-sets" className="button secondary">Browse practice sets</Link>
+      </section>
     </section>
 
     <section className="progress-inline" aria-label="Progress summary">

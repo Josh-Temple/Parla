@@ -101,3 +101,19 @@ Polished post-refactor learning UX with reliable Browse URL filter syncing, impr
 
 - `npm run lint` ✅
 - `npm run build` ✅
+
+
+## Session update (2026-05-05)
+
+- Added static Practice Sets domain data (`PracticeSet` type + 5 initial sets) mapped to existing card IDs and scenario-specific copyable AI prompts.
+- Added new `/practice-sets` page with mobile-friendly cards showing title, goal, description, card count, and actions for set drill + prompt copy.
+- Extended `/drill` to support `?set=<practiceSetId>` and display mode label as `practice set · <title>`.
+- Preserved existing drill query behavior for `mode`, `tag`, and `category` routes.
+- Updated drill completion panel to show set-aware completion state (`Set complete`) and `Practice another set` CTA for set sessions.
+- Added Practice Sets entry points on Home, Use with AI, and top navigation.
+- Updated README product focus and card quality checklist note for practice sets.
+
+### Validation run
+
+- `npm run lint` ✅
+- `npm run build` ✅

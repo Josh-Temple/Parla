@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { DrillCard } from "@/components/DrillCard";
 import type { Card } from "@/domain/cards/cardTypes";
 import { prioritizeDailyCards, selectDrillCards, type DrillMode } from "@/domain/review/reviewSelectors";
+import { getPracticeSetById } from "@/domain/practiceSets/staticPracticeSets";
 import { useParlaData } from "@/hooks/useParlaData";
 import { shuffle } from "@/lib/utils";
 
@@ -51,9 +52,17 @@ function DrillPageContent() {
   const mode = parseMode(searchParams.get("mode"));
   const categoryFilter = searchParams.get("category");
   const tagFilter = searchParams.get("tag");
+  const practiceSetId = searchParams.get("set");
   const { cards, progress, loading, loadState } = useParlaData();
 
+  const activePracticeSet = practiceSetId ? getPracticeSetById(practiceSetId) : undefined;
+
   const drillCards = useMemo(() => {
+    if (activePracticeSet) {
+      const scopedCards = cards.filter((card) => activePracticeSet.cardIds.includes(card.id));
+      return selectDrillCards(scopedCards, progress, "all");
+    }
+
     if (mode === "all") {
       const progressMap = new Map(progress.map((entry) => [entry.card_id, entry]));
       const now = new Date();
@@ -77,7 +86,7 @@ function DrillPageContent() {
     }
 
     return selectDrillCards(scopedCards, progress, mode);
-  }, [cards, progress, mode, categoryFilter, tagFilter]);
+  }, [cards, progress, mode, categoryFilter, tagFilter, activePracticeSet]);
 
   if (loading) {
     return (
@@ -128,10 +137,10 @@ function DrillPageContent() {
     <main>
       <div className="panel">
         <p className="small" style={{ margin: 0 }}>
-          Mode: {mode}{categoryFilter ? ` · ${categoryFilter}` : ""}{tagFilter ? ` · #${tagFilter}` : ""}
+          Mode: {activePracticeSet ? `practice set · ${activePracticeSet.title}` : `${mode}${categoryFilter ? ` · ${categoryFilter}` : ""}${tagFilter ? ` · #${tagFilter}` : ""}`}
         </p>
       </div>
-      <DrillCard cards={drillCards} initialProgress={progress} />
+      <DrillCard cards={drillCards} initialProgress={progress} practiceSetTitle={activePracticeSet?.title} />
     </main>
   );
 }
