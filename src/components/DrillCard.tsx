@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import type { Card } from "@/domain/cards/cardTypes";
 import type { ProgressItem, Rating } from "@/domain/progress/progressTypes";
+import type { PracticeSet } from "@/domain/practiceSets/practiceSetTypes";
 import { getJapaneseHint } from "@/domain/cards/cardSupport";
 import { computeNextReview } from "@/domain/review/reviewScheduler";
 import { audioResolver, progressRepository } from "@/domain/services";
@@ -16,7 +17,7 @@ function shouldInsertRequeue(cards: Card[], cardId: string, startIndex: number):
   return !cards.slice(startIndex, startIndex + SAME_SESSION_REQUEUE_GAP + 1).some((item) => item.id === cardId);
 }
 
-export function DrillCard({ cards, initialProgress, practiceSetTitle }: { cards: Card[]; initialProgress: ProgressItem[]; practiceSetTitle?: string }) {
+export function DrillCard({ cards, initialProgress, practiceSet }: { cards: Card[]; initialProgress: ProgressItem[]; practiceSet?: PracticeSet }) {
   const [sessionCards, setSessionCards] = useState(cards);
   const [index, setIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
@@ -25,6 +26,7 @@ export function DrillCard({ cards, initialProgress, practiceSetTitle }: { cards:
   const [showClozeHint, setShowClozeHint] = useState(false);
   const [showHint, setShowHint] = useState(false);
   const [progressMap, setProgressMap] = useState(() => new Map(initialProgress.map((p) => [p.card_id, p])));
+  const [copyStatus, setCopyStatus] = useState<string | null>(null);
 
   useEffect(() => {
     setSessionCards(cards);
@@ -34,8 +36,20 @@ export function DrillCard({ cards, initialProgress, practiceSetTitle }: { cards:
     setShowClozeHint(false);
     setShowHint(false);
     setRatedCount(0);
+    setCopyStatus(null);
     setProgressMap(new Map(initialProgress.map((p) => [p.card_id, p])));
   }, [cards, initialProgress]);
+
+  const copyConversationPrompt = async () => {
+    if (!practiceSet) return;
+
+    try {
+      await navigator.clipboard.writeText(practiceSet.aiPrompt);
+      setCopyStatus("Prompt copied.");
+    } catch {
+      setCopyStatus("Could not copy. Please try again.");
+    }
+  };
 
   const card = sessionCards[index];
 
@@ -97,16 +111,28 @@ export function DrillCard({ cards, initialProgress, practiceSetTitle }: { cards:
   if (sessionComplete) {
     return (
       <div className="panel">
-        <h2 style={{ marginTop: 0 }}>{practiceSetTitle ? "Set complete" : "Session complete"}</h2>
+        <h2 style={{ marginTop: 0 }}>{practiceSet ? `${practiceSet.title} complete` : "Session complete"}</h2>
         <p className="small">Rated {ratedCount} phrases.</p>
         <p className="small">Session cards: {sessionCards.length}</p>
         <div style={{ display: "grid", gap: 8 }}>
-          <Link href="/use-with-ai" className="button primary">Use with AI</Link>
-          {practiceSetTitle ? (
-          <Link href="/practice-sets" className="button secondary">Practice another set</Link>
-        ) : (
-          <Link href="/drill?mode=hard&tag=ai" className="button secondary">Review weak AI phrases</Link>
-        )}
+          {practiceSet ? (
+            <>
+              <p className="small" style={{ margin: 0 }}>
+                You do not need to use every phrase. Start the conversation and use one when you need help.
+              </p>
+              <button className="button primary" onClick={() => void copyConversationPrompt()}>
+                Copy conversation prompt
+              </button>
+              {copyStatus ? <p className="small" aria-live="polite" style={{ margin: 0 }}>{copyStatus}</p> : null}
+              <Link href="/use-with-ai" className="button secondary">Use with AI</Link>
+              <Link href="/practice-sets" className="button ghost">Practice another set</Link>
+            </>
+          ) : (
+            <>
+              <Link href="/use-with-ai" className="button primary">Use with AI</Link>
+              <Link href="/drill?mode=hard&tag=ai" className="button secondary">Review weak AI phrases</Link>
+            </>
+          )}
           <button
             className="button ghost"
             onClick={() => {

@@ -34,6 +34,19 @@ export default function HomePage() {
         <div><span className="today-stat-label">Weak AI phrases</span><strong className="today-stat-value">{loading ? "..." : hardAiCards.length}</strong></div>
       </div>
 
+      <section className="validation-flow" aria-labelledby="voice-survival-title">
+        <p className="eyebrow">10-minute practice</p>
+        <h2 id="voice-survival-title" className="section-title">Try the 10-minute Voice Survival flow</h2>
+        <ol className="validation-steps">
+          <li>Practice six useful phrases.</li>
+          <li>Copy the conversation prompt.</li>
+          <li>Use the phrases in an AI voice conversation.</li>
+        </ol>
+        <Link href="/drill?set=voice_survival" className="button primary validation-action">
+          Start Voice Survival
+        </Link>
+      </section>
+
       <section className="home-section">
         <h2 className="section-title">Today&apos;s practice flow</h2>
         <p className="small section-caption">Learn → Use with AI → Review</p>

@@ -63,6 +63,7 @@ Keep your questions simple and correct my biggest mistakes at the end.`;
       <section className="panel">
         <h1 style={{ marginTop: 0 }}>Use with AI</h1>
         <p className="small">Parla is for memorizing phrases. Then copy one prompt below and practice in ChatGPT, Gemini, Claude, or a voice AI app.</p>
+        <p className="small" style={{ marginBottom: 0 }}>You do not need to use every phrase. Start the conversation and use one when you need help.</p>
         {copyStatus ? <p className="small" aria-live="polite" style={{ marginBottom: 0 }}>{copyStatus}</p> : null}
       </section>
       <section className="panel">
