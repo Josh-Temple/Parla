@@ -8,6 +8,8 @@ Parla is **not** a chatbot. It does not include in-app LLM chat APIs. It helps l
 
 ## Product focus
 
+> **Current focus:** Validate whether learners can move from phrase recall in Parla to an actual English conversation with an external AI tool. Do not add major features until at least three users complete the full **Practice Set → Use with AI** flow.
+
 - Learn short “AI survival” phrases (meaning help, simplification, correction, conversation control)
 - Drill with the existing flash loop and self-rating
 - Copy ready-to-use prompts on `/use-with-ai` and practice in ChatGPT / Gemini / Claude / voice AI outside Parla

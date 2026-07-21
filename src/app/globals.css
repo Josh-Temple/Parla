@@ -267,6 +267,30 @@ main {
   margin-top: 12px;
 }
 
+.validation-flow {
+  margin-top: 20px;
+  padding: 16px;
+  border: 1px solid #c7d2fe;
+  border-radius: 12px;
+  background: #f5f7ff;
+}
+
+.validation-flow .eyebrow {
+  margin: 0 0 6px;
+}
+
+.validation-steps {
+  margin: 12px 0 16px;
+  padding-left: 22px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.validation-action {
+  width: 100%;
+}
+
 .topnav-inner {
   flex-wrap: wrap;
 }

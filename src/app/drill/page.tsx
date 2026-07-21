@@ -140,7 +140,7 @@ function DrillPageContent() {
           Mode: {activePracticeSet ? `practice set · ${activePracticeSet.title}` : `${mode}${categoryFilter ? ` · ${categoryFilter}` : ""}${tagFilter ? ` · #${tagFilter}` : ""}`}
         </p>
       </div>
-      <DrillCard cards={drillCards} initialProgress={progress} practiceSetTitle={activePracticeSet?.title} />
+      <DrillCard cards={drillCards} initialProgress={progress} practiceSet={activePracticeSet} />
     </main>
   );
 }

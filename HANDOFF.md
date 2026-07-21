@@ -1,5 +1,32 @@
 # HANDOFF
 
+## Current validation focus (2026-07-20)
+
+### What was implemented
+
+- Added a prominent, mobile-friendly **Try the 10-minute Voice Survival flow** entry on Home with the three-step path and a direct link to `/drill?set=voice_survival`.
+- Made drill completion aware of the full Practice Set data rather than only its title.
+- Added set-specific completion actions in this order: **Copy conversation prompt**, **Use with AI**, and **Practice another set**. The copy action uses the prompt from `staticPracticeSets` and reports success or failure inline.
+- Kept the normal drill completion actions unchanged.
+- Clarified that learners do not need to use all six phrases; they can start the conversation and use one when they need help.
+- Added `docs/USER_VALIDATION_PLAN.md` for a first round with 3–5 users.
+
+### Hypothesis
+
+Japanese learners of English can move from recalling phrases in Parla to starting an English conversation with an external AI, and can use a practiced phrase when the conversation might otherwise stop.
+
+### First Practice Set
+
+Use the existing **Voice Survival** set (`voice_survival`) for the first validation round.
+
+### Next decision condition
+
+Do not add major features until at least three real users complete the full **Practice Set → copy prompt → external AI conversation** flow. Then review whether they started without explanation, used at least one practiced phrase, where they hesitated, and whether they would use Parla again within a few days.
+
+### Explicitly on hold
+
+Major feature work remains on hold, including accounts, backend analytics, hosted AI/API integration, an in-app chatbot, new review algorithms, bulk Practice Set creation, and broad redesigns. Make only focused fixes supported by the validation findings.
+
 ## Session summary
 
 Polished post-refactor learning UX with reliable Browse URL filter syncing, improved `ai_survival` drill ordering diversity without breaking priority, and a quality rewrite of first 30 AI-survival card metadata.
