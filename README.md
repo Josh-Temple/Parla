@@ -49,6 +49,7 @@ npm run dev
 - `npm run lint`
 
 ## Deployment checklist
+- Production: https://parla-teal.vercel.app/
 
 - Node.js 18+
 - Build: `npm run build`
